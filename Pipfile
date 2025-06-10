@@ -1,0 +1,16 @@
+# Pipfile
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi
+
+[packages]
+langchain-core = ">=0.1.27,<0.2"
+langgraph = ">=0.0.25,<0.1"
+
+[dev-packages]
+# Add development-only packages here if needed, e.g.:
+# pytest = "*"
+
+[requires]
+python_version = "3.9" # Specify your target Python version
