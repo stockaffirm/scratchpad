@@ -1,10 +1,12 @@
-# pip install langchain langchain_aws langgraph boto3
 """
 Advanced Project Code Analyzer using LangGraph on AWS Bedrock.
 
 This script defines a graph where one model analyzes a file, a second model
 critiques the analysis, and the first model self-corrects based on the critique.
-This process is repeated for each file before a final synthesis report is generated.
+This process is repeated for each file.
+
+Finally, it synthesizes a holistic report and uploads it to an S3 bucket
+for ingestion by a Bedrock Knowledge Base.
 
 Dependencies:
 - langchain, langchain_aws, langgraph, boto3
@@ -13,6 +15,7 @@ Dependencies:
 Setup:
 1.  Install and configure the AWS CLI with your credentials (`aws configure`).
 2.  Ensure you have access to the models in the Bedrock console.
+3.  Create an S3 bucket and update the S3_BUCKET_NAME variable below.
 
 Usage:
    python analyze_project_langgraph.py /path/to/your/project/directory
@@ -24,6 +27,7 @@ import logging
 import argparse
 from typing import TypedDict, List, Annotated
 import operator
+import boto3
 
 from langchain_aws import ChatBedrock
 from langgraph.graph import StateGraph, END
@@ -33,7 +37,10 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 # --- Model Selection from your provided list ---
+# The primary, high-intelligence model for analysis and synthesis.
 MODEL_1_ANALYST_ARN = "arn:aws:bedrock:us-east-1:982945613320:application-inference-profile/wwshs11qcgkg3"  # Claude 3.5 Sonnet
+
+# The fast, cost-effective model for reviewing and critiquing.
 MODEL_2_REVIEWER_ARN = "arn:aws:bedrock:us-east-1:982945613320:application-inference-profile/ps5itp0ecmvd"  # Claude 3 Haiku
 
 # --- LangChain Model Initialization ---
@@ -148,7 +155,6 @@ def synthesize_node(state: AnalysisGraphState):
 # --- Helper Function ---
 def read_and_filter_files(directory: str) -> list:
     """Returns a list of valid file paths to analyze."""
-    # (Same as previous script, kept for brevity)
     file_paths = []
     skip_extensions = [
         '.pyc', '.git', '.jpg', '.jpeg', '.png', '.gif', '.svg', '.ico',
@@ -181,21 +187,17 @@ def main():
     workflow.add_node("analyze", analyze_node)
     workflow.add_node("critique", critique_node)
     workflow.add_node("correct", correct_node)
-    workflow.add_node("synthesize", synthesize_node)
 
     # 2. Define the graph edges
     workflow.set_entry_point("analyze")
     workflow.add_edge("analyze", "critique")
     workflow.add_edge("critique", "correct")
-
-    # This is a placeholder for the loop logic. We will call the graph for each file.
-    # After correction, we end this part of the graph.
     workflow.add_edge("correct", END)
 
     # Compile the graph for file-level analysis
     file_analysis_app = workflow.compile()
 
-    # 3. Execute the workflow
+    # 3. Execute the workflow for each file
     file_paths = read_and_filter_files(args.project_directory)
 
     # This will hold the state as we iterate
@@ -229,12 +231,52 @@ def main():
 
     logger.info("--- All files processed. Starting final synthesis. ---")
     final_report_state = synthesize_node(final_state)
+    final_report = final_report_state['final_report']
+    individual_analyses = "".join(final_state['all_final_analyses'])
 
-    # 5. Print the final report
+    # --- NEW SECTION: UPLOAD KNOWLEDGE TO S3 FOR BEDROCK KNOWLEDGE BASE ---
+
+    # ** CONFIGURE THIS **
+    S3_BUCKET_NAME = "your-unique-bucket-name-here"  # <-- IMPORTANT: Use your bucket name
+    S3_FILE_NAME = "full_project_analysis_report.txt"
+
     print("\n\n" + "=" * 80)
-    print("      HOLISTIC PROJECT ANALYSIS AND DATA FLOW REPORT (via LangGraph)")
+    print(f"      STEP 5: UPLOADING KNOWLEDGE TO S3 BUCKET: {S3_BUCKET_NAME}")
     print("=" * 80 + "\n")
-    print(final_report_state['final_report'])
+
+    # 5. Combine all generated knowledge into one text body
+    full_knowledge_base_text = f"""
+    --- HOLISTIC PROJECT REPORT ---
+    {final_report}
+
+    --- DETAILED FILE-BY-FILE ANALYSIS ---
+    {individual_analyses}
+    """
+
+    # 6. Upload to S3
+    if S3_BUCKET_NAME == "your-unique-bucket-name-here":
+        logger.error("S3_BUCKET_NAME has not been configured. Please update the script.")
+        print("\n--- UPLOAD SKIPPED ---")
+        print("Please configure the S3_BUCKET_NAME variable in the script to enable uploads.")
+        return
+
+    try:
+        s3_client = boto3.client('s3')
+        s3_client.put_object(
+            Bucket=S3_BUCKET_NAME,
+            Key=S3_FILE_NAME,
+            Body=full_knowledge_base_text.encode('utf-8')
+        )
+        logger.info(f"Successfully uploaded report to s3://{S3_BUCKET_NAME}/{S3_FILE_NAME}")
+        print("\n--- NEXT STEPS ---")
+        print("1. Go to your Knowledge Base in the Amazon Bedrock console.")
+        print("2. Select your data source and click the 'Sync' button.")
+        print("3. Once syncing is complete, you can use a separate query script to ask questions.")
+
+    except Exception as e:
+        logger.error(f"Failed to upload to S3. Error: {e}")
+        print("\n--- UPLOAD FAILED ---")
+        print("Please check your AWS credentials and S3 bucket permissions.")
 
 
 if __name__ == "__main__":
