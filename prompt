@@ -1,0 +1,93 @@
+Step 1 prompt (global look only):
+
+Do not change project structure or routing.
+Only update styling to match GTAM 7400 look.
+
+Edit only:
+- app/globals.css
+- existing MUI theme/provider file (if present)
+
+Apply:
+- page background: #f3f4f6
+- card background: #ffffff
+- primary text: #111827
+- secondary text: #6b7280
+- border color: #cbccd1
+- border radius base: 12px
+- font-family: 'Sons', 'Poppins', 'Segoe UI', sans-serif
+- remove any conflicting old global styles that force different colors
+
+Show full updated files only.
+Step 2 prompt (header + filters style):
+
+Do not change framework or component structure.
+Only restyle existing Navigation + ContextBar components to match GTAM 7400.
+
+Targets:
+- top bar white with subtle bottom border
+- tabs text weight 600, neutral gray, selected darker
+- export button outlined, rounded, black border/text
+- filter row compact, white selects, same heights
+- spacing/margins aligned with 7400 screenshots
+
+Edit only:
+- components/Navigation/*
+- components/ContextBar/*
+- relevant CSS modules
+
+Do not change props/contracts. Return full updated files.
+Step 3 prompt (Actionable Insight cards):
+
+Keep all logic and structure.
+Restyle InsightCard to match 7400 screenshot exactly.
+
+Requirements:
+- outlined white cards, border #cbccd1, radius 12
+- icon badge soft background
+- title bold and larger
+- impact row light gray box
+- black rounded CTA button with white text
+- consistent padding and vertical rhythm
+
+Edit only InsightCard component + its module css.
+Return full updated files.
+Step 4 prompt (Key Metrics tiles):
+
+Keep current data/logic.
+Restyle MetricCard to match 7400.
+
+Requirements:
+- fixed card height feel, border #cbccd1, radius 12
+- small uppercase metric label, muted gray
+- large bold value
+- delta in green/orange/red with muted "vs last month"
+- help icon aligned top-right
+- no layout overflow
+
+Edit only MetricCard component + css module.
+Return full updated files.
+Step 5 prompt (Ownership cards):
+
+Do not alter data flow.
+Restyle Ownership & Operations cards to match 7400.
+
+Requirements:
+- white outlined cards, border #cbccd1
+- title bold
+- each row has soft gray background chip style
+- count bold dark, percent blue
+- spacing like screenshot
+
+Edit only affected ownership section component/css.
+Return full updated files.
+Step 6 prompt (NaN/0 visual cleanup):
+
+Do not change architecture.
+Fix display formatting only:
+- no NaN% anywhere
+- if denominator is 0, show 0.0%
+- if count missing, show 0
+- keep visual style unchanged
+
+Edit only formatting/helper functions used by cards/tiles.
+Return full updated files.
