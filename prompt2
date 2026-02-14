@@ -1,0 +1,20 @@
+Keep current repo structure and routing unchanged.
+Do not switch to reference DashboardApp.
+
+Goal: make current app (page.tsx + Navigation + ContextBar + PortfolioOverview + cards) visually match localhost:7400.
+
+1) Create centralized color tokens in app/globals.css using CSS variables:
+   --gtam-bg, --gtam-surface, --gtam-border, --gtam-text, --gtam-muted,
+   --gtam-primary, --gtam-success, --gtam-warning, --gtam-danger.
+2) Replace hardcoded #0066cc and other direct hex values in:
+   - components/Navigation/*.module.css
+   - components/ContextBar/*.module.css
+   - components/InsightCard/*.module.css
+   - components/MetricCard/*.module.css
+   - page-level css modules used by overview
+   with CSS variables.
+3) Update MUI theme in Providers.tsx to use same token values (background, text, primary).
+4) Keep all component APIs and data flow unchanged.
+5) Ensure no NaN% display (format fallback to 0.0% where needed).
+
+Return full updated files only for modified files.
