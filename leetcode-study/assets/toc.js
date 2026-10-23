@@ -9,3 +9,13 @@
   document.getElementById("expAll").onclick = () => { document.querySelectorAll(".plist").forEach(l => setList(l, true)); document.querySelectorAll(".topic").forEach(t => setTopic(t, true)); document.querySelectorAll(".rowx").forEach(r => setQ(r, true)); };
   document.getElementById("colAll").onclick = () => { document.querySelectorAll(".plist").forEach(l => setList(l, false)); document.querySelectorAll(".rowx").forEach(r => setQ(r, false)); document.querySelectorAll(".topic").forEach(t => setTopic(t, false)); };
 })();
+/* Filter buttons: highlight every problem that belongs to LeetCode 75 / LeetCode 150. */
+(function(){
+  const btns = [...document.querySelectorAll(".flt")], rows = [...document.querySelectorAll(".rowx")];
+  btns.forEach(b => b.onclick = () => {
+    const on = b.getAttribute("aria-pressed") !== "true";
+    btns.forEach(x => x.setAttribute("aria-pressed", "false"));
+    b.setAttribute("aria-pressed", on);
+    rows.forEach(r => r.classList.toggle("hl", on && r.dataset["l" + b.dataset.flt] === "1"));
+  });
+})();

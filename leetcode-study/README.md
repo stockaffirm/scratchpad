@@ -4,7 +4,7 @@ Open `index.html`. Each problem: **Question → Code → Flow → Diagram** with
 
 ```
 leetcode-study/
-├── index.html            landing-page index: expandable question previews, grouped by topic
+├── index.html            landing-page index: LeetCode 75 and LeetCode 150 lists, expandable question previews
 ├── assets/               shared style, player, progress, toc scripts
 └── 238-product-except-self/   one folder per problem
     ├── index.html
