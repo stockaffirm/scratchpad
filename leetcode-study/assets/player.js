@@ -31,6 +31,7 @@ ${pnav}
   <button id="prev" title="Previous (←)">◀ Prev</button>
   <button id="play" class="play" title="Play / Pause (space)">▶ Play</button>
   <button id="next" title="Next (→)">Next ▶</button>
+  <button id="done" class="dn" title="Mark complete">☐ Done</button>
   <div class="prog"><i id="pg"></i></div><span class="ct" id="ct"></span>
   <select id="spd" title="Speed"><option value="2">0.5×</option><option value="1" selected>1×</option><option value="0.5">2×</option></select>
 </div></div>`;
@@ -68,8 +69,12 @@ function render(){
   $("#cap").textContent = f.description;
   $("#pg").style.width = ((fi+1)/n*100)+"%"; $("#ct").textContent = `${fi+1} / ${n}`;
   $("#prev").disabled = fi==0; $("#next").disabled = fi==n-1;
+  if(fi==n-1 && !Progress.has(P.id)) Progress.set(P.id,true);
+  updDone();
   $("#play").textContent = timer ? "❚❚ Pause" : (fi==n-1 ? "↺ Replay" : "▶ Play");
 }
+function updDone(){ const d=Progress.has(P.id), b=$("#done"); b.classList.toggle("on",d); b.textContent=d?"✓ Done":"☐ Done"; }
+$("#done").onclick=()=>{Progress.set(P.id,!Progress.has(P.id));updDone();};
 function stop(){ if(timer){clearInterval(timer);timer=null;} }
 function step(d){ const n=V().frames.length; fi=Math.min(n-1,Math.max(0,fi+d)); render(); }
 function play(){
