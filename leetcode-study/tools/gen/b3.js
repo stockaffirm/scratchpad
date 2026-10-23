@@ -1,0 +1,103 @@
+const {prob,R,M,F,range}=require("./lib");
+const N=null;
+const T=(lv,hot=[])=>lv.map((x,l)=>R("level "+l,x.map(v=>v===N?"·":v),hot.filter(h=>h[0]===l).map(h=>h[1])));
+prob({id:104,slug:"maximum-depth-of-binary-tree",title:"Maximum Depth of Binary Tree",level:"Easy",topic:"Binary Tree - DFS",
+q:"How many levels does the tree have (longest root-to-leaf path)?",i:"[3, 9, 20, null, null, 15, 7]",o:"3",
+code:["class Solution:","    def maxDepth(self, root):","        if not root: return 0","        return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))"],
+time:"O(n)",space:"O(h)",explain:"Depth = 1 + deeper child.",best:"Recursion: a node's depth is one more than its deeper subtree.",
+notes:["Empty tree has depth 0.","Space is the recursion depth h."],
+frames:L=>{const t=[[3],[9,20],[N,N,15,7]];return [F("Tree","Count levels top to bottom.",[L("def maxDepth")],T(t)),
+F("Leaf 9","Both children empty → depth 1.",[L("if not root"),L("return 1 +")],T(t,[[1,0]]),{"depth(9)":1}),
+F("Leaves 15 and 7","Each is a leaf → depth 1.",[L("return 1 +")],T(t,[[2,2],[2,3]]),{"depth(15)":1,"depth(7)":1}),
+F("Node 20","1 + max(1, 1) = 2.",[L("return 1 +")],T(t,[[1,1]]),{"depth(20)":2}),
+F("Root 3","1 + max(1, 2) = 3.",[L("return 1 +")],T(t,[[0,0]]),{"depth(3)":3})]}});
+prob({id:872,slug:"leaf-similar-trees",title:"Leaf-Similar Trees",level:"Easy",topic:"Binary Tree - DFS",
+q:"Two trees are leaf-similar if their leaf values, read left to right, match.",i:"two trees with leaves 6,7,4,9,8",o:"True",
+code:["class Solution:","    def leafSimilar(self, root1, root2):","        def leaves(n):","            if not n: return []","            if not n.left and not n.right: return [n.val]","            return leaves(n.left) + leaves(n.right)","        return leaves(root1) == leaves(root2)"],
+time:"O(n+m)",space:"O(n+m)",explain:"Collect leaves in order, compare lists.",best:"DFS collects leaves left to right; compare the two lists.",
+notes:["A leaf has no left and no right child.","DFS left-before-right gives the leaf order."],
+frames:L=>{const t=[[3],[5,1],[6,2,9,8],[N,N,7,4,N,N,N,N]];return [F("Tree 1","Leaves are the nodes with no children.",[L("def leaves")],T(t)),
+F("Leaves of tree 1","Left-to-right: 6, 7, 4, 9, 8.",[L("[n.val]"),L("return leaves(n.left)")],T(t,[[2,0],[3,2],[3,3],[2,2],[2,3]])),
+F("Leaves of tree 2","Another shape, same leaves.",[L("return leaves(root1)")],[R("tree 1",[6,7,4,9,8],[0,1,2,3,4]),R("tree 2",[6,7,4,9,8],[0,1,2,3,4])]),
+F("Return","Lists are equal.",[L("return leaves(root1)")],[R("answer",["True"],[0])])]}});
+prob({id:1448,slug:"count-good-nodes-in-binary-tree",title:"Count Good Nodes in Binary Tree",level:"Medium",topic:"Binary Tree - DFS",
+q:"A node is good if no node on the path from the root is larger. Count them.",i:"[3, 1, 4, 3, null, 1, 5]",o:"4",
+code:["class Solution:","    def goodNodes(self, root):","        def dfs(node, mx):","            if not node: return 0","            good = 1 if node.val >= mx else 0","            mx = max(mx, node.val)","            return good + dfs(node.left, mx) + dfs(node.right, mx)","        return dfs(root, root.val)"],
+time:"O(n)",space:"O(h)",explain:"Carry the path maximum down.",best:"DFS passing the max-so-far down the path.",
+notes:["Equal to the max counts as good (>=).","Root is always good."],
+frames:L=>{const t=[[3],[1,4],[3,N,1,5]],f=[F("Tree","Carry the maximum seen on the path.",[L("def dfs")],T(t))];
+ const steps=[["3",3,0,0,1],["1",3,1,0,0],["3",3,2,0,1],["4",3,1,1,1],["1",4,2,2,0],["5",4,2,3,1]];let good=[],cnt=0;
+ steps.forEach(([v,mx,l,i,g])=>{if(g){cnt++;good.push([l,i])}f.push(F("Visit "+v,g?v+" ≥ "+mx+" → good":v+" < "+mx+" → not good",[L("good ="),L("mx = max")],T(t,good.concat([])),{"max so far":mx,count:cnt}))});
+ f.push(F("Return","4 good nodes.",[L("return dfs")],T(t,good),{count:cnt}));return f}});
+prob({id:437,slug:"path-sum-iii",title:"Path Sum III",level:"Medium",topic:"Binary Tree - DFS",
+q:"Count downward paths whose values sum to target.",i:"[10, 5, -3, 3, 2, null, 11], target=8",o:"2",
+code:["class Solution:","    def pathSum(self, root, target):","        count = Counter({0: 1})","        def dfs(node, cur):","            if not node: return 0","            cur += node.val","            res = count[cur - target]","            count[cur] += 1","            res += dfs(node.left, cur) + dfs(node.right, cur)","            count[cur] -= 1","            return res","        return dfs(root, 0)"],
+time:"O(n)",space:"O(h)",explain:"Prefix sums on the path + a hash map of counts.",best:"Prefix-sum hash map along the path turns it into O(n).",
+notes:["A path sums to target if prefix[now] - target was seen earlier on the path.","Undo the count when backtracking."],
+frames:L=>{const t=[[10],[5,-3],[3,2,N,11]],f=[F("Tree","target = 8. Track running sums down the path.",[L("count = Counter")],T(t),{target:8})];
+ const rows=[["10",[0,0],10,0],["5",[1,0],15,1],["3",[2,0],18,0],["2",[2,1],17,0],["-3",[1,1],7,0],["11",[2,3],18,1]];let total=0;
+ rows.forEach(([v,h,cur,found])=>{total+=found;f.push(F("Visit "+v,"cur = "+cur+"; need earlier prefix "+(cur-8)+(found?" → found! +1":" → none"),[L("cur += node.val"),L("res = count")],T(t,[h]),{cur,need:cur-8,total}))});
+ f.push(F("Return","Paths: 5→3 and -3→11.",[L("return dfs")],T(t,[[1,0],[2,0],[1,1],[2,3]]),{total:2}));return f}});
+prob({id:1372,slug:"longest-zigzag-path-in-a-binary-tree",title:"Longest ZigZag Path in a Binary Tree",level:"Medium",topic:"Binary Tree - DFS",
+q:"Longest path that alternates left, right, left, right…",i:"1 → R 2 → L 3 → R 4 (and 2 → R 5)",o:"3",
+code:["class Solution:","    def longestZigZag(self, root):","        best = 0","        def dfs(node, came_from, length):","            nonlocal best","            if not node: return","            best = max(best, length)","            dfs(node.left, 'L', length + 1 if came_from == 'R' else 1)","            dfs(node.right, 'R', length + 1 if came_from == 'L' else 1)","        dfs(root, '', 0)","        return best"],
+time:"O(n)",space:"O(h)",explain:"Switching direction extends; same direction resets to 1.",best:"DFS tracking last direction and current zigzag length.",
+notes:["length counts edges in the zigzag ending here.","Same direction twice restarts at 1."],
+frames:L=>{const t=[[1],[N,2],[N,N,3,5],[N,N,N,N,N,4,N,N]];return [F("Tree","1 has only a right child 2; 2 has left 3 and right 5; 3 has right 4.",[L("def dfs")],T(t)),
+F("Root","length 0.",[L("best = max")],T(t,[[0,0]]),{length:0,best:0}),
+F("Go right to 2","Came from R → length 1.",[L("dfs(node.right")],T(t,[[0,0],[1,1]]),{length:1,best:1}),
+F("Go left to 3","Switched R→L → length 2.",[L("dfs(node.left")],T(t,[[1,1],[2,2]]),{length:2,best:2}),
+F("Go right to 4","Switched L→R → length 3.",[L("dfs(node.right")],T(t,[[2,2],[3,5]]),{length:3,best:3}),
+F("Back at 2 → right to 5","R then R again → reset to 1.",[L("dfs(node.right")],T(t,[[1,1],[2,3]]),{length:1,best:3}),
+F("Return","Longest zigzag = 3.",[L("return best")],T(t,[[0,0],[1,1],[2,2],[3,5]]),{best:3})]}});
+prob({id:236,slug:"lowest-common-ancestor",title:"Lowest Common Ancestor of a Binary Tree",level:"Medium",topic:"Binary Tree - DFS",
+q:"Find the lowest node that has both p and q as descendants.",i:"p = 6, q = 4",o:"5",
+code:["class Solution:","    def lowestCommonAncestor(self, root, p, q):","        if not root or root == p or root == q: return root","        left = self.lowestCommonAncestor(root.left, p, q)","        right = self.lowestCommonAncestor(root.right, p, q)","        return root if left and right else left or right"],
+time:"O(n)",space:"O(h)",explain:"Each call returns what it found below.",best:"Post-order: if both sides found something, this node is the LCA.",
+notes:["A node can be its own ancestor.","Returning p or q bubbles the find upward."],
+frames:L=>{const t=[[3],[5,1],[6,2,0,8],[N,N,7,4,N,N,N,N]];return [F("Tree","Find the meeting point of 6 and 4.",[L("def lowest")],T(t)),
+F("Found 6","Subtree under 5-left returns 6.",[L("root == p or root == q")],T(t,[[2,0]]),{"returns":6}),
+F("Found 4","Under 2, the right child is 4 → 2 returns 4.",[L("root == p or root == q")],T(t,[[3,3],[2,1]]),{"2 returns":4}),
+F("Node 5","left = 6, right = 4 → both found → return 5.",[L("return root if left and right")],T(t,[[1,0]]),{left:6,right:4,"returns":5}),
+F("Node 3","left = 5, right = None → return left.",[L("return root if left and right")],T(t,[[0,0]]),{"returns":5}),
+F("Answer","LCA is 5.",[L("return root if")],T(t,[[1,0]]))]}});
+prob({id:199,slug:"binary-tree-right-side-view",title:"Binary Tree Right Side View",level:"Medium",topic:"Binary Tree - BFS",
+q:"What do you see standing on the right side of the tree?",i:"[1, 2, 3, null, 5, null, 4]",o:"[1, 3, 4]",
+code:["class Solution:","    def rightSideView(self, root):","        res, q = [], deque([root])","        while q:","            size = len(q)","            for i in range(size):","                node = q.popleft()","                if i == size - 1: res.append(node.val)","                if node.left: q.append(node.left)","                if node.right: q.append(node.right)","        return res"],
+time:"O(n)",space:"O(w)",explain:"Level by level; the last node of each level is visible.",best:"BFS by level; record the last node of each level.",
+notes:["size = len(q) freezes the level width.","w = widest level."],
+frames:L=>{const t=[[1],[2,3],[N,5,N,4]];return [F("Tree","BFS one level at a time.",[L("res, q")],T(t)),
+F("Level 0","Only node 1 → visible.",[L("if i == size - 1")],T(t,[[0,0]]),{queue:"[1]",res:"[1]"}),
+F("Level 1","Nodes 2, 3. The last one (3) is visible.",[L("if i == size - 1")],T(t,[[1,1]]),{queue:"[2,3]",res:"[1,3]"}),
+F("Level 2","Nodes 5, 4. The last one (4) is visible.",[L("if i == size - 1")],T(t,[[2,3]]),{queue:"[5,4]",res:"[1,3,4]"}),
+F("Return","[1, 3, 4]",[L("return res")],[R("res",[1,3,4],[0,1,2])])]}});
+prob({id:1161,slug:"maximum-level-sum-of-a-binary-tree",title:"Maximum Level Sum of a Binary Tree",level:"Medium",topic:"Binary Tree - BFS",
+q:"Which level (1-indexed) has the largest sum?",i:"[1, 7, 0, 7, -8, null, null]",o:"2",
+code:["class Solution:","    def maxLevelSum(self, root):","        q, level, best, ans = deque([root]), 1, -inf, 1","        while q:","            s = 0","            for _ in range(len(q)):","                n = q.popleft(); s += n.val","                if n.left: q.append(n.left)","                if n.right: q.append(n.right)","            if s > best: best, ans = s, level","            level += 1","        return ans"],
+time:"O(n)",space:"O(w)",explain:"Sum each level during BFS.",best:"BFS by level, tracking the best sum and its level.",
+notes:["Levels are 1-indexed.","Keep the smallest level on ties (strict >)."],
+frames:L=>{const t=[[1],[7,0],[7,-8,N,N]];return [F("Tree","Sum each level.",[L("q, level")],T(t)),
+F("Level 1","Sum = 1 → best so far.",[L("s += n.val"),L("if s > best")],T(t,[[0,0]]),{sum:1,best:1,level:1}),
+F("Level 2","7 + 0 = 7 → new best.",[L("if s > best")],T(t,[[1,0],[1,1]]),{sum:7,best:7,level:2}),
+F("Level 3","7 + (-8) = -1 → not better.",[L("if s > best")],T(t,[[2,0],[2,1]]),{sum:-1,best:7,level:2}),
+F("Return","Level 2.",[L("return ans")],[R("ans",[2],[0])])]}});
+prob({id:700,slug:"search-in-a-binary-search-tree",title:"Search in a Binary Search Tree",level:"Easy",topic:"Binary Search Tree",
+q:"Return the subtree rooted at the node whose value equals val.",i:"[4, 2, 7, 1, 3], val = 2",o:"[2, 1, 3]",
+code:["class Solution:","    def searchBST(self, root, val):","        while root and root.val != val:","            root = root.left if val < root.val else root.right","        return root"],
+time:"O(h)",space:"O(1)",explain:"Smaller → left, larger → right.",best:"Walk down comparing; no recursion needed.",
+notes:["BST: left < node < right.","h = height; O(log n) when balanced."],
+frames:L=>{const t=[[4],[2,7],[1,3,N,N]];return [F("Tree","Looking for 2.",[L("def search")],T(t)),
+F("At 4","2 < 4 → go left.",[L("root = root.left")],T(t,[[0,0]])),
+F("At 2","Found it.",[L("while root and")],T(t,[[1,0]])),
+F("Return","The subtree 2 → (1, 3).",[L("return root")],T(t,[[1,0],[2,0],[2,1]]))]}});
+prob({id:450,slug:"delete-node-in-a-bst",title:"Delete Node in a BST",level:"Medium",topic:"Binary Search Tree",
+q:"Delete the node with the given key and keep it a valid BST.",i:"[5, 3, 6, 2, 4, null, 7], key = 3",o:"[5, 4, 6, 2, null, null, 7]",
+code:["class Solution:","    def deleteNode(self, root, key):","        if not root: return None","        if key < root.val: root.left = self.deleteNode(root.left, key)","        elif key > root.val: root.right = self.deleteNode(root.right, key)","        else:","            if not root.left: return root.right","            if not root.right: return root.left","            succ = root.right","            while succ.left: succ = succ.left","            root.val = succ.val","            root.right = self.deleteNode(root.right, succ.val)","        return root"],
+time:"O(h)",space:"O(h)",explain:"Zero/one child: splice. Two children: copy the in-order successor.",best:"Three cases: leaf, one child, two children (use successor).",
+notes:["Successor = smallest value in the right subtree.","Copy its value, then delete the successor."],
+frames:L=>{const a=[[5],[3,6],[2,4,N,7]];return [F("Tree","Delete 3 (it has two children).",[L("def delete")],T(a,[[1,0]])),
+F("Find 3","3 < 5 → go left.",[L("if key < root.val")],T(a,[[0,0],[1,0]])),
+F("Two children","Both 2 and 4 exist → need the successor.",[L("if not root.left"),L("if not root.right")],T(a,[[1,0],[2,0],[2,1]])),
+F("Successor","Smallest in the right subtree: 4.",[L("succ = root.right"),L("while succ.left")],T(a,[[2,1]])),
+F("Copy value","Node 3 becomes 4.",[L("root.val = succ.val")],T([[5],[4,6],[2,4,N,7]],[[1,0]])),
+F("Delete old 4","Remove the successor from the right.",[L("root.right = self.deleteNode")],T([[5],[4,6],[2,N,N,7]],[[1,0]]))]}});
