@@ -93,3 +93,4 @@ details{margin-top:6px;font-size:14px;color:var(--mute)}details summary{cursor:p
 .qa{display:none;padding:2px 14px 14px 46px}.rowx.qopen .qa{display:block}.qa .q{font-size:16px;margin:0 0 10px}.qa .open{display:inline-block;margin-top:12px;font-weight:600}
 .thead .ti{grid-column:4}
 @media (max-width:560px){.thead,.r{grid-template-columns:26px 30px 1fr 24px;gap:6px}.thead .lc,.rowx .lc,.thead span:nth-child(5),.rowx .tag{display:none}.thead span:nth-child(5){display:none}.qa{padding-left:14px}}
+.ck{width:26px;height:26px;border:2px solid var(--ink);border-radius:7px;opacity:.8}.ck:hover{opacity:1;border-color:var(--ok)}.rowx.done .ck{opacity:1}.thead,.r{grid-template-columns:28px 40px 62px 1fr 74px 40px}h1{margin-bottom:14px}
