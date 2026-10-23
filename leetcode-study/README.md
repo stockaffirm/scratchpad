@@ -1,6 +1,6 @@
 # LeetCode Visual Study
 
-Open `index.html`. Each problem: **Question → Code → Flow → Diagram** with Prev / Play / Next (also ← → and space).
+**▶ [Open the live version](https://stockaffirm.github.io/scratchpad/leetcode-study/)** (or open `index.html` locally). Each problem: **Question → Code → Flow → Diagram** with Prev / Play / Next (also ← → and space).
 
 ```
 leetcode-study/
