@@ -11,9 +11,9 @@ function hl(line){
 }
 
 const cur = ORDER.findIndex(d=>d.startsWith(P.id+"-")), pv = ORDER[cur-1], nx = ORDER[cur+1];
-const pnav = `<div class="pnav bot">${pv?`<a href="../${pv}/">◀ Previous problem</a>`:"<span></span>"}${nx?`<a href="../${nx}/">Next problem ▶</a>`:"<span></span>"}</div>`;
+const pnav = `<div class="pnav bot">${pv?`<a href="../${pv}/">◀ Previous problem</a>`:"<span></span>"}${nx?`<a data-next href="../${nx}/">Next problem ▶</a>`:"<span></span>"}</div>`;
 $("#app").innerHTML = `
-<div class="pnav"><a href="../">← All problems</a><span class="pos">${cur+1} of ${ORDER.length}</span>${nx?`<a class="go" href="../${nx}/">Next problem ▶</a>`:"<span></span>"}</div>
+<div class="pnav"><a href="../">← All problems</a><span class="pos">${cur+1} of ${ORDER.length}</span>${nx?`<a data-next class="go" href="../${nx}/">Next problem ▶</a>`:"<span></span>"}</div>
 <h1>${P.id}. ${esc(P.title)}</h1>
 <p class="sub"><span class="tag ${P.level}">${P.level}</span><span class="tag">${esc(P.topic)}</span></p>
 <section class="sec"><h2><b>1</b>Question</h2>
@@ -37,6 +37,7 @@ ${pnav}
   <select id="spd" title="Speed"><option value="2">0.5×</option><option value="1" selected>1×</option><option value="0.5">2×</option></select>
 </div></div>`;
 
+document.querySelectorAll("a[data-next]").forEach(a=>a.addEventListener("click",()=>Progress.set(P.id,true)));
 const V = () => P.variants[vi], F = () => V().frames[fi];
 
 function renderTabs(){
