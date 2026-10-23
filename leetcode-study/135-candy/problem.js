@@ -80,6 +80,76 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "child 1: rating 0 ≤ 1 (left neighbour) → stays 1",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "ratings",
+         "cells": [
+          "1",
+          "0",
+          "2"
+         ],
+         "hot": [
+          1,
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "candy",
+         "cells": [
+          "1",
+          "1",
+          "1"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "child 2: rating 2 > 0 (left neighbour) → candy = 1 + 1 = 2",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "ratings",
+         "cells": [
+          "1",
+          "0",
+          "2"
+         ],
+         "hot": [
+          2,
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "candy",
+         "cells": [
+          "1",
+          "1",
+          "2"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -113,6 +183,76 @@ window.PROBLEM = {
         0
        ],
        "marks": {}
+      }
+     ],
+     "sub": [
+      {
+       "description": "child 1: rating 0 ≤ 2 (right neighbour) → stays 1",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "ratings",
+         "cells": [
+          "1",
+          "0",
+          "2"
+         ],
+         "hot": [
+          1,
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "candy",
+         "cells": [
+          "1",
+          "1",
+          "2"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "child 0: rating 1 > 0 (right neighbour) → candy = max(current, 1 + 1) = 2",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "ratings",
+         "cells": [
+          "1",
+          "0",
+          "2"
+         ],
+         "hot": [
+          0,
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "candy",
+         "cells": [
+          "2",
+          "1",
+          "2"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
       }
      ]
     },

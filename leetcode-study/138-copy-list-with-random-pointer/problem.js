@@ -71,6 +71,71 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "clone map[0] = A→A'",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "clone map",
+         "cells": [
+          "A→A'",
+          "·",
+          "·"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "clone map[1] = B→B'",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "clone map",
+         "cells": [
+          "A→A'",
+          "B→B'",
+          "·"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "clone map[2] = C→C'. Create A', B', C' with no pointers yet; remember A→A', B→B', C→C'.",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "clone map",
+         "cells": [
+          "A→A'",
+          "B→B'",
+          "C→C'"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -109,6 +174,116 @@ window.PROBLEM = {
         2
        ],
        "marks": {}
+      }
+     ],
+     "sub": [
+      {
+       "description": "copy random[0] = A'→C'",
+       "codeLines": [
+        9
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "copy next",
+         "cells": [
+          "A'",
+          "B'",
+          "C'"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {},
+         "kind": "list"
+        },
+        {
+         "name": "copy random",
+         "cells": [
+          "A'→C'",
+          "·",
+          "·"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "copy random[1] = B'→A'",
+       "codeLines": [
+        9
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "copy next",
+         "cells": [
+          "A'",
+          "B'",
+          "C'"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {},
+         "kind": "list"
+        },
+        {
+         "name": "copy random",
+         "cells": [
+          "A'→C'",
+          "B'→A'",
+          "·"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "copy random[2] = C'→B'. Set A'.next = clone[A.next] = B' and A'.random = clone[A.random] = C'. Same for the others.",
+       "codeLines": [
+        9
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "copy next",
+         "cells": [
+          "A'",
+          "B'",
+          "C'"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {},
+         "kind": "list"
+        },
+        {
+         "name": "copy random",
+         "cells": [
+          "A'→C'",
+          "B'→A'",
+          "C'→B'"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
       }
      ]
     },

@@ -61,6 +61,107 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "dp[0] = 6 + min(4, 1) = 7",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "row",
+         "cells": [
+          "6",
+          "5",
+          "7"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "dp",
+         "cells": [
+          "7",
+          "1",
+          "8"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "dp[1] = 5 + min(1, 8) = 6",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "row",
+         "cells": [
+          "6",
+          "5",
+          "7"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "dp",
+         "cells": [
+          "7",
+          "6",
+          "8"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "dp[2] = 7 + min(8, 3) = 10",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "row",
+         "cells": [
+          "6",
+          "5",
+          "7"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "dp",
+         "cells": [
+          "7",
+          "6",
+          "10"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -83,6 +184,70 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "dp[0] = 3 + min(7, 6) = 9",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "row",
+         "cells": [
+          "3",
+          "4"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "dp",
+         "cells": [
+          "9",
+          "6"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "dp[1] = 4 + min(6, 10) = 10",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "row",
+         "cells": [
+          "3",
+          "4"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "dp",
+         "cells": [
+          "9",
+          "10"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -102,6 +267,37 @@ window.PROBLEM = {
         0
        ],
        "marks": {}
+      }
+     ],
+     "sub": [
+      {
+       "description": "dp[0] = 2 + min(9, 10) = 11",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "row",
+         "cells": [
+          "2"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "dp",
+         "cells": [
+          "11"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
       }
      ]
     },

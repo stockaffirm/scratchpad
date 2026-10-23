@@ -90,6 +90,203 @@ window.PROBLEM = {
         4
        ]
       }
+     ],
+     "sub": [
+      {
+       "description": "Kid 0: 2 + 3 = 5 ≥ 5 → True",
+       "codeLines": [
+        6
+       ],
+       "facts": {
+        "max": 5
+       },
+       "rows": [
+        {
+         "name": "candies",
+         "cells": [
+          "2",
+          "3",
+          "5",
+          "1",
+          "3"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "with extra",
+         "cells": [
+          "5",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "Kid 1: 3 + 3 = 6 ≥ 5 → True",
+       "codeLines": [
+        6
+       ],
+       "facts": {
+        "max": 5
+       },
+       "rows": [
+        {
+         "name": "candies",
+         "cells": [
+          "2",
+          "3",
+          "5",
+          "1",
+          "3"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "with extra",
+         "cells": [
+          "5",
+          "6",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "Kid 2: 5 + 3 = 8 ≥ 5 → True",
+       "codeLines": [
+        6
+       ],
+       "facts": {
+        "max": 5
+       },
+       "rows": [
+        {
+         "name": "candies",
+         "cells": [
+          "2",
+          "3",
+          "5",
+          "1",
+          "3"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "with extra",
+         "cells": [
+          "5",
+          "6",
+          "8",
+          "·",
+          "·"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "Kid 3: 1 + 3 = 4 < 5 → False",
+       "codeLines": [
+        6
+       ],
+       "facts": {
+        "max": 5
+       },
+       "rows": [
+        {
+         "name": "candies",
+         "cells": [
+          "2",
+          "3",
+          "5",
+          "1",
+          "3"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        },
+        {
+         "name": "with extra",
+         "cells": [
+          "5",
+          "6",
+          "8",
+          "4",
+          "·"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "Kid 4: 3 + 3 = 6 ≥ 5 → True",
+       "codeLines": [
+        6
+       ],
+       "facts": {
+        "max": 5
+       },
+       "rows": [
+        {
+         "name": "candies",
+         "cells": [
+          "2",
+          "3",
+          "5",
+          "1",
+          "3"
+         ],
+         "hot": [
+          4
+         ],
+         "marks": {}
+        },
+        {
+         "name": "with extra",
+         "cells": [
+          "5",
+          "6",
+          "8",
+          "4",
+          "6"
+         ],
+         "hot": [
+          4
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -173,6 +370,193 @@ window.PROBLEM = {
         2
        ]
       }
+     ],
+     "sub": [
+      {
+       "description": "Start: biggest = 2",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "candies",
+         "cells": [
+          "2",
+          "3",
+          "5",
+          "1",
+          "3"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "running max",
+         "cells": [
+          "2",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "3 vs biggest 2 → new biggest 3",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "candies",
+         "cells": [
+          "2",
+          "3",
+          "5",
+          "1",
+          "3"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "running max",
+         "cells": [
+          "2",
+          "3",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "5 vs biggest 3 → new biggest 5",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "candies",
+         "cells": [
+          "2",
+          "3",
+          "5",
+          "1",
+          "3"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "running max",
+         "cells": [
+          "2",
+          "3",
+          "5",
+          "·",
+          "·"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "1 vs biggest 5 → keep 5",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "candies",
+         "cells": [
+          "2",
+          "3",
+          "5",
+          "1",
+          "3"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        },
+        {
+         "name": "running max",
+         "cells": [
+          "2",
+          "3",
+          "5",
+          "5",
+          "·"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "3 vs biggest 5 → keep 5",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "candies",
+         "cells": [
+          "2",
+          "3",
+          "5",
+          "1",
+          "3"
+         ],
+         "hot": [
+          4
+         ],
+         "marks": {}
+        },
+        {
+         "name": "running max",
+         "cells": [
+          "2",
+          "3",
+          "5",
+          "5",
+          "5"
+         ],
+         "hot": [
+          4
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -198,6 +582,203 @@ window.PROBLEM = {
         1,
         2,
         4
+       ]
+      }
+     ],
+     "sub": [
+      {
+       "description": "Kid 0: 2 + 3 = 5 ≥ 5 → True",
+       "codeLines": [
+        8
+       ],
+       "facts": {
+        "max": 5
+       },
+       "rows": [
+        {
+         "name": "candies",
+         "cells": [
+          "2",
+          "3",
+          "5",
+          "1",
+          "3"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "with extra",
+         "cells": [
+          "5",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "Kid 1: 3 + 3 = 6 ≥ 5 → True",
+       "codeLines": [
+        8
+       ],
+       "facts": {
+        "max": 5
+       },
+       "rows": [
+        {
+         "name": "candies",
+         "cells": [
+          "2",
+          "3",
+          "5",
+          "1",
+          "3"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "with extra",
+         "cells": [
+          "5",
+          "6",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "Kid 2: 5 + 3 = 8 ≥ 5 → True",
+       "codeLines": [
+        8
+       ],
+       "facts": {
+        "max": 5
+       },
+       "rows": [
+        {
+         "name": "candies",
+         "cells": [
+          "2",
+          "3",
+          "5",
+          "1",
+          "3"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "with extra",
+         "cells": [
+          "5",
+          "6",
+          "8",
+          "·",
+          "·"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "Kid 3: 1 + 3 = 4 < 5 → False",
+       "codeLines": [
+        8
+       ],
+       "facts": {
+        "max": 5
+       },
+       "rows": [
+        {
+         "name": "candies",
+         "cells": [
+          "2",
+          "3",
+          "5",
+          "1",
+          "3"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        },
+        {
+         "name": "with extra",
+         "cells": [
+          "5",
+          "6",
+          "8",
+          "4",
+          "·"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "Kid 4: 3 + 3 = 6 ≥ 5 → True",
+       "codeLines": [
+        8
+       ],
+       "facts": {
+        "max": 5
+       },
+       "rows": [
+        {
+         "name": "candies",
+         "cells": [
+          "2",
+          "3",
+          "5",
+          "1",
+          "3"
+         ],
+         "hot": [
+          4
+         ],
+         "marks": {}
+        },
+        {
+         "name": "with extra",
+         "cells": [
+          "5",
+          "6",
+          "8",
+          "4",
+          "6"
+         ],
+         "hot": [
+          4
+         ],
+         "marks": {}
+        }
        ]
       }
      ]

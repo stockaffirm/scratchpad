@@ -108,6 +108,278 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "m[0][0] = 6",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "m",
+         "cells": [
+          [
+           "6",
+           "2"
+          ],
+          [
+           "4",
+           "5"
+          ],
+          [
+           "7",
+           "8"
+          ]
+         ],
+         "hot": [
+          "0,0"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "res",
+         "cells": [
+          "1",
+          "2",
+          "3"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "m[0][1] = 9",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "m",
+         "cells": [
+          [
+           "6",
+           "9"
+          ],
+          [
+           "4",
+           "5"
+          ],
+          [
+           "7",
+           "8"
+          ]
+         ],
+         "hot": [
+          "0,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "res",
+         "cells": [
+          "1",
+          "2",
+          "3"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "m[1][0] = 5",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "m",
+         "cells": [
+          [
+           "6",
+           "9"
+          ],
+          [
+           "5",
+           "5"
+          ],
+          [
+           "7",
+           "8"
+          ]
+         ],
+         "hot": [
+          "1,0"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "res",
+         "cells": [
+          "1",
+          "2",
+          "3"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "m[1][1] = 8",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "m",
+         "cells": [
+          [
+           "6",
+           "9"
+          ],
+          [
+           "5",
+           "8"
+          ],
+          [
+           "7",
+           "8"
+          ]
+         ],
+         "hot": [
+          "1,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "res",
+         "cells": [
+          "1",
+          "2",
+          "3"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "m[2][0] = 4",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "m",
+         "cells": [
+          [
+           "6",
+           "9"
+          ],
+          [
+           "5",
+           "8"
+          ],
+          [
+           "4",
+           "8"
+          ]
+         ],
+         "hot": [
+          "2,0"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "res",
+         "cells": [
+          "1",
+          "2",
+          "3"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "m[2][1] = 7. Left over: [[4,5,6],[7,8,9]] rotated so the right side is now the top.",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "m",
+         "cells": [
+          [
+           "6",
+           "9"
+          ],
+          [
+           "5",
+           "8"
+          ],
+          [
+           "4",
+           "7"
+          ]
+         ],
+         "hot": [
+          "2,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "res",
+         "cells": [
+          "1",
+          "2",
+          "3"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {

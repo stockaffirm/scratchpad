@@ -97,6 +97,164 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "level 2[0] = 3",
+       "codeLines": [
+        4
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "level 0",
+         "cells": [
+          "4"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "level 1",
+         "cells": [
+          "2",
+          "7"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "level 2",
+         "cells": [
+          "3",
+          "3",
+          "6",
+          "9"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "level 2[1] = 1",
+       "codeLines": [
+        4
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "level 0",
+         "cells": [
+          "4"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "level 1",
+         "cells": [
+          "2",
+          "7"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "level 2",
+         "cells": [
+          "3",
+          "1",
+          "6",
+          "9"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "level 2[2] = 9",
+       "codeLines": [
+        4
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "level 0",
+         "cells": [
+          "4"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "level 1",
+         "cells": [
+          "2",
+          "7"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "level 2",
+         "cells": [
+          "3",
+          "1",
+          "9",
+          "9"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "level 2[3] = 6. Inside 2 swap (1,3); inside 7 swap (6,9).",
+       "codeLines": [
+        4
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "level 0",
+         "cells": [
+          "4"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "level 1",
+         "cells": [
+          "2",
+          "7"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "level 2",
+         "cells": [
+          "3",
+          "1",
+          "9",
+          "6"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -137,6 +295,176 @@ window.PROBLEM = {
        ],
        "hot": [],
        "marks": {}
+      }
+     ],
+     "sub": [
+      {
+       "description": "level 2[0] = 9",
+       "codeLines": [
+        4
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "level 0",
+         "cells": [
+          "4"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "level 1",
+         "cells": [
+          "7",
+          "2"
+         ],
+         "hot": [
+          0,
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "level 2",
+         "cells": [
+          "9",
+          "1",
+          "9",
+          "6"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "level 2[1] = 6",
+       "codeLines": [
+        4
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "level 0",
+         "cells": [
+          "4"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "level 1",
+         "cells": [
+          "7",
+          "2"
+         ],
+         "hot": [
+          0,
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "level 2",
+         "cells": [
+          "9",
+          "6",
+          "9",
+          "6"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "level 2[2] = 3",
+       "codeLines": [
+        4
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "level 0",
+         "cells": [
+          "4"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "level 1",
+         "cells": [
+          "7",
+          "2"
+         ],
+         "hot": [
+          0,
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "level 2",
+         "cells": [
+          "9",
+          "6",
+          "3",
+          "6"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "level 2[3] = 1. 2 and 7 trade places.",
+       "codeLines": [
+        4
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "level 0",
+         "cells": [
+          "4"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "level 1",
+         "cells": [
+          "7",
+          "2"
+         ],
+         "hot": [
+          0,
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "level 2",
+         "cells": [
+          "9",
+          "6",
+          "3",
+          "1"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        }
+       ]
       }
      ]
     },

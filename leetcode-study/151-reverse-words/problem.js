@@ -124,6 +124,267 @@ window.PROBLEM = {
        ],
        "hot": []
       }
+     ],
+     "sub": [
+      {
+       "description": "swap positions 0 and 14",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "a",
+         "cells": [
+          "e",
+          "h",
+          "e",
+          " ",
+          "s",
+          "k",
+          "y",
+          " ",
+          "i",
+          "s",
+          " ",
+          "b",
+          "l",
+          "u",
+          "t"
+         ],
+         "hot": [
+          0,
+          14
+         ],
+         "marks": {
+          "0": "i",
+          "14": "j"
+         }
+        }
+       ]
+      },
+      {
+       "description": "swap positions 1 and 13",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "a",
+         "cells": [
+          "e",
+          "u",
+          "e",
+          " ",
+          "s",
+          "k",
+          "y",
+          " ",
+          "i",
+          "s",
+          " ",
+          "b",
+          "l",
+          "h",
+          "t"
+         ],
+         "hot": [
+          1,
+          13
+         ],
+         "marks": {
+          "1": "i",
+          "13": "j"
+         }
+        }
+       ]
+      },
+      {
+       "description": "swap positions 2 and 12",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "a",
+         "cells": [
+          "e",
+          "u",
+          "l",
+          " ",
+          "s",
+          "k",
+          "y",
+          " ",
+          "i",
+          "s",
+          " ",
+          "b",
+          "e",
+          "h",
+          "t"
+         ],
+         "hot": [
+          2,
+          12
+         ],
+         "marks": {
+          "2": "i",
+          "12": "j"
+         }
+        }
+       ]
+      },
+      {
+       "description": "swap positions 3 and 11",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "a",
+         "cells": [
+          "e",
+          "u",
+          "l",
+          "b",
+          "s",
+          "k",
+          "y",
+          " ",
+          "i",
+          "s",
+          " ",
+          " ",
+          "e",
+          "h",
+          "t"
+         ],
+         "hot": [
+          3,
+          11
+         ],
+         "marks": {
+          "3": "i",
+          "11": "j"
+         }
+        }
+       ]
+      },
+      {
+       "description": "swap positions 4 and 10",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "a",
+         "cells": [
+          "e",
+          "u",
+          "l",
+          "b",
+          " ",
+          "k",
+          "y",
+          " ",
+          "i",
+          "s",
+          "s",
+          " ",
+          "e",
+          "h",
+          "t"
+         ],
+         "hot": [
+          4,
+          10
+         ],
+         "marks": {
+          "4": "i",
+          "10": "j"
+         }
+        }
+       ]
+      },
+      {
+       "description": "swap positions 5 and 9",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "a",
+         "cells": [
+          "e",
+          "u",
+          "l",
+          "b",
+          " ",
+          "s",
+          "y",
+          " ",
+          "i",
+          "k",
+          "s",
+          " ",
+          "e",
+          "h",
+          "t"
+         ],
+         "hot": [
+          5,
+          9
+         ],
+         "marks": {
+          "5": "i",
+          "9": "j"
+         }
+        }
+       ]
+      },
+      {
+       "description": "swap positions 6 and 8",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "a",
+         "cells": [
+          "e",
+          "u",
+          "l",
+          "b",
+          " ",
+          "s",
+          "i",
+          " ",
+          "y",
+          "k",
+          "s",
+          " ",
+          "e",
+          "h",
+          "t"
+         ],
+         "hot": [
+          6,
+          8
+         ],
+         "marks": {
+          "6": "i",
+          "8": "j"
+         }
+        }
+       ]
+      }
      ]
     },
     {
@@ -159,6 +420,193 @@ window.PROBLEM = {
         "e"
        ],
        "hot": []
+      }
+     ],
+     "sub": [
+      {
+       "description": "reverse the word at 0–3: swap 0 and 3",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "a",
+         "cells": [
+          "b",
+          "u",
+          "l",
+          "e",
+          " ",
+          "s",
+          "i",
+          " ",
+          "y",
+          "k",
+          "s",
+          " ",
+          "e",
+          "h",
+          "t"
+         ],
+         "hot": [
+          0,
+          3
+         ],
+         "marks": {
+          "0": "i",
+          "3": "j"
+         }
+        }
+       ]
+      },
+      {
+       "description": "reverse the word at 0–3: swap 1 and 2",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "a",
+         "cells": [
+          "b",
+          "l",
+          "u",
+          "e",
+          " ",
+          "s",
+          "i",
+          " ",
+          "y",
+          "k",
+          "s",
+          " ",
+          "e",
+          "h",
+          "t"
+         ],
+         "hot": [
+          1,
+          2
+         ],
+         "marks": {
+          "1": "i",
+          "2": "j"
+         }
+        }
+       ]
+      },
+      {
+       "description": "reverse the word at 5–6: swap 5 and 6",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "a",
+         "cells": [
+          "b",
+          "l",
+          "u",
+          "e",
+          " ",
+          "i",
+          "s",
+          " ",
+          "y",
+          "k",
+          "s",
+          " ",
+          "e",
+          "h",
+          "t"
+         ],
+         "hot": [
+          5,
+          6
+         ],
+         "marks": {
+          "5": "i",
+          "6": "j"
+         }
+        }
+       ]
+      },
+      {
+       "description": "reverse the word at 8–10: swap 8 and 10",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "a",
+         "cells": [
+          "b",
+          "l",
+          "u",
+          "e",
+          " ",
+          "i",
+          "s",
+          " ",
+          "s",
+          "k",
+          "y",
+          " ",
+          "e",
+          "h",
+          "t"
+         ],
+         "hot": [
+          8,
+          10
+         ],
+         "marks": {
+          "8": "i",
+          "10": "j"
+         }
+        }
+       ]
+      },
+      {
+       "description": "reverse the word at 12–14: swap 12 and 14",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "a",
+         "cells": [
+          "b",
+          "l",
+          "u",
+          "e",
+          " ",
+          "i",
+          "s",
+          " ",
+          "s",
+          "k",
+          "y",
+          " ",
+          "t",
+          "h",
+          "e"
+         ],
+         "hot": [
+          12,
+          14
+         ],
+         "marks": {
+          "12": "i",
+          "14": "j"
+         }
+        }
+       ]
       }
      ]
     }
@@ -211,6 +659,90 @@ window.PROBLEM = {
        ],
        "hot": [
         0
+       ]
+      }
+     ],
+     "sub": [
+      {
+       "description": "appendleft('the') → front of the deque",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "deque",
+         "cells": [
+          "the"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "appendleft('sky') → front of the deque",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "deque",
+         "cells": [
+          "sky",
+          "the"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "appendleft('is') → front of the deque",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "deque",
+         "cells": [
+          "is",
+          "sky",
+          "the"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "appendleft('blue') → front of the deque",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "deque",
+         "cells": [
+          "blue",
+          "is",
+          "sky",
+          "the"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
        ]
       }
      ]

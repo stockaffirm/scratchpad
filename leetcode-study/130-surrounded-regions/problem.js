@@ -148,6 +148,180 @@ window.PROBLEM = {
        "marks": {},
        "kind": "grid"
       }
+     ],
+     "sub": [
+      {
+       "description": "board[1][1] = X",
+       "codeLines": [
+        11
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "X",
+           "X",
+           "X",
+           "X"
+          ],
+          [
+           "X",
+           "X",
+           "O",
+           "X"
+          ],
+          [
+           "X",
+           "X",
+           "O",
+           "X"
+          ],
+          [
+           "X",
+           "#",
+           "X",
+           "X"
+          ]
+         ],
+         "hot": [
+          "1,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "board[1][2] = X",
+       "codeLines": [
+        11
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "X",
+           "X",
+           "X",
+           "X"
+          ],
+          [
+           "X",
+           "X",
+           "X",
+           "X"
+          ],
+          [
+           "X",
+           "X",
+           "O",
+           "X"
+          ],
+          [
+           "X",
+           "#",
+           "X",
+           "X"
+          ]
+         ],
+         "hot": [
+          "1,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "board[2][2] = X",
+       "codeLines": [
+        11
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "X",
+           "X",
+           "X",
+           "X"
+          ],
+          [
+           "X",
+           "X",
+           "X",
+           "X"
+          ],
+          [
+           "X",
+           "X",
+           "X",
+           "X"
+          ],
+          [
+           "X",
+           "#",
+           "X",
+           "X"
+          ]
+         ],
+         "hot": [
+          "2,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "board[3][1] = O. Unmarked O's become X; # goes back to O.",
+       "codeLines": [
+        11
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "X",
+           "X",
+           "X",
+           "X"
+          ],
+          [
+           "X",
+           "X",
+           "X",
+           "X"
+          ],
+          [
+           "X",
+           "X",
+           "X",
+           "X"
+          ],
+          [
+           "X",
+           "O",
+           "X",
+           "X"
+          ]
+         ],
+         "hot": [
+          "3,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      }
      ]
     }
    ]

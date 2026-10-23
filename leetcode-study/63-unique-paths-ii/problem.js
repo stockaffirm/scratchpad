@@ -88,6 +88,76 @@ window.PROBLEM = {
        "marks": {},
        "kind": "grid"
       }
+     ],
+     "sub": [
+      {
+       "description": "cell (0,1) = above 0 + left 1 = 1",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "paths",
+         "cells": [
+          [
+           "1",
+           "1",
+           "·"
+          ],
+          [
+           "·",
+           "·",
+           "·"
+          ],
+          [
+           "·",
+           "·",
+           "·"
+          ]
+         ],
+         "hot": [
+          "0,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "cell (0,2) = above 0 + left 1 = 1",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "paths",
+         "cells": [
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "·",
+           "·",
+           "·"
+          ],
+          [
+           "·",
+           "·",
+           "·"
+          ]
+         ],
+         "hot": [
+          "0,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      }
      ]
     },
     {
@@ -123,6 +193,110 @@ window.PROBLEM = {
        "marks": {},
        "kind": "grid"
       }
+     ],
+     "sub": [
+      {
+       "description": "cell (1,0) = above 1 + left 0 = 1",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "paths",
+         "cells": [
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "1",
+           "·",
+           "·"
+          ],
+          [
+           "·",
+           "·",
+           "·"
+          ]
+         ],
+         "hot": [
+          "1,0"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "cell (1,1) is an obstacle → 0 paths",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "paths",
+         "cells": [
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "1",
+           "0",
+           "·"
+          ],
+          [
+           "·",
+           "·",
+           "·"
+          ]
+         ],
+         "hot": [
+          "1,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "cell (1,2) = above 1 + left 0 = 1",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "paths",
+         "cells": [
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "1",
+           "0",
+           "1"
+          ],
+          [
+           "·",
+           "·",
+           "·"
+          ]
+         ],
+         "hot": [
+          "1,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      }
      ]
     },
     {
@@ -157,6 +331,110 @@ window.PROBLEM = {
        ],
        "marks": {},
        "kind": "grid"
+      }
+     ],
+     "sub": [
+      {
+       "description": "cell (2,0) = above 1 + left 0 = 1",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "paths",
+         "cells": [
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "1",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "·",
+           "·"
+          ]
+         ],
+         "hot": [
+          "2,0"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "cell (2,1) = above 0 + left 1 = 1",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "paths",
+         "cells": [
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "1",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "·"
+          ]
+         ],
+         "hot": [
+          "2,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "cell (2,2) = above 1 + left 1 = 2",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "paths",
+         "cells": [
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "1",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "2"
+          ]
+         ],
+         "hot": [
+          "2,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
       }
      ]
     },

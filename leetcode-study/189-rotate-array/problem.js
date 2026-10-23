@@ -72,6 +72,95 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "swap positions 0 and 6",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "7",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "1"
+         ],
+         "hot": [
+          0,
+          6
+         ],
+         "marks": {
+          "0": "a",
+          "6": "b"
+         }
+        }
+       ]
+      },
+      {
+       "description": "swap positions 1 and 5",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "7",
+          "6",
+          "3",
+          "4",
+          "5",
+          "2",
+          "1"
+         ],
+         "hot": [
+          1,
+          5
+         ],
+         "marks": {
+          "1": "a",
+          "5": "b"
+         }
+        }
+       ]
+      },
+      {
+       "description": "swap positions 2 and 4",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "7",
+          "6",
+          "5",
+          "4",
+          "3",
+          "2",
+          "1"
+         ],
+         "hot": [
+          2,
+          4
+         ],
+         "marks": {
+          "2": "a",
+          "4": "b"
+         }
+        }
+       ]
+      }
      ]
     },
     {
@@ -99,6 +188,37 @@ window.PROBLEM = {
         2
        ],
        "marks": {}
+      }
+     ],
+     "sub": [
+      {
+       "description": "swap positions 0 and 2",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "5",
+          "6",
+          "7",
+          "4",
+          "3",
+          "2",
+          "1"
+         ],
+         "hot": [
+          0,
+          2
+         ],
+         "marks": {
+          "0": "a",
+          "2": "b"
+         }
+        }
+       ]
       }
      ]
     },
@@ -128,6 +248,66 @@ window.PROBLEM = {
         6
        ],
        "marks": {}
+      }
+     ],
+     "sub": [
+      {
+       "description": "swap positions 3 and 6",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "5",
+          "6",
+          "7",
+          "1",
+          "3",
+          "2",
+          "4"
+         ],
+         "hot": [
+          3,
+          6
+         ],
+         "marks": {
+          "3": "a",
+          "6": "b"
+         }
+        }
+       ]
+      },
+      {
+       "description": "swap positions 4 and 5",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "5",
+          "6",
+          "7",
+          "1",
+          "2",
+          "3",
+          "4"
+         ],
+         "hot": [
+          4,
+          5
+         ],
+         "marks": {
+          "4": "a",
+          "5": "b"
+         }
+        }
+       ]
       }
      ]
     }

@@ -81,6 +81,71 @@ window.PROBLEM = {
         2
        ]
       }
+     ],
+     "sub": [
+      {
+       "description": "k = 6: 9 % 6 = 3 ≠ 0 → can't repeat evenly, skip",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "candidates",
+         "cells": [
+          "6",
+          "5",
+          "4"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "k = 5: 9 % 5 = 4 ≠ 0 → can't repeat evenly, skip",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "candidates",
+         "cells": [
+          "6",
+          "5",
+          "4"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "k = 4: 9 % 4 = 1 ≠ 0 → can't repeat evenly, skip",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "candidates",
+         "cells": [
+          "6",
+          "5",
+          "4"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -132,6 +197,485 @@ window.PROBLEM = {
         "C"
        ],
        "hot": []
+      }
+     ],
+     "sub": [
+      {
+       "description": "3 copies[0] = A",
+       "codeLines": [
+        6,
+        7,
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "base",
+         "cells": [
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ]
+        },
+        {
+         "name": "3 copies",
+         "cells": [
+          "A",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          0
+         ]
+        },
+        {
+         "name": "2 copies",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "3 copies[1] = B",
+       "codeLines": [
+        6,
+        7,
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "base",
+         "cells": [
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ]
+        },
+        {
+         "name": "3 copies",
+         "cells": [
+          "A",
+          "B",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          1
+         ]
+        },
+        {
+         "name": "2 copies",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "3 copies[2] = C",
+       "codeLines": [
+        6,
+        7,
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "base",
+         "cells": [
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ]
+        },
+        {
+         "name": "3 copies",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          2
+         ]
+        },
+        {
+         "name": "2 copies",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "3 copies[3] = A",
+       "codeLines": [
+        6,
+        7,
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "base",
+         "cells": [
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ]
+        },
+        {
+         "name": "3 copies",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          3
+         ]
+        },
+        {
+         "name": "2 copies",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "3 copies[4] = B",
+       "codeLines": [
+        6,
+        7,
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "base",
+         "cells": [
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ]
+        },
+        {
+         "name": "3 copies",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          4
+         ]
+        },
+        {
+         "name": "2 copies",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "3 copies[5] = C",
+       "codeLines": [
+        6,
+        7,
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "base",
+         "cells": [
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ]
+        },
+        {
+         "name": "3 copies",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          5
+         ]
+        },
+        {
+         "name": "2 copies",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "3 copies[6] = A",
+       "codeLines": [
+        6,
+        7,
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "base",
+         "cells": [
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ]
+        },
+        {
+         "name": "3 copies",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "·",
+          "·"
+         ],
+         "hot": [
+          6
+         ]
+        },
+        {
+         "name": "2 copies",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "3 copies[7] = B",
+       "codeLines": [
+        6,
+        7,
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "base",
+         "cells": [
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ]
+        },
+        {
+         "name": "3 copies",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "·"
+         ],
+         "hot": [
+          7
+         ]
+        },
+        {
+         "name": "2 copies",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "3 copies[8] = C. Base ABC; repeat it 3 times for str1 and 2 times for str2.",
+       "codeLines": [
+        6,
+        7,
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "base",
+         "cells": [
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ]
+        },
+        {
+         "name": "3 copies",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": [
+          8
+         ]
+        },
+        {
+         "name": "2 copies",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
       }
      ]
     },
@@ -254,6 +798,818 @@ window.PROBLEM = {
         "C"
        ],
        "hot": []
+      }
+     ],
+     "sub": [
+      {
+       "description": "str1+str2[0] = A",
+       "codeLines": [
+        4,
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "str1+str2",
+         "cells": [
+          "A",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          0
+         ]
+        },
+        {
+         "name": "str2+str1",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "str1+str2[1] = B",
+       "codeLines": [
+        4,
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "str1+str2",
+         "cells": [
+          "A",
+          "B",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          1
+         ]
+        },
+        {
+         "name": "str2+str1",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "str1+str2[2] = C",
+       "codeLines": [
+        4,
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "str1+str2",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          2
+         ]
+        },
+        {
+         "name": "str2+str1",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "str1+str2[3] = A",
+       "codeLines": [
+        4,
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "str1+str2",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          3
+         ]
+        },
+        {
+         "name": "str2+str1",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "str1+str2[4] = B",
+       "codeLines": [
+        4,
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "str1+str2",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          4
+         ]
+        },
+        {
+         "name": "str2+str1",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "str1+str2[5] = C",
+       "codeLines": [
+        4,
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "str1+str2",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          5
+         ]
+        },
+        {
+         "name": "str2+str1",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "str1+str2[6] = A",
+       "codeLines": [
+        4,
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "str1+str2",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          6
+         ]
+        },
+        {
+         "name": "str2+str1",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "str1+str2[7] = B",
+       "codeLines": [
+        4,
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "str1+str2",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          7
+         ]
+        },
+        {
+         "name": "str2+str1",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "str1+str2[8] = C",
+       "codeLines": [
+        4,
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "str1+str2",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          8
+         ]
+        },
+        {
+         "name": "str2+str1",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "str1+str2[9] = A",
+       "codeLines": [
+        4,
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "str1+str2",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          9
+         ]
+        },
+        {
+         "name": "str2+str1",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "str1+str2[10] = B",
+       "codeLines": [
+        4,
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "str1+str2",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          10
+         ]
+        },
+        {
+         "name": "str2+str1",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "str1+str2[11] = C",
+       "codeLines": [
+        4,
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "str1+str2",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          11
+         ]
+        },
+        {
+         "name": "str2+str1",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "str1+str2[12] = A",
+       "codeLines": [
+        4,
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "str1+str2",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "·",
+          "·"
+         ],
+         "hot": [
+          12
+         ]
+        },
+        {
+         "name": "str2+str1",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "str1+str2[13] = B",
+       "codeLines": [
+        4,
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "str1+str2",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "·"
+         ],
+         "hot": [
+          13
+         ]
+        },
+        {
+         "name": "str2+str1",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
+      },
+      {
+       "description": "str1+str2[14] = C. Concatenating in either order gives exactly the same string.",
+       "codeLines": [
+        4,
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "str1+str2",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": [
+          14
+         ]
+        },
+        {
+         "name": "str2+str1",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": []
+        }
+       ]
       }
      ]
     },

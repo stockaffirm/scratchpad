@@ -123,6 +123,154 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "set[0] = 100",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "set",
+         "cells": [
+          "100",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "set[1] = 4",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "set",
+         "cells": [
+          "100",
+          "4",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "set[2] = 200",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "set",
+         "cells": [
+          "100",
+          "4",
+          "200",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "set[3] = 1",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "set",
+         "cells": [
+          "100",
+          "4",
+          "200",
+          "1",
+          "·",
+          "·"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "set[4] = 3",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "set",
+         "cells": [
+          "100",
+          "4",
+          "200",
+          "1",
+          "3",
+          "·"
+         ],
+         "hot": [
+          4
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "set[5] = 2. Runs of length 1.",
+       "codeLines": [
+        8
+       ],
+       "facts": {
+        "best": 4
+       },
+       "rows": [
+        {
+         "name": "set",
+         "cells": [
+          "100",
+          "4",
+          "200",
+          "1",
+          "3",
+          "2"
+         ],
+         "hot": [
+          5
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {

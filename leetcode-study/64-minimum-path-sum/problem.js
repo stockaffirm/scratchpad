@@ -86,6 +86,76 @@ window.PROBLEM = {
        "marks": {},
        "kind": "grid"
       }
+     ],
+     "sub": [
+      {
+       "description": "cell (0,1): 3 + only from the left 1 = 4",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "grid",
+         "cells": [
+          [
+           "1",
+           "4",
+           "1"
+          ],
+          [
+           "1",
+           "5",
+           "1"
+          ],
+          [
+           "4",
+           "2",
+           "1"
+          ]
+         ],
+         "hot": [
+          "0,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "cell (0,2): 1 + only from the left 4 = 5",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "grid",
+         "cells": [
+          [
+           "1",
+           "4",
+           "5"
+          ],
+          [
+           "1",
+           "5",
+           "1"
+          ],
+          [
+           "4",
+           "2",
+           "1"
+          ]
+         ],
+         "hot": [
+          "0,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      }
      ]
     },
     {
@@ -123,6 +193,110 @@ window.PROBLEM = {
        "marks": {},
        "kind": "grid"
       }
+     ],
+     "sub": [
+      {
+       "description": "cell (1,0): 1 + only from above 1 = 2",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "grid",
+         "cells": [
+          [
+           "1",
+           "4",
+           "5"
+          ],
+          [
+           "2",
+           "5",
+           "1"
+          ],
+          [
+           "4",
+           "2",
+           "1"
+          ]
+         ],
+         "hot": [
+          "1,0"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "cell (1,1): 5 + min(up 4, left 2) = 2 = 7",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "grid",
+         "cells": [
+          [
+           "1",
+           "4",
+           "5"
+          ],
+          [
+           "2",
+           "7",
+           "1"
+          ],
+          [
+           "4",
+           "2",
+           "1"
+          ]
+         ],
+         "hot": [
+          "1,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "cell (1,2): 1 + min(up 5, left 7) = 5 = 6",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "grid",
+         "cells": [
+          [
+           "1",
+           "4",
+           "5"
+          ],
+          [
+           "2",
+           "7",
+           "6"
+          ],
+          [
+           "4",
+           "2",
+           "1"
+          ]
+         ],
+         "hot": [
+          "1,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      }
      ]
     },
     {
@@ -159,6 +333,110 @@ window.PROBLEM = {
        ],
        "marks": {},
        "kind": "grid"
+      }
+     ],
+     "sub": [
+      {
+       "description": "cell (2,0): 4 + only from above 2 = 6",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "grid",
+         "cells": [
+          [
+           "1",
+           "4",
+           "5"
+          ],
+          [
+           "2",
+           "7",
+           "6"
+          ],
+          [
+           "6",
+           "2",
+           "1"
+          ]
+         ],
+         "hot": [
+          "2,0"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "cell (2,1): 2 + min(up 7, left 6) = 6 = 8",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "grid",
+         "cells": [
+          [
+           "1",
+           "4",
+           "5"
+          ],
+          [
+           "2",
+           "7",
+           "6"
+          ],
+          [
+           "6",
+           "8",
+           "1"
+          ]
+         ],
+         "hot": [
+          "2,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "cell (2,2): 1 + min(up 6, left 8) = 6 = 7",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "grid",
+         "cells": [
+          [
+           "1",
+           "4",
+           "5"
+          ],
+          [
+           "2",
+           "7",
+           "6"
+          ],
+          [
+           "6",
+           "8",
+           "7"
+          ]
+         ],
+         "hot": [
+          "2,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
       }
      ]
     },

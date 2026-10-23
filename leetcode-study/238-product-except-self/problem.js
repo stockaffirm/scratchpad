@@ -64,6 +64,146 @@ window.PROBLEM = {
         3
        ]
       }
+     ],
+     "sub": [
+      {
+       "description": "L[0] = 1 (nothing to the left of index 0)",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "4"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "L",
+         "cells": [
+          "1",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "L[1] = nums[0] × L[0] = 1 × 1 = 1",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "4"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "L",
+         "cells": [
+          "1",
+          "1",
+          "·",
+          "·"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "L[2] = nums[1] × L[1] = 2 × 1 = 2",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "4"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "L",
+         "cells": [
+          "1",
+          "1",
+          "2",
+          "·"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "L[3] = nums[2] × L[2] = 3 × 2 = 6",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "4"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "L",
+         "cells": [
+          "1",
+          "1",
+          "2",
+          "6"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -87,6 +227,190 @@ window.PROBLEM = {
         0,
         1,
         2
+       ]
+      }
+     ],
+     "sub": [
+      {
+       "description": "R[3] = 1 (nothing to the right of index 3)",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "4"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "L",
+         "cells": [
+          "1",
+          "1",
+          "2",
+          "6"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "R",
+         "cells": [
+          "·",
+          "·",
+          "·",
+          "1"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "R[2] = nums[3] × R[3] = 4 × 1 = 4",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "4"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        },
+        {
+         "name": "L",
+         "cells": [
+          "1",
+          "1",
+          "2",
+          "6"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "R",
+         "cells": [
+          "·",
+          "·",
+          "4",
+          "1"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "R[1] = nums[2] × R[2] = 3 × 4 = 12",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "4"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "L",
+         "cells": [
+          "1",
+          "1",
+          "2",
+          "6"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "R",
+         "cells": [
+          "·",
+          "12",
+          "4",
+          "1"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "R[0] = nums[1] × R[1] = 2 × 12 = 24",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "4"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "L",
+         "cells": [
+          "1",
+          "1",
+          "2",
+          "6"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "R",
+         "cells": [
+          "24",
+          "12",
+          "4",
+          "1"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
        ]
       }
      ]
@@ -133,6 +457,200 @@ window.PROBLEM = {
         1,
         2,
         3
+       ]
+      }
+     ],
+     "sub": [
+      {
+       "description": "answer[0] = L[0] × R[0] = 1 × 24 = 24",
+       "codeLines": [
+        9
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "L",
+         "cells": [
+          "1",
+          "1",
+          "2",
+          "6"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "R",
+         "cells": [
+          "24",
+          "12",
+          "4",
+          "1"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "answer",
+         "cells": [
+          "24",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "answer[1] = L[1] × R[1] = 1 × 12 = 12",
+       "codeLines": [
+        9
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "L",
+         "cells": [
+          "1",
+          "1",
+          "2",
+          "6"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "R",
+         "cells": [
+          "24",
+          "12",
+          "4",
+          "1"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "answer",
+         "cells": [
+          "24",
+          "12",
+          "·",
+          "·"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "answer[2] = L[2] × R[2] = 2 × 4 = 8",
+       "codeLines": [
+        9
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "L",
+         "cells": [
+          "1",
+          "1",
+          "2",
+          "6"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "R",
+         "cells": [
+          "24",
+          "12",
+          "4",
+          "1"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "answer",
+         "cells": [
+          "24",
+          "12",
+          "8",
+          "·"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "answer[3] = L[3] × R[3] = 6 × 1 = 6",
+       "codeLines": [
+        9
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "L",
+         "cells": [
+          "1",
+          "1",
+          "2",
+          "6"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        },
+        {
+         "name": "R",
+         "cells": [
+          "24",
+          "12",
+          "4",
+          "1"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        },
+        {
+         "name": "answer",
+         "cells": [
+          "24",
+          "12",
+          "8",
+          "6"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        }
        ]
       }
      ]
@@ -199,6 +717,146 @@ window.PROBLEM = {
         1,
         2,
         3
+       ]
+      }
+     ],
+     "sub": [
+      {
+       "description": "answer[0] = 1",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "4"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "answer",
+         "cells": [
+          "1",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "answer[1] = nums[0] × answer[0] = 1 × 1 = 1",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "4"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "answer",
+         "cells": [
+          "1",
+          "1",
+          "·",
+          "·"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "answer[2] = nums[1] × answer[1] = 2 × 1 = 2",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "4"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "answer",
+         "cells": [
+          "1",
+          "1",
+          "2",
+          "·"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "answer[3] = nums[2] × answer[2] = 3 × 2 = 6",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "4"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "answer",
+         "cells": [
+          "1",
+          "1",
+          "2",
+          "6"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        }
        ]
       }
      ]

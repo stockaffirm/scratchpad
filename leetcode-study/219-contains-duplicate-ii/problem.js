@@ -72,6 +72,116 @@ window.PROBLEM = {
        "hot": [],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "last[0] = 1→0",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "1"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "last",
+         "cells": [
+          "1→0",
+          "·",
+          "·"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "last[1] = 2→1",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "1"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "last",
+         "cells": [
+          "1→0",
+          "2→1",
+          "·"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "last[2] = 3→2. All new → record positions.",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "1"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "last",
+         "cells": [
+          "1→0",
+          "2→1",
+          "3→2"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {

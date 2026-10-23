@@ -97,6 +97,158 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "reachable in 1[0] = 8",
+       "codeLines": [
+        14,
+        16
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "reachable in 1",
+         "cells": [
+          "8",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "reachable in 1[1] = 3",
+       "codeLines": [
+        14,
+        16
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "reachable in 1",
+         "cells": [
+          "8",
+          "3",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "reachable in 1[2] = 4",
+       "codeLines": [
+        14,
+        16
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "reachable in 1",
+         "cells": [
+          "8",
+          "3",
+          "4",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "reachable in 1[3] = 5",
+       "codeLines": [
+        14,
+        16
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "reachable in 1",
+         "cells": [
+          "8",
+          "3",
+          "4",
+          "5",
+          "·",
+          "·"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "reachable in 1[4] = 6",
+       "codeLines": [
+        14,
+        16
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "reachable in 1",
+         "cells": [
+          "8",
+          "3",
+          "4",
+          "5",
+          "6",
+          "·"
+         ],
+         "hot": [
+          4
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "reachable in 1[5] = 7. Roll 1 → square 2 → ladder to 8. Rolls 2–6 → squares 3,4,5,6,7.",
+       "codeLines": [
+        14,
+        16
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "reachable in 1",
+         "cells": [
+          "8",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+         ],
+         "hot": [
+          5
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {

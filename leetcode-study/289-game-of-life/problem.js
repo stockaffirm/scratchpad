@@ -176,6 +176,164 @@ window.PROBLEM = {
        "marks": {},
        "kind": "grid"
       }
+     ],
+     "sub": [
+      {
+       "description": "board[0][1] = 0",
+       "codeLines": [
+        9
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "0",
+           "0",
+           "0"
+          ],
+          [
+           "0",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "0",
+           "0",
+           "0"
+          ]
+         ],
+         "hot": [
+          "0,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "board[1][0] = 1",
+       "codeLines": [
+        9
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "0",
+           "0",
+           "0"
+          ],
+          [
+           "1",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "0",
+           "0",
+           "0"
+          ]
+         ],
+         "hot": [
+          "1,0"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "board[2][0] = 0",
+       "codeLines": [
+        9
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "0",
+           "0",
+           "0"
+          ],
+          [
+           "1",
+           "0",
+           "1"
+          ],
+          [
+           "0",
+           "1",
+           "1"
+          ],
+          [
+           "0",
+           "0",
+           "0"
+          ]
+         ],
+         "hot": [
+          "2,0"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "board[3][1] = 1. Every cell updated using the OLD board.",
+       "codeLines": [
+        9
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "0",
+           "0",
+           "0"
+          ],
+          [
+           "1",
+           "0",
+           "1"
+          ],
+          [
+           "0",
+           "1",
+           "1"
+          ],
+          [
+           "0",
+           "1",
+           "0"
+          ]
+         ],
+         "hot": [
+          "3,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      }
      ]
     }
    ]

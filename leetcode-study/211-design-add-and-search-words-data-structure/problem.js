@@ -139,6 +139,73 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "tries[0] = b-a-d ✓",
+       "codeLines": [
+        11
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "tries",
+         "cells": [
+          "b-a-d ✓",
+          "·",
+          "·"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "tries[1] = d-a-d",
+       "codeLines": [
+        11
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "tries",
+         "cells": [
+          "b-a-d ✓",
+          "d-a-d",
+          "·"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "tries[2] = m-a-d. '.' tries b, d and m; each then matches 'ad' → True.",
+       "codeLines": [
+        11
+       ],
+       "facts": {
+        "result": "True"
+       },
+       "rows": [
+        {
+         "name": "tries",
+         "cells": [
+          "b-a-d ✓",
+          "d-a-d",
+          "m-a-d"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {

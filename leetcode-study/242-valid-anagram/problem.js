@@ -52,6 +52,267 @@ window.PROBLEM = {
        "hot": [],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "'a' → count of 'a' is 1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "word",
+         "cells": [
+          "a",
+          "n",
+          "a",
+          "g",
+          "r",
+          "a",
+          "m"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "counts",
+         "cells": [
+          "a:1"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "'n' → count of 'n' is 1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "word",
+         "cells": [
+          "a",
+          "n",
+          "a",
+          "g",
+          "r",
+          "a",
+          "m"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "counts",
+         "cells": [
+          "a:1",
+          "n:1"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "'a' → count of 'a' is 2",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "word",
+         "cells": [
+          "a",
+          "n",
+          "a",
+          "g",
+          "r",
+          "a",
+          "m"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "counts",
+         "cells": [
+          "a:2",
+          "n:1"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "'g' → count of 'g' is 1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "word",
+         "cells": [
+          "a",
+          "n",
+          "a",
+          "g",
+          "r",
+          "a",
+          "m"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        },
+        {
+         "name": "counts",
+         "cells": [
+          "a:2",
+          "n:1",
+          "g:1"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "'r' → count of 'r' is 1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "word",
+         "cells": [
+          "a",
+          "n",
+          "a",
+          "g",
+          "r",
+          "a",
+          "m"
+         ],
+         "hot": [
+          4
+         ],
+         "marks": {}
+        },
+        {
+         "name": "counts",
+         "cells": [
+          "a:2",
+          "n:1",
+          "g:1",
+          "r:1"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "'a' → count of 'a' is 3",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "word",
+         "cells": [
+          "a",
+          "n",
+          "a",
+          "g",
+          "r",
+          "a",
+          "m"
+         ],
+         "hot": [
+          5
+         ],
+         "marks": {}
+        },
+        {
+         "name": "counts",
+         "cells": [
+          "a:3",
+          "n:1",
+          "g:1",
+          "r:1"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "'m' → count of 'm' is 1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "word",
+         "cells": [
+          "a",
+          "n",
+          "a",
+          "g",
+          "r",
+          "a",
+          "m"
+         ],
+         "hot": [
+          6
+         ],
+         "marks": {}
+        },
+        {
+         "name": "counts",
+         "cells": [
+          "a:3",
+          "n:1",
+          "g:1",
+          "r:1",
+          "m:1"
+         ],
+         "hot": [
+          4
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -87,6 +348,268 @@ window.PROBLEM = {
        ],
        "hot": [],
        "marks": {}
+      }
+     ],
+     "sub": [
+      {
+       "description": "'n' → count of 'n' is 1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "word",
+         "cells": [
+          "n",
+          "a",
+          "g",
+          "a",
+          "r",
+          "a",
+          "m"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "counts",
+         "cells": [
+          "n:1"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "'a' → count of 'a' is 1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "word",
+         "cells": [
+          "n",
+          "a",
+          "g",
+          "a",
+          "r",
+          "a",
+          "m"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "counts",
+         "cells": [
+          "n:1",
+          "a:1"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "'g' → count of 'g' is 1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "word",
+         "cells": [
+          "n",
+          "a",
+          "g",
+          "a",
+          "r",
+          "a",
+          "m"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "counts",
+         "cells": [
+          "n:1",
+          "a:1",
+          "g:1"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "'a' → count of 'a' is 2",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "word",
+         "cells": [
+          "n",
+          "a",
+          "g",
+          "a",
+          "r",
+          "a",
+          "m"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        },
+        {
+         "name": "counts",
+         "cells": [
+          "n:1",
+          "a:2",
+          "g:1"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "'r' → count of 'r' is 1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "word",
+         "cells": [
+          "n",
+          "a",
+          "g",
+          "a",
+          "r",
+          "a",
+          "m"
+         ],
+         "hot": [
+          4
+         ],
+         "marks": {}
+        },
+        {
+         "name": "counts",
+         "cells": [
+          "n:1",
+          "a:2",
+          "g:1",
+          "r:1"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "'a' → count of 'a' is 3",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "word",
+         "cells": [
+          "n",
+          "a",
+          "g",
+          "a",
+          "r",
+          "a",
+          "m"
+         ],
+         "hot": [
+          5
+         ],
+         "marks": {}
+        },
+        {
+         "name": "counts",
+         "cells": [
+          "n:1",
+          "a:3",
+          "g:1",
+          "r:1"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "'m' → count of 'm' is 1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "word",
+         "cells": [
+          "n",
+          "a",
+          "g",
+          "a",
+          "r",
+          "a",
+          "m"
+         ],
+         "hot": [
+          6
+         ],
+         "marks": {}
+        },
+        {
+         "name": "counts",
+         "cells": [
+          "n:1",
+          "a:3",
+          "g:1",
+          "r:1",
+          "m:1"
+         ],
+         "hot": [
+          4
+         ],
+         "marks": {}
+        }
+       ]
       }
      ]
     },

@@ -82,6 +82,123 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "visited[0] = 1",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "visited",
+         "cells": [
+          "1",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "visited[1] = 2",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "visited",
+         "cells": [
+          "1",
+          "2",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "visited[2] = 3",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "visited",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "·",
+          "·"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "visited[3] = 4",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "visited",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "·"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "visited[4] = 6. 1, 2, 3, 4, 6",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "visited",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "6"
+         ],
+         "hot": [
+          4
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -120,6 +237,200 @@ window.PROBLEM = {
         2
        ],
        "marks": {}
+      }
+     ],
+     "sub": [
+      {
+       "description": "sorted[0] = 1",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "sorted",
+         "cells": [
+          "1",
+          "·",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "gaps",
+         "cells": [
+          "1",
+          "1",
+          "1",
+          "2"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "sorted[1] = 2",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "sorted",
+         "cells": [
+          "1",
+          "2",
+          "·",
+          "·",
+          "·"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "gaps",
+         "cells": [
+          "1",
+          "1",
+          "1",
+          "2"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "sorted[2] = 3",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "sorted",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "·",
+          "·"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "gaps",
+         "cells": [
+          "1",
+          "1",
+          "1",
+          "2"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "sorted[3] = 4",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "sorted",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "·"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        },
+        {
+         "name": "gaps",
+         "cells": [
+          "1",
+          "1",
+          "1",
+          "2"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "sorted[4] = 6. 2−1 = 1, 3−2 = 1, 4−3 = 1, 6−4 = 2",
+       "codeLines": [
+        8
+       ],
+       "facts": {
+        "best": 1
+       },
+       "rows": [
+        {
+         "name": "sorted",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "6"
+         ],
+         "hot": [
+          4
+         ],
+         "marks": {}
+        },
+        {
+         "name": "gaps",
+         "cells": [
+          "1",
+          "1",
+          "1",
+          "2"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {}
+        }
+       ]
       }
      ]
     },

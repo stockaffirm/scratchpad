@@ -74,6 +74,218 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "see 1 → count of 1 is now 1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "arr",
+         "cells": [
+          "1",
+          "2",
+          "2",
+          "1",
+          "1",
+          "3"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "counts",
+         "cells": [
+          "1→1"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "see 2 → count of 2 is now 1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "arr",
+         "cells": [
+          "1",
+          "2",
+          "2",
+          "1",
+          "1",
+          "3"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "counts",
+         "cells": [
+          "1→1",
+          "2→1"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "see 2 → count of 2 is now 2",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "arr",
+         "cells": [
+          "1",
+          "2",
+          "2",
+          "1",
+          "1",
+          "3"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "counts",
+         "cells": [
+          "1→1",
+          "2→2"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "see 1 → count of 1 is now 2",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "arr",
+         "cells": [
+          "1",
+          "2",
+          "2",
+          "1",
+          "1",
+          "3"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        },
+        {
+         "name": "counts",
+         "cells": [
+          "1→2",
+          "2→2"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "see 1 → count of 1 is now 3",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "arr",
+         "cells": [
+          "1",
+          "2",
+          "2",
+          "1",
+          "1",
+          "3"
+         ],
+         "hot": [
+          4
+         ],
+         "marks": {}
+        },
+        {
+         "name": "counts",
+         "cells": [
+          "1→3",
+          "2→2"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "see 3 → count of 3 is now 1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "arr",
+         "cells": [
+          "1",
+          "2",
+          "2",
+          "1",
+          "1",
+          "3"
+         ],
+         "hot": [
+          5
+         ],
+         "marks": {}
+        },
+        {
+         "name": "counts",
+         "cells": [
+          "1→3",
+          "2→2",
+          "3→1"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {

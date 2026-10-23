@@ -92,6 +92,76 @@ window.PROBLEM = {
        "marks": {},
        "kind": "grid"
       }
+     ],
+     "sub": [
+      {
+       "description": "cell (1,1) = above 1 + left 1 = 2",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "paths",
+         "cells": [
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "1",
+           "2",
+           "·"
+          ],
+          [
+           "1",
+           "·",
+           "·"
+          ]
+         ],
+         "hot": [
+          "1,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "cell (1,2) = above 1 + left 2 = 3",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "paths",
+         "cells": [
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "1",
+           "2",
+           "3"
+          ],
+          [
+           "1",
+           "·",
+           "·"
+          ]
+         ],
+         "hot": [
+          "1,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      }
      ]
     },
     {
@@ -127,6 +197,76 @@ window.PROBLEM = {
        ],
        "marks": {},
        "kind": "grid"
+      }
+     ],
+     "sub": [
+      {
+       "description": "cell (2,1) = above 2 + left 1 = 3",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "paths",
+         "cells": [
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "1",
+           "2",
+           "3"
+          ],
+          [
+           "1",
+           "3",
+           "·"
+          ]
+         ],
+         "hot": [
+          "2,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "cell (2,2) = above 3 + left 3 = 6",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "paths",
+         "cells": [
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "1",
+           "2",
+           "3"
+          ],
+          [
+           "1",
+           "3",
+           "6"
+          ]
+         ],
+         "hot": [
+          "2,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
       }
      ]
     },

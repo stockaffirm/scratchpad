@@ -130,6 +130,144 @@ window.PROBLEM = {
        "marks": {},
        "kind": "grid"
       }
+     ],
+     "sub": [
+      {
+       "description": "m[0][1] = 0",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "m",
+         "cells": [
+          [
+           "1",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "1"
+          ]
+         ],
+         "hot": [
+          "0,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "m[1][0] = 0",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "m",
+         "cells": [
+          [
+           "1",
+           "0",
+           "1"
+          ],
+          [
+           "0",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "1"
+          ]
+         ],
+         "hot": [
+          "1,0"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "m[1][2] = 0",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "m",
+         "cells": [
+          [
+           "1",
+           "0",
+           "1"
+          ],
+          [
+           "0",
+           "0",
+           "0"
+          ],
+          [
+           "1",
+           "1",
+           "1"
+          ]
+         ],
+         "hot": [
+          "1,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "m[2][1] = 0. Every cell in row 1 or column 1 becomes 0.",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "m",
+         "cells": [
+          [
+           "1",
+           "0",
+           "1"
+          ],
+          [
+           "0",
+           "0",
+           "0"
+          ],
+          [
+           "1",
+           "0",
+           "1"
+          ]
+         ],
+         "hot": [
+          "2,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      }
      ]
     }
    ]

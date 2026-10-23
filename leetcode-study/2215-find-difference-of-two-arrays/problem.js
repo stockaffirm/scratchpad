@@ -78,6 +78,98 @@ window.PROBLEM = {
        "hot": [],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "a[0] = 1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "a",
+         "cells": [
+          "1",
+          "·",
+          "·"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "b",
+         "cells": [
+          "1",
+          "2"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "a[1] = 2",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "a",
+         "cells": [
+          "1",
+          "2",
+          "·"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "b",
+         "cells": [
+          "1",
+          "2"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "a[2] = 3. Duplicates vanish.",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "a",
+         "cells": [
+          "1",
+          "2",
+          "3"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "b",
+         "cells": [
+          "1",
+          "2"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {

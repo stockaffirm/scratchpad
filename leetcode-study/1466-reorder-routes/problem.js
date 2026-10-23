@@ -73,6 +73,103 @@ window.PROBLEM = {
        "hot": [],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "visited[0] = 0",
+       "codeLines": [
+        8,
+        11
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "visited",
+         "cells": [
+          "0",
+          "·",
+          "·"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "stack",
+         "cells": [
+          "1",
+          "4"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "visited[1] = 1",
+       "codeLines": [
+        8,
+        11
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "visited",
+         "cells": [
+          "0",
+          "1",
+          "·"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "stack",
+         "cells": [
+          "1",
+          "4"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "visited[2] = 4. 0→1 points away: flip; 0→4 already toward 0",
+       "codeLines": [
+        8,
+        11
+       ],
+       "facts": {
+        "changes": 1
+       },
+       "rows": [
+        {
+         "name": "visited",
+         "cells": [
+          "0",
+          "1",
+          "4"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "stack",
+         "cells": [
+          "1",
+          "4"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
