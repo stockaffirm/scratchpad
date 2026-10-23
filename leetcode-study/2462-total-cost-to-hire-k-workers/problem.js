@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Total Cost to Hire K Workers",
  "level": "Medium",
  "topic": "Heap / Priority Queue",
- "question": "Hire k workers in rounds; each round take the cheapest among the first/last `candidates` (ties → lower index).",
+ "question": "Hire k workers over k rounds. Each round, look at the first `candidates` and last `candidates` workers still waiting and hire the cheapest (tie → lower index). What's the total cost?",
  "input": "[17,12,10,2,7,2,11,20,8], k=3, candidates=4",
  "output": "11",
  "notes": [
@@ -180,5 +180,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Hire the workers costing 2, 2, then 7 → 11.",
+ "idea": "Use two heaps, one for each end."
 };

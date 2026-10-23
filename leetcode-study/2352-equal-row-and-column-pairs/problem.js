@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Equal Row and Column Pairs",
  "level": "Medium",
  "topic": "Hash Map / Set",
- "question": "Count (row, column) pairs that contain the same sequence.",
+ "question": "A square grid. A row and a column are a pair if they hold the same numbers in the same order. How many (row, column) pairs are there?",
  "input": "[[3,2,1],[1,7,6],[2,7,7]]",
  "output": "1",
  "notes": [
@@ -186,5 +186,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Row 3 is [2,7,7]. Column 2 reads down as 2,7,7. Same → 1 pair.",
+ "idea": "Store each row as a tuple in a counter. Look up every column."
 };

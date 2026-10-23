@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Min Cost Climbing Stairs",
  "level": "Easy",
  "topic": "DP - 1D",
- "question": "Pay cost[i] to climb from step i by 1 or 2. Start at step 0 or 1; reach the top. Minimum cost?",
+ "question": "Each stair has a price to step off it. You can start on stair 0 or 1 and move up 1 or 2 stairs at a time. What's the cheapest way to get past the last stair?",
  "input": "[1, 100, 1, 1, 1, 100, 1]",
  "output": "4",
  "notes": [
@@ -333,5 +333,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "[1,100,1,1,1,100,1]: skip over the two 100s and pay 1+1+1+1 = 4.",
+ "idea": "Cheapest cost to reach stair i = the better of the previous two stairs."
 };

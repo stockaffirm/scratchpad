@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Merge Strings Alternately",
  "level": "Easy",
  "topic": "Array / String",
- "question": "Merge two strings by taking letters alternately; append any leftover letters.",
+ "question": "You have two words. Make a new word by taking one letter from the first word, then one from the second, then the first again, and so on. If one word is longer, add its leftover letters at the end.",
  "input": "\"abc\", \"pq\"",
  "output": "\"apbqc\"",
  "notes": [
@@ -228,5 +228,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "'abc' and 'pq': take a, p, b, q. Only 'c' is left, so add it → apbqc.",
+ "idea": "Use one index i. Take word1[i], then word2[i], if each still exists."
 };

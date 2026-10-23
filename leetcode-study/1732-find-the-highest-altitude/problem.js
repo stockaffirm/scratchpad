@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Find the Highest Altitude",
  "level": "Easy",
  "topic": "Prefix Sum",
- "question": "A biker starts at 0 and gains/loses altitude per leg. Highest point?",
+ "question": "A biker starts at height 0. Each number is how much the height changes on the next leg. What's the highest point reached?",
  "input": "gain = [-5, 1, 5, 0, -7]",
  "output": "1",
  "notes": [
@@ -271,5 +271,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "0 → -5 → -4 → 1 → 1 → -6. The highest height is 1.",
+ "idea": "Keep a running total. Remember the biggest total seen."
 };

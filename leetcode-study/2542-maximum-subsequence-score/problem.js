@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Maximum Subsequence Score",
  "level": "Medium",
  "topic": "Heap / Priority Queue",
- "question": "Pick k indices; score = (sum of nums1) × (min of nums2). Maximise it.",
+ "question": "Choose k positions. Score = (sum of the chosen nums1) × (smallest of the chosen nums2). Find the best score.",
  "input": "nums1=[1,3,3,2], nums2=[2,1,3,4], k=3",
  "output": "12",
  "notes": [
@@ -219,5 +219,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Choose nums1 = 2, 3, 1 (their nums2 are 4, 3, 2): sum 6 × smallest nums2 (2) = 12.",
+ "idea": "Sort by nums2, biggest first. Keep the k largest nums1 values in a min-heap."
 };

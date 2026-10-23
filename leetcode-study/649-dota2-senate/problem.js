@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Dota2 Senate",
  "level": "Medium",
  "topic": "Queue",
- "question": "Senators ban opponents in turn. Which party wins?",
+ "question": "Radiant (R) and Dire (D) senators vote in turn. On your turn you ban one opposing senator. When only one party is left, it wins. Who wins?",
  "input": "\"RDD\"",
  "output": "\"Dire\"",
  "notes": [
@@ -132,5 +132,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "RDD: R (index 0) bans the first D. The other D (index 2) then bans R. Dire wins.",
+ "idea": "Use two queues of positions. The earlier senator acts, then rejoins the line for the next round."
 };

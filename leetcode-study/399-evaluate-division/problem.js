@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Evaluate Division",
  "level": "Medium",
  "topic": "Graphs - DFS",
- "question": "Given a/b = 2 and b/c = 3, answer queries like a/c and c/a.",
+ "question": "You know a/b = 2 and b/c = 3. Answer new questions like a/c or c/a. If you can't tell, answer −1.",
  "input": "a/b=2, b/c=3 ; queries a/c, c/a",
  "output": "[6.0, 0.1667]",
  "notes": [
@@ -156,5 +156,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "a/c = (a/b) × (b/c) = 2 × 3 = 6, and c/a = 1/6.",
+ "idea": "Build a graph where each edge carries a ratio. Multiply the ratios along the path."
 };

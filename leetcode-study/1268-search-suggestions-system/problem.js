@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Search Suggestions System",
  "level": "Medium",
  "topic": "Trie",
- "question": "After each typed letter, suggest up to 3 products with that prefix, in lexicographic order.",
+ "question": "As someone types a word letter by letter, suggest up to 3 products (in alphabetical order) that start with what's typed so far.",
  "input": "products=[mobile, mouse, moneypot, monitor, mousepad], word=\"mouse\"",
  "output": "[[mobile,moneypot,monitor], same, [mouse,mousepad], same, same]",
  "notes": [
@@ -249,5 +249,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "After typing 'mo' you see mobile, moneypot, monitor. After 'mou' you see mouse, mousepad.",
+ "idea": "Sort the products, then binary search for the first match."
 };

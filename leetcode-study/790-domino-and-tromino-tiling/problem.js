@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Domino and Tromino Tiling",
  "level": "Medium",
  "topic": "DP - 1D",
- "question": "Count ways to tile a 2×n board with dominoes and L-trominoes (mod 10⁹+7).",
+ "question": "Count the ways to completely cover a 2×n board using 2×1 dominoes and L-shaped trominoes.",
  "input": "n = 5",
  "output": "24",
  "notes": [
@@ -143,5 +143,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "For n = 5 there are 24 ways.",
+ "idea": "dp[n] = 2 × dp[n−1] + dp[n−3]."
 };

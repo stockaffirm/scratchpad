@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Leaf-Similar Trees",
  "level": "Easy",
  "topic": "Binary Tree - DFS",
- "question": "Two trees are leaf-similar if their leaf values, read left to right, match.",
+ "question": "Leaves are nodes with no children. Read a tree's leaves from left to right. Do two trees give the same sequence?",
  "input": "two trees with leaves 6,7,4,9,8",
  "output": "True",
  "notes": [
@@ -201,5 +201,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Both trees give 6, 7, 4, 9, 8 → True.",
+ "idea": "Collect leaves with DFS, then compare the two lists."
 };

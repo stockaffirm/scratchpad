@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Longest Common Subsequence",
  "level": "Medium",
  "topic": "DP - Multidimensional",
- "question": "Length of the longest subsequence common to both strings.",
+ "question": "Find the longest list of letters that appears in both words in the same order (the letters don't need to be next to each other).",
  "input": "\"abcde\", \"ace\"",
  "output": "3",
  "notes": [
@@ -412,5 +412,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "'abcde' and 'ace': a, c, e appear in both in order → 3.",
+ "idea": "Fill a table over prefixes. A match = diagonal + 1. Otherwise take the better of up and left."
 };

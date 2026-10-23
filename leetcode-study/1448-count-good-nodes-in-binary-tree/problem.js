@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Count Good Nodes in Binary Tree",
  "level": "Medium",
  "topic": "Binary Tree - DFS",
- "question": "A node is good if no node on the path from the root is larger. Count them.",
+ "question": "A node is 'good' if no node on the path from the root to it has a bigger value. Count the good nodes.",
  "input": "[3, 1, 4, 3, null, 1, 5]",
  "output": "4",
  "notes": [
@@ -385,5 +385,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "3 (root) good. 1 isn't (3 is bigger). The next 3 is good (3 ≥ 3). 4 is good. 1 isn't (4 is bigger). 5 is good → 4.",
+ "idea": "Pass the biggest value seen so far down the path."
 };

@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Find Peak Element",
  "level": "Medium",
  "topic": "Binary Search",
- "question": "Find any index whose value is greater than both neighbours, in O(log n).",
+ "question": "A peak is a number bigger than both its neighbours. Find any peak.",
  "input": "[1, 2, 1, 3, 5, 6, 4]",
  "output": "5 (index of 6)",
  "notes": [
@@ -171,5 +171,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "6 sits between 5 and 4, so it's a peak (index 5).",
+ "idea": "If the next number is bigger, a peak is to the right. Otherwise one is here or to the left."
 };

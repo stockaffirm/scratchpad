@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Reorder Routes to Make All Paths Lead to the City Zero",
  "level": "Medium",
  "topic": "Graphs - DFS",
- "question": "Roads are one-way. Flip the fewest so every city can reach city 0.",
+ "question": "Roads are one-way and form a tree. Flip as few roads as possible so every city can reach city 0.",
  "input": "n=6, [[0,1],[1,3],[2,3],[4,0],[4,5]]",
  "output": "3",
  "notes": [
@@ -279,5 +279,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Three roads point away from 0 and must be flipped: 0→1, 1→3, 4→5 → 3.",
+ "idea": "Walk out from 0. Count the roads that point away from 0."
 };

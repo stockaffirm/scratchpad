@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Non-overlapping Intervals",
  "level": "Medium",
  "topic": "Intervals",
- "question": "Remove the fewest intervals so the rest don't overlap.",
+ "question": "Remove as few intervals as possible so that none of the remaining ones overlap.",
  "input": "[[1,2],[2,3],[3,4],[1,3]]",
  "output": "1",
  "notes": [
@@ -206,5 +206,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Remove [1,3]. The others only touch at the ends, which is fine → 1 removal.",
+ "idea": "Sort by end time. Keep the interval that finishes earliest."
 };

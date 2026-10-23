@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Best Time to Buy and Sell Stock with Transaction Fee",
  "level": "Medium",
  "topic": "DP - Multidimensional",
- "question": "Unlimited trades, but pay a fee per sale. Maximum profit?",
+ "question": "You see a stock's prices over several days. Buy and sell as often as you like (one share at a time) but pay a fee on each sale. What's the best profit?",
  "input": "prices=[1,3,2,8,4,9], fee=2",
  "output": "8",
  "notes": [
@@ -342,5 +342,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Buy at 1, sell at 8 (+7, −2 fee = 5). Buy at 4, sell at 9 (+5, −2 = 3). Total 8.",
+ "idea": "Track the best profit while holding a share and while holding cash. Update both every day."
 };

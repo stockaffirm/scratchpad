@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Search in a Binary Search Tree",
  "level": "Easy",
  "topic": "Binary Search Tree",
- "question": "Return the subtree rooted at the node whose value equals val.",
+ "question": "In a binary search tree (left is smaller, right is bigger), find the node with value val and return it with everything below it.",
  "input": "[4, 2, 7, 1, 3], val = 2",
  "output": "[2, 1, 3]",
  "notes": [
@@ -182,5 +182,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Look for 2: 2 < 4, so go left and find it. Return 2 with its children 1 and 3.",
+ "idea": "Compare and go left or right, like a number-guessing game."
 };

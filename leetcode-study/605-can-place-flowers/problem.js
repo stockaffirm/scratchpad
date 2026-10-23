@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Can Place Flowers",
  "level": "Easy",
  "topic": "Greedy",
- "question": "Can you plant n flowers with no two flowers side by side?",
+ "question": "A row of plots: 1 means a flower, 0 means empty. You can't plant in a plot next to a flower. Can you plant n more flowers?",
  "input": "flowerbed=[1,0,0,0,1], n=1",
  "output": "True",
  "notes": [
@@ -147,5 +147,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "[1,0,0,0,1]: only the middle plot has empty plots on both sides. Plant there → one flower fits → True.",
+ "idea": "Go left to right. Plant whenever a plot and both its neighbours are empty."
 };

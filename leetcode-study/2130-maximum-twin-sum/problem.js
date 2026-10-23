@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Maximum Twin Sum of a Linked List",
  "level": "Medium",
  "topic": "Linked List",
- "question": "Node i pairs with node n-1-i (its twin). Find the largest twin sum.",
+ "question": "In a linked list of even length, the node at position i and the node at position n−1−i are 'twins'. Find the biggest sum of a twin pair.",
  "input": "4 → 2 → 2 → 3",
  "output": "7",
  "notes": [
@@ -123,5 +123,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "4→2→2→3: twins are (4,3) = 7 and (2,2) = 4. The biggest is 7.",
+ "idea": "Copy the values to an array and pair them from both ends."
 };

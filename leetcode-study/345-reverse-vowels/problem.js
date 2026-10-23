@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Reverse Vowels of a String",
  "level": "Easy",
  "topic": "Two Pointers",
- "question": "Reverse only the vowels of the string; leave every other letter in place.",
+ "question": "Reverse only the vowels (a e i o u, upper or lower case). Every other letter stays where it is.",
  "input": "\"IceCreAm\"",
  "output": "\"AceCreIm\"",
  "notes": [
@@ -169,5 +169,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "IceCreAm: the vowels in order are I, e, e, A. Reversed they are A, e, e, I. Put them back → AceCreIm.",
+ "idea": "Two pointers from both ends. Skip non-vowels. Swap vowels."
 };

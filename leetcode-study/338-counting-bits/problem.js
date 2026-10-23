@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Counting Bits",
  "level": "Easy",
  "topic": "Bit Manipulation",
- "question": "For every i in 0…n, count the 1-bits in i's binary form.",
+ "question": "For every number from 0 to n, count the 1s in its binary form.",
  "input": "n = 5",
  "output": "[0, 1, 1, 2, 1, 2]",
  "notes": [
@@ -264,5 +264,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "5 is 101 in binary, which has two 1s. For n = 5 the answer is [0,1,1,2,1,2].",
+ "idea": "bits(i) = bits(i ÷ 2) + the last bit of i."
 };

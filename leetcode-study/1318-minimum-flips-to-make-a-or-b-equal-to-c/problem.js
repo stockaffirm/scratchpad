@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Minimum Flips to Make a OR b Equal to c",
  "level": "Medium",
  "topic": "Bit Manipulation",
- "question": "Fewest bit flips in a and/or b so that (a OR b) == c.",
+ "question": "Flip as few bits as possible in a and b so that (a OR b) equals c.",
  "input": "a=2 (010), b=6 (110), c=5 (101)",
  "output": "3",
  "notes": [
@@ -225,5 +225,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "2 = 010, 6 = 110, 5 = 101. Bit by bit you need 3 flips in total.",
+ "idea": "Check each bit position on its own."
 };

@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Find the Difference of Two Arrays",
  "level": "Easy",
  "topic": "Hash Map / Set",
- "question": "Values only in nums1, and values only in nums2 (no duplicates).",
+ "question": "Two lists. Give the numbers that appear only in the first list, and the numbers that appear only in the second (each listed once).",
  "input": "[1,2,3,3], [1,1,2,2]",
  "output": "[[3], []]",
  "notes": [
@@ -182,5 +182,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "First list {1,2,3}, second {1,2}: only 3 is exclusive to the first, nothing exclusive to the second → [[3], []].",
+ "idea": "Turn each list into a set, then subtract one from the other."
 };

@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Online Stock Span",
  "level": "Medium",
  "topic": "Monotonic Stack",
- "question": "For each price, count consecutive previous days (including today) with price ≤ today's.",
+ "question": "For each day's price, count the consecutive days up to and including today whose price was ≤ today's.",
  "input": "100, 80, 60, 70, 60, 75, 85",
  "output": "1, 1, 1, 2, 1, 4, 6",
  "notes": [
@@ -414,5 +414,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Price 75: the days 60, 70, 60, 75 are all ≤ 75 → span 4. Price 85 → span 6.",
+ "idea": "Keep a stack of (price, span) pairs."
 };

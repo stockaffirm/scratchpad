@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Unique Number of Occurrences",
  "level": "Easy",
  "topic": "Hash Map / Set",
- "question": "Is every value's occurrence count different?",
+ "question": "Count how many times each number appears. Are all those counts different from each other?",
  "input": "[1,2,2,1,1,3]",
  "output": "True",
  "notes": [
@@ -136,5 +136,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "1 appears 3 times, 2 appears 2 times, 3 appears once. The counts 3, 2, 1 are all different → True.",
+ "idea": "Use a Counter, then check that the counts contain no duplicates."
 };

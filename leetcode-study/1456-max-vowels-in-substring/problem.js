@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Maximum Vowels in a Substring of Given Length",
  "level": "Medium",
  "topic": "Sliding Window",
- "question": "Most vowels in any substring of length k?",
+ "question": "Look at every stretch of k letters in a row. What's the most vowels any single stretch has?",
  "input": "\"abciiidef\", k=3",
  "output": "3",
  "notes": [
@@ -290,5 +290,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "k=3: the stretch 'iii' has 3 vowels, which is the most.",
+ "idea": "Slide a window. Add 1 if the new letter is a vowel, subtract 1 if the leaving letter was."
 };

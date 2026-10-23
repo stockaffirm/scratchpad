@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Reverse Words in a String",
  "level": "Medium",
  "topic": "Strings",
- "question": "Reverse the order of the words, with a single space between them.",
+ "question": "Reverse the order of the words. Exactly one space between words, no spaces at the start or end.",
  "input": "\"  the  sky is blue  \"",
  "output": "\"blue is sky the\"",
  "notes": [
@@ -364,5 +364,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "'  the  sky is blue  ' has the words the, sky, is, blue. Reversed → blue is sky the.",
+ "idea": "split() already removes extra spaces. Reverse the word list and join with a space."
 };

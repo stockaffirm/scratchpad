@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Edit Distance",
  "level": "Medium",
  "topic": "DP - Multidimensional",
- "question": "Minimum insert / delete / replace operations to turn word1 into word2.",
+ "question": "What's the fewest edits (insert, delete or replace one letter) to turn word1 into word2?",
  "input": "\"horse\" → \"ros\"",
  "output": "3",
  "notes": [
@@ -412,5 +412,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "horse → rorse → rose → ros: 3 edits.",
+ "idea": "Fill a table of edit distances between prefixes."
 };

@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Delete Node in a BST",
  "level": "Medium",
  "topic": "Binary Search Tree",
- "question": "Delete the node with the given key and keep it a valid BST.",
+ "question": "Delete a node from a binary search tree so it is still a valid BST.",
  "input": "[5, 3, 6, 2, 4, null, 7], key = 3",
  "output": "[5, 4, 6, 2, null, null, 7]",
  "notes": [
@@ -268,5 +268,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Delete 3 (it has two children): replace it with 4, the next-bigger value, then remove the old 4.",
+ "idea": "Leaf → remove it. One child → bypass it. Two children → copy the next-bigger value up, then remove that one."
 };

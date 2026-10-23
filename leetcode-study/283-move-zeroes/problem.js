@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Move Zeroes",
  "level": "Easy",
  "topic": "Two Pointers",
- "question": "Move all zeroes to the end in place, keeping the order of non-zero values.",
+ "question": "Move every 0 to the end of the list. The other numbers keep their original order. Do it inside the same list.",
  "input": "[0, 1, 0, 3, 12]",
  "output": "[1, 3, 12, 0, 0]",
  "notes": [
@@ -187,5 +187,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "[0,1,0,3,12]: the non-zeros 1, 3, 12 slide left and the zeros go to the end → [1,3,12,0,0].",
+ "idea": "Slow pointer = next spot for a non-zero. Swap each non-zero into that spot."
 };

@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Successful Pairs of Spells and Potions",
  "level": "Medium",
  "topic": "Binary Search",
- "question": "A pair succeeds if spell × potion ≥ success. For each spell, count the potions that work.",
+ "question": "A spell and a potion succeed together if spell × potion ≥ success. For each spell, how many potions work with it?",
  "input": "spells=[5,1,3], potions=[1,2,3,4,5], success=7",
  "output": "[4, 0, 3]",
  "notes": [
@@ -152,5 +152,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Spell 5 needs a potion of at least 2: potions 2, 3, 4, 5 → 4 potions.",
+ "idea": "Sort the potions. Binary search for the first one that is strong enough."
 };

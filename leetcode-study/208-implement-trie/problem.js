@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Implement Trie (Prefix Tree)",
  "level": "Medium",
  "topic": "Trie",
- "question": "Build a trie with insert, search (whole word) and startsWith (prefix).",
+ "question": "Build a prefix tree. Store words letter by letter, then look up whole words (search) or just beginnings (startsWith).",
  "input": "insert(apple), search(apple), search(app), startsWith(app), insert(app), search(app)",
  "output": "T, F, T, T",
  "notes": [
@@ -204,5 +204,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "After insert('apple'): search('app') is False (it isn't a word) but startsWith('app') is True.",
+ "idea": "Nested dictionaries, one level per letter. A '$' marks the end of a word."
 };

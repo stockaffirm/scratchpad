@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Kids With the Greatest Number of Candies",
  "level": "Easy",
  "topic": "Arrays",
- "question": "If one kid gets ALL the extra candies, would they hold the most candies?",
+ "question": "Each kid has some candies. Pretend you give ONE kid all the extra candies. Would that kid then have at least as many as the richest kid? Answer for every kid.",
  "input": "candies=[2,3,5,1,3], extra=3",
  "output": "[T, T, T, F, T]",
  "notes": [
@@ -225,5 +225,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Most candies is 5, extra is 3. Kid with 2 → 5 ✓, 3 → 6 ✓, 5 → 8 ✓, 1 → 4 ✗, 3 → 6 ✓.",
+ "idea": "Find the maximum once. Then check candies[i] + extra ≥ max."
 };

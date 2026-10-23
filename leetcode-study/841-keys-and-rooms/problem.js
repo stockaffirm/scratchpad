@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Keys and Rooms",
  "level": "Medium",
  "topic": "Graphs - DFS",
- "question": "Room 0 is open. Each room holds keys to other rooms. Can you visit them all?",
+ "question": "Room 0 is open. Each room holds keys to other rooms. Can you eventually get into every room?",
  "input": "[[1,3],[3,0,1],[2],[0]]",
  "output": "False",
  "notes": [
@@ -236,5 +236,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "The only key to room 2 is inside room 2 itself, so you can never reach it → False.",
+ "idea": "DFS from room 0, following keys."
 };

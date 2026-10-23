@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Number of Recent Calls",
  "level": "Easy",
  "topic": "Queue",
- "question": "ping(t) returns how many pings happened in the last 3000 ms (inclusive).",
+ "question": "Count pings. For each new ping at time t, how many pings (including this one) happened in the last 3000 ms?",
  "input": "ping(1), ping(100), ping(3001), ping(3002)",
  "output": "1, 2, 3, 3",
  "notes": [
@@ -148,5 +148,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Pings at 1 and 100 → 2. At 3001 the window is 1…3001, so 3. At 3002 the window is 2…3002, which drops the ping at 1 → still 3.",
+ "idea": "Keep a queue of times. Remove old ones from the front."
 };

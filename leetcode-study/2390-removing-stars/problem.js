@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Removing Stars From a String",
  "level": "Medium",
  "topic": "Stack",
- "question": "Each * deletes the closest non-star letter to its left. Return what remains.",
+ "question": "Every * deletes itself and the nearest letter to its left. Return what is left.",
  "input": "\"leet**cod*e\"",
  "output": "\"lecoe\"",
  "notes": [
@@ -566,5 +566,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "leet** → the first * deletes t, the second deletes e → 'le'. Then 'cod*e': * deletes d → 'coe'. Result: lecoe.",
+ "idea": "Use a stack. Push letters. Pop when you see *."
 };

@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Increasing Triplet Subsequence",
  "level": "Medium",
  "topic": "Greedy",
- "question": "Is there i < j < k with nums[i] < nums[j] < nums[k]?",
+ "question": "Is there any set of three numbers, in left-to-right order, that keep getting bigger? They don't need to be neighbours.",
  "input": "[2, 1, 5, 0, 4, 6]",
  "output": "True",
  "notes": [
@@ -187,5 +187,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "[2,1,5,0,4,6]: 0, then 4, then 6 keep growing in order → True.",
+ "idea": "Track the smallest value and the smallest 'middle' value so far. A number bigger than both proves a triplet."
 };

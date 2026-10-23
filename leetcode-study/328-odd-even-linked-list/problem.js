@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Odd Even Linked List",
  "level": "Medium",
  "topic": "Linked List",
- "question": "Group all odd-position nodes first, then even-position nodes, in place.",
+ "question": "Rearrange a linked list so all nodes in odd positions come first, then the even positions. Keep the original order within each group.",
  "input": "1 → 2 → 3 → 4 → 5",
  "output": "1 → 3 → 5 → 2 → 4",
  "notes": [
@@ -175,5 +175,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "1,2,3,4,5 → odd positions 1,3,5 first, then even positions 2,4 → 1,3,5,2,4.",
+ "idea": "Build two chains (odd and even) and join them."
 };

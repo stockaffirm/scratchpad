@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Combination Sum III",
  "level": "Medium",
  "topic": "Backtracking",
- "question": "Choose k distinct numbers from 1–9 that add up to n.",
+ "question": "Choose k different numbers from 1 to 9 that add up to n. List every such set.",
  "input": "k = 3, n = 7",
  "output": "[[1,2,4]]",
  "notes": [
@@ -168,5 +168,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Three numbers adding to 7: only 1 + 2 + 4 works.",
+ "idea": "Backtracking: pick numbers in increasing order and stop a branch once the sum is too big."
 };

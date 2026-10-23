@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Product of Array Except Self",
  "level": "Medium",
  "topic": "Prefix / Suffix",
- "question": "For each index, the product of every other number. No division, O(n).",
+ "question": "For each position, multiply every OTHER number in the list (all except itself). No division allowed.",
  "input": "[1, 2, 3, 4]",
  "output": "[24, 12, 8, 6]",
  "notes": [
@@ -310,5 +310,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "[1,2,3,4]: position 0 → 2×3×4 = 24. Position 1 → 1×3×4 = 12. Position 2 → 1×2×4 = 8. Position 3 → 1×2×3 = 6.",
+ "idea": "answer[i] = (product of everything left of i) × (product of everything right of i)."
 };

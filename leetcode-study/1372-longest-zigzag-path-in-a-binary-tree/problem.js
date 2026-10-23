@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Longest ZigZag Path in a Binary Tree",
  "level": "Medium",
  "topic": "Binary Tree - DFS",
- "question": "Longest path that alternates left, right, left, right…",
+ "question": "A zigzag path goes left, then right, then left… (or starts with right). Find the longest zigzag in the tree, counted in steps.",
  "input": "1 → R 2 → L 3 → R 4 (and 2 → R 5)",
  "output": "3",
  "notes": [
@@ -435,5 +435,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "1 → right to 2 → left to 3 → right to 4: three alternating steps → 3.",
+ "idea": "Pass down the last direction and the length. Switching direction adds 1; same direction restarts at 1."
 };

@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Greatest Common Divisor of Strings",
  "level": "Easy",
  "topic": "Strings",
- "question": "Find the longest string x that repeats to build both strings.",
+ "question": "A string 'divides' another if repeating it enough times builds the other one. Find the longest string that divides BOTH words.",
  "input": "\"ABCABCABC\", \"ABCABC\"",
  "output": "\"ABC\"",
  "notes": [
@@ -309,5 +309,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "'ABCABCABC' is ABC three times. 'ABCABC' is ABC two times. So ABC divides both.",
+ "idea": "If str1+str2 ≠ str2+str1 there is no answer. Otherwise the answer's length is gcd(len1, len2)."
 };

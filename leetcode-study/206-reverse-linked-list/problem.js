@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Reverse Linked List",
  "level": "Easy",
  "topic": "Linked List",
- "question": "Reverse a singly linked list.",
+ "question": "Reverse a linked list so the last node becomes the first.",
  "input": "1 → 2 → 3 → 4 → 5",
  "output": "5 → 4 → 3 → 2 → 1",
  "notes": [
@@ -263,5 +263,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "1→2→3→4→5 becomes 5→4→3→2→1.",
+ "idea": "Walk along the list and flip each arrow to point backwards."
 };

@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Max Number of K-Sum Pairs",
  "level": "Medium",
  "topic": "Two Pointers",
- "question": "Repeatedly remove two numbers that add to k. How many operations?",
+ "question": "Find two numbers that add up to k, remove them, and count one operation. Repeat. How many operations can you do?",
  "input": "[3, 1, 3, 4, 3], k=6",
  "output": "1",
  "notes": [
@@ -163,5 +163,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "[3,1,3,4,3], k=6: only the two 3s add up to 6. Nothing else pairs → 1 operation.",
+ "idea": "Sort first. Then use one pointer at each end."
 };

@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Daily Temperatures",
  "level": "Medium",
  "topic": "Monotonic Stack",
- "question": "For each day, how many days until a warmer one? (0 if never.)",
+ "question": "For each day, how many days do you wait for a warmer temperature? Use 0 if it never gets warmer.",
  "input": "[73,74,75,71,69,72,76,73]",
  "output": "[1,1,4,2,1,1,0,0]",
  "notes": [
@@ -550,5 +550,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Day 0 (73): day 1 is 74 → wait 1. Day 2 (75): day 6 is 76 → wait 4.",
+ "idea": "Keep a stack of days still waiting for a warmer day."
 };

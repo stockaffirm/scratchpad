@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Kth Largest Element in an Array",
  "level": "Medium",
  "topic": "Heap / Priority Queue",
- "question": "Find the kth largest value (not kth distinct).",
+ "question": "Find the kth largest number in the list (duplicates count).",
  "input": "[3, 2, 1, 5, 6, 4], k = 2",
  "output": "5",
  "notes": [
@@ -306,5 +306,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Sorted from biggest: 6, 5, 4, 3, 2, 1. The 2nd largest is 5.",
+ "idea": "Keep a min-heap of the k biggest numbers. Its smallest value is the answer."
 };

@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Single Number",
  "level": "Easy",
  "topic": "Bit Manipulation",
- "question": "Every number appears twice except one. Find it in O(1) space.",
+ "question": "Every number appears twice except one. Find the one that appears once.",
  "input": "[4, 1, 2, 1, 2]",
  "output": "4",
  "notes": [
@@ -241,5 +241,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "4 appears only once → 4.",
+ "idea": "XOR cancels equal pairs: x ^ x = 0."
 };

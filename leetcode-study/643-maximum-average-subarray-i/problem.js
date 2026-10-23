@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Maximum Average Subarray I",
  "level": "Easy",
  "topic": "Sliding Window",
- "question": "Find the contiguous subarray of length k with the largest average.",
+ "question": "Look at every run of k numbers in a row. Which run has the biggest average?",
  "input": "[1, 12, -5, -6, 50, 3], k=4",
  "output": "12.75",
  "notes": [
@@ -146,5 +146,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "k=4: the run [12, -5, -6, 50] adds to 51, the biggest sum. 51 ÷ 4 = 12.75.",
+ "idea": "Slide a window one step at a time: add the new number, subtract the one that left."
 };

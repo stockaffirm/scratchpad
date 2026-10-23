@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Binary Tree Right Side View",
  "level": "Medium",
  "topic": "Binary Tree - BFS",
- "question": "What do you see standing on the right side of the tree?",
+ "question": "Imagine standing on the right side of the tree. Which nodes can you see, from top to bottom?",
  "input": "[1, 2, 3, null, 5, null, 4]",
  "output": "[1, 3, 4]",
  "notes": [
@@ -212,5 +212,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Row 1: 1. Row 2: 3 hides 2. Row 3: 4 hides 5. → [1, 3, 4].",
+ "idea": "BFS level by level. Take the last node of each level."
 };

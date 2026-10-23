@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Maximum Level Sum of a Binary Tree",
  "level": "Medium",
  "topic": "Binary Tree - BFS",
- "question": "Which level (1-indexed) has the largest sum?",
+ "question": "Add up the values on each level of the tree. Which level (counting from 1) has the biggest sum?",
  "input": "[1, 7, 0, 7, -8, null, null]",
  "output": "2",
  "notes": [
@@ -214,5 +214,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Level sums are 1, 7 and −1. The biggest is 7 → level 2.",
+ "idea": "BFS level by level, keeping the best sum."
 };

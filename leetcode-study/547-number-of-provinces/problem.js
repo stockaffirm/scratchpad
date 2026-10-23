@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Number of Provinces",
  "level": "Medium",
  "topic": "Graphs - DFS",
- "question": "Cities are connected directly or indirectly. Count the groups.",
+ "question": "Cities are linked directly or through other cities. A group of connected cities is a province. How many provinces are there?",
  "input": "[[1,1,0],[1,1,0],[0,0,1]]",
  "output": "2",
  "notes": [
@@ -199,5 +199,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Cities 0 and 1 are linked; city 2 is alone → 2 provinces.",
+ "idea": "Every time you find an unvisited city, start a new DFS: that's a new province."
 };

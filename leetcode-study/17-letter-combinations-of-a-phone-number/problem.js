@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Letter Combinations of a Phone Number",
  "level": "Medium",
  "topic": "Backtracking",
- "question": "Return all letter combinations a digit string could represent on a phone keypad.",
+ "question": "On a phone keypad 2 = abc, 3 = def, and so on. Given some digits, list every letter combination they could spell.",
  "input": "\"23\"",
  "output": "[\"ad\",\"ae\",\"af\",\"bd\",\"be\",\"bf\",\"cd\",\"ce\",\"cf\"]",
  "notes": [
@@ -198,5 +198,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "2 → a, b, c and 3 → d, e, f gives 3 × 3 = 9 words.",
+ "idea": "Pick one letter per digit, going deeper one digit at a time (recursion)."
 };

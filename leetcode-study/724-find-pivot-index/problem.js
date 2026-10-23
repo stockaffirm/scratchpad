@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Find Pivot Index",
  "level": "Easy",
  "topic": "Prefix Sum",
- "question": "Find the index where the sum on the left equals the sum on the right.",
+ "question": "Find a position where the numbers to its left add up to the same as the numbers to its right (the number itself doesn't count).",
  "input": "[1, 7, 3, 6, 5, 6]",
  "output": "3",
  "notes": [
@@ -240,5 +240,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "[1,7,3,6,5,6]: left of index 3 is 1+7+3 = 11. Right of it is 5+6 = 11. Equal → index 3.",
+ "idea": "right sum = total − left sum − current number."
 };

@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Asteroid Collision",
  "level": "Medium",
  "topic": "Stack",
- "question": "Positive moves right, negative moves left. Smaller explodes; equal both explode. Final state?",
+ "question": "Asteroids in a row. Positive ones fly right, negative ones fly left, same speed. When two meet, the smaller one explodes (equal size: both). Which survive?",
  "input": "[5, 10, -5, -12]",
  "output": "[-12]",
  "notes": [
@@ -214,5 +214,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "[5,10,-5,-12]: -5 hits 10 and explodes. -12 hits 10, then 5, and destroys both. Only -12 is left.",
+ "idea": "Keep a stack of survivors. Collisions only happen with the top of the stack."
 };

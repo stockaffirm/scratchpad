@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "String Compression",
  "level": "Medium",
  "topic": "Array / String",
- "question": "Compress runs in place: letter, then the count if it is greater than 1. Return new length.",
+ "question": "Shrink a list of letters in place. Replace each run of the same letter with the letter and how many times it repeated (skip the number if it is 1). Return the new length.",
  "input": "[\"a\",\"a\",\"b\",\"b\",\"c\",\"c\",\"c\"]",
  "output": "6 → [\"a\",\"2\",\"b\",\"2\",\"c\",\"3\"]",
  "notes": [
@@ -270,5 +270,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "a a b b c c c becomes a 2 b 2 c 3. That is 6 characters long.",
+ "idea": "One pointer reads ahead to count a run. Another writes the result behind it."
 };

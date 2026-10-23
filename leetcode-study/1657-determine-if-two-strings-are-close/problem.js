@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Determine if Two Strings Are Close",
  "level": "Medium",
  "topic": "Hash Map / Set",
- "question": "Can you turn one string into the other by swapping letters or swapping letter identities?",
+ "question": "Two moves are allowed: swap any two letters' positions, or swap two letter types everywhere (every a becomes b and every b becomes a). Can word1 become word2?",
  "input": "\"cabbba\", \"abbccc\"",
  "output": "True",
  "notes": [
@@ -183,5 +183,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "cabbba has a×2, b×3, c×1. abbccc has a×1, b×2, c×3. Same letters, and the counts {1,2,3} match → True.",
+ "idea": "They need the same set of letters and the same list of counts (in any order)."
 };

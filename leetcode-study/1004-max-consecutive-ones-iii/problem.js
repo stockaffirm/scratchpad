@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Max Consecutive Ones III",
  "level": "Medium",
  "topic": "Sliding Window",
- "question": "Longest run of 1s if you may flip at most k zeros.",
+ "question": "A list of 0s and 1s. You may turn at most k zeros into ones. What's the longest run of 1s you can make?",
  "input": "[1,0,1,1,0,1], k=1",
  "output": "4",
  "notes": [
@@ -279,5 +279,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "k=1 on [1,0,1,1,0,1]: flip the second 0 and positions 2–5 become 1,1,1,1 → length 4.",
+ "idea": "Keep a window with at most k zeros. Grow on the right; shrink on the left when there are too many zeros."
 };

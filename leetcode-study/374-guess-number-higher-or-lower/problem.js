@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Guess Number Higher or Lower",
  "level": "Easy",
  "topic": "Binary Search",
- "question": "Guess the number I picked from 1…n using an API that says higher or lower.",
+ "question": "I picked a number from 1 to n. guess(x) tells you if your guess is too high or too low. Find my number in as few guesses as possible.",
  "input": "n = 10, picked = 6",
  "output": "6",
  "notes": [
@@ -152,5 +152,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "n = 10, my number is 6: guess 5 (too low), guess 8 (too high), guess 6 ✓.",
+ "idea": "Binary search: halve the range every guess."
 };

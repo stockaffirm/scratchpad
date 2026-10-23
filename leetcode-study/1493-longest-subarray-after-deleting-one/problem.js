@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Longest Subarray of 1's After Deleting One Element",
  "level": "Medium",
  "topic": "Sliding Window",
- "question": "Delete exactly one element; longest run of 1s left?",
+ "question": "You must delete exactly one number from a list of 0s and 1s. What's the longest run of only 1s you can be left with?",
  "input": "[0,1,1,1,0,1,1,0,1]",
  "output": "5",
  "notes": [
@@ -422,5 +422,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "[0,1,1,1,0,1,1,0,1]: delete the middle 0 (index 4). The 1,1,1 and 1,1 join into a run of 5.",
+ "idea": "Keep a window with at most one zero. The answer is the window size minus 1 (the deleted spot)."
 };

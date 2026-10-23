@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Lowest Common Ancestor of a Binary Tree",
  "level": "Medium",
  "topic": "Binary Tree - DFS",
- "question": "Find the lowest node that has both p and q as descendants.",
+ "question": "Find the lowest node that has both p and q somewhere below it (a node counts as below itself).",
  "input": "p = 6, q = 4",
  "output": "5",
  "notes": [
@@ -361,5 +361,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "p = 6 and q = 4 both sit under node 5, and no lower node has both → 5.",
+ "idea": "Each node reports what it found below. If both sides found something, this node is the answer."
 };

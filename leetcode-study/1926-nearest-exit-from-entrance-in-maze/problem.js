@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Nearest Exit from Entrance in Maze",
  "level": "Medium",
  "topic": "Graphs - BFS",
- "question": "Fewest steps from the entrance to any border exit ('.' cells on the edge).",
+ "question": "A maze: + is a wall, . is open. Start at the entrance. An exit is any open cell on the border (but not the entrance). Fewest steps to an exit?",
  "input": "4×4 maze, entrance (1,0)",
  "output": "4",
  "notes": [
@@ -250,5 +250,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "(1,0) → (1,1) → (1,2) → (2,2) → (3,2) is on the border: 4 steps.",
+ "idea": "BFS: the first exit it reaches is the closest."
 };

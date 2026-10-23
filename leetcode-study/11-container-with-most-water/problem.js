@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Container With Most Water",
  "level": "Medium",
  "topic": "Two Pointers",
- "question": "Pick two lines that, with the x-axis, hold the most water.",
+ "question": "Vertical lines stand side by side. Pick two as the walls of a container. Water fills up to the shorter wall. What's the most water you can hold?",
  "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
  "output": "49",
  "notes": [
@@ -372,5 +372,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Walls of height 8 (position 1) and 7 (position 8): width is 7, height is the shorter wall 7 → 7×7 = 49.",
+ "idea": "Start with the widest pair. Always move the shorter wall inward, because moving the taller one can't help."
 };

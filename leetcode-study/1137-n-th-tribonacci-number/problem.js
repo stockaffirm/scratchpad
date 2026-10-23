@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "N-th Tribonacci Number",
  "level": "Easy",
  "topic": "DP - 1D",
- "question": "T0=0, T1=1, T2=1, Tn = Tn-1 + Tn-2 + Tn-3. Find Tn.",
+ "question": "Tribonacci: each number is the sum of the previous three, starting 0, 1, 1. Find the nth number.",
  "input": "n = 4",
  "output": "4",
  "notes": [
@@ -112,5 +112,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "The sequence goes 0, 1, 1, 2, 4. So T4 = 4.",
+ "idea": "Keep only the last 3 values."
 };

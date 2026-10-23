@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Maximum Depth of Binary Tree",
  "level": "Easy",
  "topic": "Binary Tree - DFS",
- "question": "How many levels does the tree have (longest root-to-leaf path)?",
+ "question": "How deep is the tree? Count the nodes along the longest path from the root down to a leaf.",
  "input": "[3, 9, 20, null, null, 15, 7]",
  "output": "3",
  "notes": [
@@ -230,5 +230,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "3 → 20 → 15 passes through 3 nodes → depth 3.",
+ "idea": "depth = 1 + the deeper of the left and right subtrees."
 };

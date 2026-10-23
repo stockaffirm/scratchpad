@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Delete the Middle Node of a Linked List",
  "level": "Medium",
  "topic": "Linked List",
- "question": "Delete the middle node (index ⌊n/2⌋) and return the head.",
+ "question": "Remove the middle node of a linked list.",
  "input": "1 → 3 → 4 → 7 → 1 → 2 → 6",
  "output": "1 → 3 → 4 → 1 → 2 → 6",
  "notes": [
@@ -169,5 +169,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "7 nodes: the middle is the 4th (value 7). Remove it.",
+ "idea": "Slow and fast pointers: when fast reaches the end, slow is at the middle."
 };

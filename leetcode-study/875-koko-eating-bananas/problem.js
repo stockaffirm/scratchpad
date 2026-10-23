@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Koko Eating Bananas",
  "level": "Medium",
  "topic": "Binary Search",
- "question": "Smallest eating speed k (bananas/hour) to finish all piles within h hours.",
+ "question": "Koko eats k bananas per hour, from one pile at a time, and has h hours to finish all piles. What's the smallest k that lets her finish?",
  "input": "piles=[3,6,7,11], h=8",
  "output": "4",
  "notes": [
@@ -231,5 +231,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "k = 4 needs 1+2+2+3 = 8 hours (allowed). k = 3 needs 10 hours (too slow) → 4.",
+ "idea": "Binary search on the speed."
 };

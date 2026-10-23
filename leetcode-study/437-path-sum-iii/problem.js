@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Path Sum III",
  "level": "Medium",
  "topic": "Binary Tree - DFS",
- "question": "Count downward paths whose values sum to target.",
+ "question": "Count downward paths (parent to child, starting and stopping anywhere) whose values add up to target.",
  "input": "[10, 5, -3, 3, 2, null, 11], target=8",
  "output": "2",
  "notes": [
@@ -377,5 +377,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "target = 8: the path 5→3 sums to 8, and −3→11 sums to 8 → 2 paths.",
+ "idea": "Keep running sums along the path and a dictionary of earlier sums."
 };

@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Minimum Number of Arrows to Burst Balloons",
  "level": "Medium",
  "topic": "Intervals",
- "question": "Balloons span [start, end] on the x-axis. An arrow at x bursts every balloon covering x. Fewest arrows?",
+ "question": "Balloons are ranges on a line. One arrow shot straight up bursts every balloon that covers its x position. What's the fewest arrows to burst all of them?",
  "input": "[[10,16],[2,8],[1,6],[7,12]]",
  "output": "2",
  "notes": [
@@ -206,5 +206,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "An arrow at 6 bursts [1,6] and [2,8]. An arrow at 12 bursts [7,12] and [10,16] → 2 arrows.",
+ "idea": "Sort by end. Shoot at the end of the first balloon, and skip all balloons it bursts."
 };

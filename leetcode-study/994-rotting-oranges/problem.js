@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Rotting Oranges",
  "level": "Medium",
  "topic": "Graphs - BFS",
- "question": "Each minute rotten oranges (2) rot adjacent fresh ones (1). Minutes until none are fresh?",
+ "question": "Grid: 0 = empty, 1 = fresh orange, 2 = rotten orange. Every minute, each rotten orange rots its fresh neighbours (up, down, left, right). How many minutes until none are fresh? (−1 if impossible)",
  "input": "[[2,1,1],[1,1,0],[0,1,1]]",
  "output": "4",
  "notes": [
@@ -238,5 +238,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Rot spreads outward from the top-left corner and finishes after 4 minutes.",
+ "idea": "BFS starting from all rotten oranges at once."
 };

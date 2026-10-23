@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Decode String",
  "level": "Medium",
  "topic": "Stack",
- "question": "Expand k[encoded] patterns, possibly nested.",
+ "question": "Expand compressed text. k[abc] means abc repeated k times. Brackets can be nested.",
  "input": "\"3[a2[c]]\"",
  "output": "\"accaccacc\"",
  "notes": [
@@ -470,5 +470,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "3[a2[c]]: 2[c] is cc, so a2[c] is acc, and 3 times that is accaccacc.",
+ "idea": "A stack remembers the text so far and the repeat count each time you see '['."
 };

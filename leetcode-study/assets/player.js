@@ -18,7 +18,8 @@ $("#app").innerHTML = `
 <p class="sub"><span class="tag ${P.level}">${P.level}</span><span class="tag">${esc(P.topic)}</span></p>
 <section class="sec"><h2><b>1</b>Question</h2>
   <p class="q">${esc(P.question)}</p>
-  <div class="io"><div><small>Input</small>${esc(P.input)}</div><div class="arrow">→</div><div><small>Output</small>${esc(P.output)}</div></div>
+  <div class="io"><div><small>Example input</small>${esc(P.input)}</div><div class="arrow">→</div><div><small>Output</small>${esc(P.output)}</div></div>
+  ${P.why?`<p class="why"><b>Why?</b> ${esc(P.why)}</p>`:""}${P.idea?`<p class="idea"><b>💡 Key idea</b> ${esc(P.idea)}</p>`:""}
 </section>
 <div class="work"><section class="sec codeSec"><h2><b>2</b>Code</h2><div class="tabs" id="tabs"></div><pre class="code" id="code"></pre><div class="meta" id="meta"></div></section>
 <div class="right"><section class="sec"><h2><b>3</b>Flow</h2><div class="flow" id="flow"></div></section>

@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Smallest Number in Infinite Set",
  "level": "Medium",
  "topic": "Heap / Priority Queue",
- "question": "An infinite set {1,2,3,…}. popSmallest removes and returns the smallest; addBack(x) restores x.",
+ "question": "Imagine a set holding every positive number. popSmallest() removes and returns the smallest. addBack(x) puts x back if it was removed.",
  "input": "pop, pop, addBack(1), pop, pop",
  "output": "1, 2, 1, 3",
  "notes": [
@@ -148,5 +148,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "pop → 1, pop → 2, addBack(1), pop → 1 again, pop → 3.",
+ "idea": "A counter for the untouched numbers plus a heap for numbers added back."
 };

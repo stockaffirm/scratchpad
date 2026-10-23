@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Is Subsequence",
  "level": "Easy",
  "topic": "Two Pointers",
- "question": "Is s a subsequence of t (same order, gaps allowed)?",
+ "question": "Can you get word s by deleting some letters from t, without changing the order of the rest?",
  "input": "s=\"ace\", t=\"abcde\"",
  "output": "True",
  "notes": [
@@ -276,5 +276,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "t = abcde. Delete b and d and you get ace → True.",
+ "idea": "Scan t once. Move forward in s each time the letters match."
 };

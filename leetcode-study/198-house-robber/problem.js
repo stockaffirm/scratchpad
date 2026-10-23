@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "House Robber",
  "level": "Medium",
  "topic": "DP - 1D",
- "question": "Rob houses for maximum money without robbing two adjacent houses.",
+ "question": "Houses in a row hold money. Robbing two neighbouring houses sets off an alarm. What's the most you can take?",
  "input": "[2, 7, 9, 3, 1]",
  "output": "12",
  "notes": [
@@ -272,5 +272,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "Rob houses with 2, 9 and 1 → 12.",
+ "idea": "At each house choose: skip it, or rob it plus the best from two houses back."
 };

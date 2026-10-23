@@ -3,7 +3,7 @@ window.PROBLEM = {
  "title": "Unique Paths",
  "level": "Medium",
  "topic": "DP - Multidimensional",
- "question": "A robot moves only right or down from top-left to bottom-right. How many paths?",
+ "question": "A robot starts top-left and wants to reach bottom-right, moving only right or down. How many different paths are there?",
  "input": "m = 3, n = 3",
  "output": "6",
  "notes": [
@@ -167,5 +167,7 @@ window.PROBLEM = {
     }
    ]
   }
- ]
+ ],
+ "why": "On a 3×3 grid there are 6 paths.",
+ "idea": "Paths to a cell = paths from the cell above + paths from the cell on the left."
 };
