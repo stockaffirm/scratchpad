@@ -1,5 +1,6 @@
 /* Shared player: renders window.PROBLEM (question -> code -> flow -> diagram) with Prev / Play / Next. */
 (function(){
+const ORDER = ["1071-gcd-of-strings","1431-kids-with-candies","605-can-place-flowers","345-reverse-vowels","151-reverse-words","238-product-except-self","334-increasing-triplet"];
 const P = window.PROBLEM, $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 let vi = 0, fi = 0, timer = null, speed = 1;
@@ -9,8 +10,10 @@ function hl(line){
     (m,c,s,k,n)=> c?`<span class="c">${c}</span>`: s?`<span class="s">${s}</span>`: k?`<span class="k">${k}</span>`: `<span class="n">${n}</span>`);
 }
 
+const cur = ORDER.findIndex(d=>d.startsWith(P.id+"-")), pv = ORDER[cur-1], nx = ORDER[cur+1];
+const pnav = `<div class="pnav bot">${pv?`<a href="../${pv}/">◀ Previous problem</a>`:"<span></span>"}${nx?`<a href="../${nx}/">Next problem ▶</a>`:"<span></span>"}</div>`;
 $("#app").innerHTML = `
-<a href="../">← All problems</a>
+<div class="pnav"><a href="../">← All problems</a><span class="pos">${cur+1} of ${ORDER.length}</span>${nx?`<a class="go" href="../${nx}/">Next problem ▶</a>`:"<span></span>"}</div>
 <h1>${P.id}. ${esc(P.title)}</h1>
 <p class="sub"><span class="tag ${P.level}">${P.level}</span><span class="tag">${esc(P.topic)}</span></p>
 <section class="sec"><h2><b>1</b>Question</h2>
@@ -23,6 +26,7 @@ $("#app").innerHTML = `
 <section class="sec"><h2>Remember</h2>
   <div class="recap">${esc(P.best)}</div>
   <details><summary>Key notes</summary><ul>${P.notes.map(n=>`<li>${esc(n)}</li>`).join("")}</ul></details></section>
+${pnav}
 <div class="bar"><div class="in">
   <button id="prev" title="Previous (←)">◀ Prev</button>
   <button id="play" class="play" title="Play / Pause (space)">▶ Play</button>
