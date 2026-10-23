@@ -1,6 +1,6 @@
 /* Shared player: renders window.PROBLEM (question -> code -> flow -> diagram) with Prev / Play / Next. */
 (function(){
-const ORDER = ["1071-gcd-of-strings","1431-kids-with-candies","605-can-place-flowers","345-reverse-vowels","151-reverse-words","238-product-except-self","334-increasing-triplet"];
+const ORDER = window.ORDER;
 const P = window.PROBLEM, $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 let vi = 0, fi = 0, timer = null, speed = 1;
@@ -57,11 +57,14 @@ function render(){
   const sig = {};
   $("#stage").innerHTML = f.rows.map(r=>{
     const old = prevSig[r.name];
-    return `<div class="row"><span class="nm">${esc(r.name)}</span><div class="cells">${r.cells.map((c,i)=>{
-      const t = String(c), sp = t===" ";
-      return `<span class="cell${r.hot.includes(i)?" hot":""}${sp?" sp":""}${old&&old[i]!==t?" pop":""}">${sp?"␣":esc(t)}</span>`;}).join("")}</div></div>`;
+    const mk=r.marks||{}, cell=(c,i,hot)=>{const t=String(c),sp=t===" ",nul=t==="·";
+      return `<span class="cw"><span class="cell${hot?" hot":""}${sp||nul?" sp":""}${old&&old[i]!==t?" pop":""}${nul?" nul":""}">${sp?"␣":esc(t)}</span><span class="mk">${mk[i]?esc(mk[i]):""}</span></span>`;};
+    let body;
+    if(r.kind==="grid") body=`<div class="grid2">${r.cells.map((row,ri)=>`<div class="cells">${row.map((c,ci)=>cell(c,ri*100+ci,r.hot.includes(ri+","+ci))).join("")}</div>`).join("")}</div>`;
+    else body=`<div class="cells">${r.cells.map((c,i)=>cell(c,i,r.hot.includes(i))).join(r.kind==="list"?'<span class="lk">→</span>':"")}</div>`;
+    return `<div class="row"><span class="nm">${esc(r.name)}</span>${body}</div>`;
   }).join("") + (f.facts&&Object.keys(f.facts).length?`<div class="row"><span class="nm"></span><div class="facts">${Object.entries(f.facts).map(([k,v])=>`<span>${esc(k)} = ${esc(v)}</span>`).join("")}</div></div>`:"");
-  f.rows.forEach(r=>sig[r.name]=r.cells.map(String)); prevSig = sig;
+  f.rows.forEach(r=>sig[r.name]=r.kind==='grid'?[].concat(...r.cells.map((row,ri)=>row.map((c,ci)=>[ri*100+ci,String(c)]))).reduce((a,[k,v])=>(a[k]=v,a),[]):r.cells.map(String)); prevSig = sig;
   $("#cap").textContent = f.description;
   $("#pg").style.width = ((fi+1)/n*100)+"%"; $("#ct").textContent = `${fi+1} / ${n}`;
   $("#prev").disabled = fi==0; $("#next").disabled = fi==n-1;
