@@ -12,7 +12,7 @@ window.Progress = {
   document.querySelector(".sub").after(top);
   function paint(){
     let done = 0, next = null;
-    rows.forEach(r => { const d = Progress.has(r.dataset.id); r.classList.toggle("done", d); if(d) done++; else if(!next) next = r; });
+    rows.forEach(r => { const d = Progress.has(r.dataset.id); r.classList.toggle("done", d); r.querySelector(".ck").setAttribute("aria-checked", d); if(d) done++; else if(!next) next = r; });
     document.querySelectorAll(".topic").forEach(t => {
       const rs = [...t.querySelectorAll(".rowx")], n = rs.filter(r=>r.classList.contains("done")).length, s = t.querySelector(".pc");
       s.textContent = n + "/" + rs.length; s.classList.toggle("all", n === rs.length);
@@ -24,5 +24,6 @@ window.Progress = {
     const r = top.querySelector("#reset");
     if(r) r.onclick = () => { if(confirm("Clear all progress on this browser?")){ Progress.clear(); paint(); } };
   }
+  rows.forEach(r => r.querySelector(".ck").onclick = () => { Progress.set(r.dataset.id, !Progress.has(r.dataset.id)); paint(); });
   paint(); window.addEventListener("pageshow", paint);
 })();

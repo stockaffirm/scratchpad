@@ -4,8 +4,8 @@ Open `index.html`. Each problem: **Question → Code → Flow → Diagram** with
 
 ```
 leetcode-study/
-├── index.html            all 75 problems, grouped by topic
-├── assets/               shared style.css, player.js, order.js
+├── index.html            landing-page index: expandable question previews, grouped by topic
+├── assets/               shared style, player, progress, toc scripts
 └── 238-product-except-self/   one folder per problem
     ├── index.html
     └── problem.js        question, code, steps (edit to change a lesson)
