@@ -72,6 +72,168 @@ window.PROBLEM = {
         "5": "r"
        }
       }
+     ],
+     "sub": [
+      {
+       "description": "-4 + (-1) + 2 = -3 < 0 → too small, move l right",
+       "codeLines": [
+        8,
+        9
+       ],
+       "facts": {
+        "sum": -3
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "-4",
+          "-1",
+          "-1",
+          "0",
+          "1",
+          "2"
+         ],
+         "hot": [
+          0,
+          1,
+          5
+         ],
+         "marks": {
+          "0": "i",
+          "1": "l",
+          "5": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "-4 + (-1) + 2 = -3 < 0 → too small, move l right",
+       "codeLines": [
+        8,
+        9
+       ],
+       "facts": {
+        "sum": -3
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "-4",
+          "-1",
+          "-1",
+          "0",
+          "1",
+          "2"
+         ],
+         "hot": [
+          0,
+          2,
+          5
+         ],
+         "marks": {
+          "0": "i",
+          "2": "l",
+          "5": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "-4 + (0) + 2 = -2 < 0 → too small, move l right",
+       "codeLines": [
+        8,
+        9
+       ],
+       "facts": {
+        "sum": -2
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "-4",
+          "-1",
+          "-1",
+          "0",
+          "1",
+          "2"
+         ],
+         "hot": [
+          0,
+          3,
+          5
+         ],
+         "marks": {
+          "0": "i",
+          "3": "l",
+          "5": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "-4 + (1) + 2 = -1 < 0 → too small, move l right",
+       "codeLines": [
+        8,
+        9
+       ],
+       "facts": {
+        "sum": -1
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "-4",
+          "-1",
+          "-1",
+          "0",
+          "1",
+          "2"
+         ],
+         "hot": [
+          0,
+          4,
+          5
+         ],
+         "marks": {
+          "0": "i",
+          "4": "l",
+          "5": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "l meets r → no triple starts with -4",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "-4",
+          "-1",
+          "-1",
+          "0",
+          "1",
+          "2"
+         ],
+         "hot": [
+          0,
+          5
+         ],
+         "marks": {
+          "0": "i",
+          "5": "l,r"
+         }
+        }
+       ]
+      }
      ]
     },
     {
@@ -137,6 +299,72 @@ window.PROBLEM = {
         "3": "l",
         "4": "r"
        }
+      }
+     ],
+     "sub": [
+      {
+       "description": "after saving, l moves to index 3: -1 + 0 + 2 = 1 > 0 → too big, move r left",
+       "codeLines": [
+        10
+       ],
+       "facts": {
+        "sum": 1
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "-4",
+          "-1",
+          "-1",
+          "0",
+          "1",
+          "2"
+         ],
+         "hot": [
+          1,
+          3,
+          5
+         ],
+         "marks": {
+          "1": "i",
+          "3": "l",
+          "5": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "-1 + 0 + 1 = 0 → save [-1,0,1]",
+       "codeLines": [
+        12
+       ],
+       "facts": {
+        "sum": 0
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "-4",
+          "-1",
+          "-1",
+          "0",
+          "1",
+          "2"
+         ],
+         "hot": [
+          1,
+          3,
+          4
+         ],
+         "marks": {
+          "1": "i",
+          "3": "l",
+          "4": "r"
+         }
+        }
+       ]
       }
      ]
     },

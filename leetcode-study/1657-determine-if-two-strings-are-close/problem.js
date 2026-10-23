@@ -83,6 +83,493 @@ window.PROBLEM = {
        "hot": [],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "w1: see 'c' → c:1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "w1",
+         "cells": [
+          "c",
+          "a",
+          "b",
+          "b",
+          "b",
+          "a"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "w1 counts",
+         "cells": [
+          "c:1"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "w1: see 'a' → c:1 a:1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "w1",
+         "cells": [
+          "c",
+          "a",
+          "b",
+          "b",
+          "b",
+          "a"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "w1 counts",
+         "cells": [
+          "c:1",
+          "a:1"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "w1: see 'b' → c:1 a:1 b:1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "w1",
+         "cells": [
+          "c",
+          "a",
+          "b",
+          "b",
+          "b",
+          "a"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "w1 counts",
+         "cells": [
+          "c:1",
+          "a:1",
+          "b:1"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "w1: see 'b' → c:1 a:1 b:2",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "w1",
+         "cells": [
+          "c",
+          "a",
+          "b",
+          "b",
+          "b",
+          "a"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        },
+        {
+         "name": "w1 counts",
+         "cells": [
+          "c:1",
+          "a:1",
+          "b:2"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "w1: see 'b' → c:1 a:1 b:3",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "w1",
+         "cells": [
+          "c",
+          "a",
+          "b",
+          "b",
+          "b",
+          "a"
+         ],
+         "hot": [
+          4
+         ],
+         "marks": {}
+        },
+        {
+         "name": "w1 counts",
+         "cells": [
+          "c:1",
+          "a:1",
+          "b:3"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "w1: see 'a' → c:1 a:2 b:3",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "w1",
+         "cells": [
+          "c",
+          "a",
+          "b",
+          "b",
+          "b",
+          "a"
+         ],
+         "hot": [
+          5
+         ],
+         "marks": {}
+        },
+        {
+         "name": "w1 counts",
+         "cells": [
+          "c:1",
+          "a:2",
+          "b:3"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "w2: see 'a' → a:1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "w1 counts",
+         "cells": [
+          "c:1",
+          "a:2",
+          "b:3"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "w2",
+         "cells": [
+          "a",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "w2 counts",
+         "cells": [
+          "a:1"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "w2: see 'b' → a:1 b:1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "w1 counts",
+         "cells": [
+          "c:1",
+          "a:2",
+          "b:3"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "w2",
+         "cells": [
+          "a",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "w2 counts",
+         "cells": [
+          "a:1",
+          "b:1"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "w2: see 'b' → a:1 b:2",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "w1 counts",
+         "cells": [
+          "c:1",
+          "a:2",
+          "b:3"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "w2",
+         "cells": [
+          "a",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "w2 counts",
+         "cells": [
+          "a:1",
+          "b:2"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "w2: see 'c' → a:1 b:2 c:1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "w1 counts",
+         "cells": [
+          "c:1",
+          "a:2",
+          "b:3"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "w2",
+         "cells": [
+          "a",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        },
+        {
+         "name": "w2 counts",
+         "cells": [
+          "a:1",
+          "b:2",
+          "c:1"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "w2: see 'c' → a:1 b:2 c:2",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "w1 counts",
+         "cells": [
+          "c:1",
+          "a:2",
+          "b:3"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "w2",
+         "cells": [
+          "a",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [
+          4
+         ],
+         "marks": {}
+        },
+        {
+         "name": "w2 counts",
+         "cells": [
+          "a:1",
+          "b:2",
+          "c:2"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "w2: see 'c' → a:1 b:2 c:3",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "w1 counts",
+         "cells": [
+          "c:1",
+          "a:2",
+          "b:3"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "w2",
+         "cells": [
+          "a",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [
+          5
+         ],
+         "marks": {}
+        },
+        {
+         "name": "w2 counts",
+         "cells": [
+          "a:1",
+          "b:2",
+          "c:3"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {

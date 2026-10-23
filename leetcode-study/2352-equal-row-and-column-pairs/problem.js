@@ -87,6 +87,143 @@ window.PROBLEM = {
        "marks": {},
        "kind": "grid"
       }
+     ],
+     "sub": [
+      {
+       "description": "row 0 = (3,2,1) → store as a tuple, count 1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "grid",
+         "cells": [
+          [
+           "3",
+           "2",
+           "1"
+          ],
+          [
+           "1",
+           "7",
+           "6"
+          ],
+          [
+           "2",
+           "7",
+           "7"
+          ]
+         ],
+         "hot": [
+          "0,0",
+          "0,1",
+          "0,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "row counter",
+         "cells": [
+          "(3,2,1)"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "row 1 = (1,7,6) → store as a tuple, count 1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "grid",
+         "cells": [
+          [
+           "3",
+           "2",
+           "1"
+          ],
+          [
+           "1",
+           "7",
+           "6"
+          ],
+          [
+           "2",
+           "7",
+           "7"
+          ]
+         ],
+         "hot": [
+          "1,0",
+          "1,1",
+          "1,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "row counter",
+         "cells": [
+          "(3,2,1)",
+          "(1,7,6)"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "row 2 = (2,7,7) → store as a tuple, count 1",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "grid",
+         "cells": [
+          [
+           "3",
+           "2",
+           "1"
+          ],
+          [
+           "1",
+           "7",
+           "6"
+          ],
+          [
+           "2",
+           "7",
+           "7"
+          ]
+         ],
+         "hot": [
+          "2,0",
+          "2,1",
+          "2,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "row counter",
+         "cells": [
+          "(3,2,1)",
+          "(1,7,6)",
+          "(2,7,7)"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -123,6 +260,182 @@ window.PROBLEM = {
        ],
        "marks": {},
        "kind": "grid"
+      }
+     ],
+     "sub": [
+      {
+       "description": "column 0 reads down as (3,1,2) → no matching row",
+       "codeLines": [
+        4,
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "grid",
+         "cells": [
+          [
+           "3",
+           "2",
+           "1"
+          ],
+          [
+           "1",
+           "7",
+           "6"
+          ],
+          [
+           "2",
+           "7",
+           "7"
+          ]
+         ],
+         "hot": [
+          "0,0",
+          "1,0",
+          "2,0"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "row counter",
+         "cells": [
+          "(3,2,1)",
+          "(1,7,6)",
+          "(2,7,7)"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "matches so far",
+         "cells": [
+          "0"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "column 1 reads down as (2,7,7) → matches a stored row!",
+       "codeLines": [
+        4,
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "grid",
+         "cells": [
+          [
+           "3",
+           "2",
+           "1"
+          ],
+          [
+           "1",
+           "7",
+           "6"
+          ],
+          [
+           "2",
+           "7",
+           "7"
+          ]
+         ],
+         "hot": [
+          "0,1",
+          "1,1",
+          "2,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "row counter",
+         "cells": [
+          "(3,2,1)",
+          "(1,7,6)",
+          "(2,7,7)"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "matches so far",
+         "cells": [
+          "0",
+          "1"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "column 2 reads down as (1,6,7) → no matching row",
+       "codeLines": [
+        4,
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "grid",
+         "cells": [
+          [
+           "3",
+           "2",
+           "1"
+          ],
+          [
+           "1",
+           "7",
+           "6"
+          ],
+          [
+           "2",
+           "7",
+           "7"
+          ]
+         ],
+         "hot": [
+          "0,2",
+          "1,2",
+          "2,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "row counter",
+         "cells": [
+          "(3,2,1)",
+          "(1,7,6)",
+          "(2,7,7)"
+         ],
+         "hot": [],
+         "marks": {}
+        },
+        {
+         "name": "matches so far",
+         "cells": [
+          "0",
+          "1",
+          "0"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
       }
      ]
     },

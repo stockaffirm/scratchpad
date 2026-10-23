@@ -134,6 +134,96 @@ window.PROBLEM = {
         5
        ]
       }
+     ],
+     "sub": [
+      {
+       "description": "left = 1: 'c' is not a vowel → skip, left = 2",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "characters",
+         "cells": [
+          "A",
+          "c",
+          "e",
+          "C",
+          "r",
+          "e",
+          "I",
+          "m"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {
+          "1": "left",
+          "5": "right"
+         }
+        }
+       ]
+      },
+      {
+       "description": "left = 2: 'e' is a vowel → stop",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "characters",
+         "cells": [
+          "A",
+          "c",
+          "e",
+          "C",
+          "r",
+          "e",
+          "I",
+          "m"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {
+          "2": "left",
+          "5": "right"
+         }
+        }
+       ]
+      },
+      {
+       "description": "right = 5: 'e' is a vowel → stop",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "characters",
+         "cells": [
+          "A",
+          "c",
+          "e",
+          "C",
+          "r",
+          "e",
+          "I",
+          "m"
+         ],
+         "hot": [
+          2,
+          5
+         ],
+         "marks": {
+          "2": "left",
+          "5": "right"
+         }
+        }
+       ]
+      }
      ]
     },
     {

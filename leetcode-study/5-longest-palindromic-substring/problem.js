@@ -93,6 +93,92 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "center at index 1 ('a'): l = r = 1 → 'a' is a palindrome of length 1",
+       "codeLines": [
+        5
+       ],
+       "facts": {
+        "best": "b"
+       },
+       "rows": [
+        {
+         "name": "s",
+         "cells": [
+          "b",
+          "a",
+          "b",
+          "a",
+          "d"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {
+          "1": "l,r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "expand: s[0] = 'b' equals s[2] = 'b' ✓ → l = 0, r = 2",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "s",
+         "cells": [
+          "b",
+          "a",
+          "b",
+          "a",
+          "d"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {
+          "0": "l",
+          "2": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "expand: l = -1 is outside → stop. Palindrome = 'bab' (length 3)",
+       "codeLines": [
+        7
+       ],
+       "facts": {
+        "best": "bab"
+       },
+       "rows": [
+        {
+         "name": "s",
+         "cells": [
+          "b",
+          "a",
+          "b",
+          "a",
+          "d"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {
+          "3": "r"
+         }
+        }
+       ]
+      }
      ]
     },
     {

@@ -70,6 +70,120 @@ window.PROBLEM = {
         "2": "j"
        }
       }
+     ],
+     "sub": [
+      {
+       "description": "start a run at nums[0] = 0",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "0",
+          "1",
+          "2",
+          "4",
+          "5",
+          "7"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {
+          "0": "i,j"
+         }
+        }
+       ]
+      },
+      {
+       "description": "1 = 0 + 1 → extend the run (j = 1)",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "0",
+          "1",
+          "2",
+          "4",
+          "5",
+          "7"
+         ],
+         "hot": [
+          0,
+          1
+         ],
+         "marks": {
+          "0": "i",
+          "1": "j"
+         }
+        }
+       ]
+      },
+      {
+       "description": "2 = 1 + 1 → extend the run (j = 2)",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "0",
+          "1",
+          "2",
+          "4",
+          "5",
+          "7"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {
+          "0": "i",
+          "2": "j"
+         }
+        }
+       ]
+      },
+      {
+       "description": "4 ≠ 2 + 1 → the run ends. Record 0->2",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "0",
+          "1",
+          "2",
+          "4",
+          "5",
+          "7"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {
+          "0": "i",
+          "2": "j"
+         }
+        }
+       ]
+      }
      ]
     },
     {
@@ -100,6 +214,90 @@ window.PROBLEM = {
         "4": "j"
        }
       }
+     ],
+     "sub": [
+      {
+       "description": "start a run at nums[3] = 4",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "0",
+          "1",
+          "2",
+          "4",
+          "5",
+          "7"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {
+          "3": "i,j"
+         }
+        }
+       ]
+      },
+      {
+       "description": "5 = 4 + 1 → extend the run (j = 4)",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "0",
+          "1",
+          "2",
+          "4",
+          "5",
+          "7"
+         ],
+         "hot": [
+          3,
+          4
+         ],
+         "marks": {
+          "3": "i",
+          "4": "j"
+         }
+        }
+       ]
+      },
+      {
+       "description": "7 ≠ 5 + 1 → the run ends. Record 4->5",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "0",
+          "1",
+          "2",
+          "4",
+          "5",
+          "7"
+         ],
+         "hot": [
+          3,
+          4
+         ],
+         "marks": {
+          "3": "i",
+          "4": "j"
+         }
+        }
+       ]
+      }
      ]
     },
     {
@@ -127,6 +325,60 @@ window.PROBLEM = {
        "marks": {
         "5": "i,j"
        }
+      }
+     ],
+     "sub": [
+      {
+       "description": "start a run at nums[5] = 7",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "0",
+          "1",
+          "2",
+          "4",
+          "5",
+          "7"
+         ],
+         "hot": [
+          5
+         ],
+         "marks": {
+          "5": "i,j"
+         }
+        }
+       ]
+      },
+      {
+       "description": "End of list. Record 7",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "0",
+          "1",
+          "2",
+          "4",
+          "5",
+          "7"
+         ],
+         "hot": [
+          5
+         ],
+         "marks": {
+          "5": "i,j"
+         }
+        }
+       ]
       }
      ]
     },

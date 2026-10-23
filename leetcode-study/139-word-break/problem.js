@@ -107,6 +107,190 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "i = 1: 'l' ✗ → dp[1] = False",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "s",
+         "cells": [
+          "l",
+          "e",
+          "e",
+          "t",
+          "c",
+          "o",
+          "d",
+          "e"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "dp",
+         "cells": [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "i = 2: 'le' ✗, [dp[1] false] 'e' ✗ → dp[2] = False",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "s",
+         "cells": [
+          "l",
+          "e",
+          "e",
+          "t",
+          "c",
+          "o",
+          "d",
+          "e"
+         ],
+         "hot": [
+          0,
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "dp",
+         "cells": [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "i = 3: 'lee' ✗, [dp[1] false] 'ee' ✗, [dp[2] false] 'e' ✗ → dp[3] = False",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "s",
+         "cells": [
+          "l",
+          "e",
+          "e",
+          "t",
+          "c",
+          "o",
+          "d",
+          "e"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "dp",
+         "cells": [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "i = 4: 'leet' ✓, [dp[1] false] 'eet' ✗, [dp[2] false] 'et' ✗, [dp[3] false] 't' ✗ → dp[4] = True",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "s",
+         "cells": [
+          "l",
+          "e",
+          "e",
+          "t",
+          "c",
+          "o",
+          "d",
+          "e"
+         ],
+         "hot": [
+          0,
+          1,
+          2,
+          3
+         ],
+         "marks": {}
+        },
+        {
+         "name": "dp",
+         "cells": [
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "hot": [
+          4
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -154,6 +338,206 @@ window.PROBLEM = {
         8
        ],
        "marks": {}
+      }
+     ],
+     "sub": [
+      {
+       "description": "i = 5: [dp[1] false] 'eetc' ✗, [dp[2] false] 'etc' ✗, [dp[3] false] 'tc' ✗, 'c' ✗ → dp[5] = False",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "s",
+         "cells": [
+          "l",
+          "e",
+          "e",
+          "t",
+          "c",
+          "o",
+          "d",
+          "e"
+         ],
+         "hot": [
+          0,
+          1,
+          2,
+          3,
+          4
+         ],
+         "marks": {}
+        },
+        {
+         "name": "dp",
+         "cells": [
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "hot": [
+          5
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "i = 6: [dp[2] false] 'etco' ✗, [dp[3] false] 'tco' ✗, 'co' ✗, [dp[5] false] 'o' ✗ → dp[6] = False",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "s",
+         "cells": [
+          "l",
+          "e",
+          "e",
+          "t",
+          "c",
+          "o",
+          "d",
+          "e"
+         ],
+         "hot": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+         ],
+         "marks": {}
+        },
+        {
+         "name": "dp",
+         "cells": [
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "hot": [
+          6
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "i = 7: [dp[3] false] 'tcod' ✗, 'cod' ✗, [dp[5] false] 'od' ✗, [dp[6] false] 'd' ✗ → dp[7] = False",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "s",
+         "cells": [
+          "l",
+          "e",
+          "e",
+          "t",
+          "c",
+          "o",
+          "d",
+          "e"
+         ],
+         "hot": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+         ],
+         "marks": {}
+        },
+        {
+         "name": "dp",
+         "cells": [
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "hot": [
+          7
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "i = 8: 'code' ✓, [dp[5] false] 'ode' ✗, [dp[6] false] 'de' ✗, [dp[7] false] 'e' ✗ → dp[8] = True",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "s",
+         "cells": [
+          "l",
+          "e",
+          "e",
+          "t",
+          "c",
+          "o",
+          "d",
+          "e"
+         ],
+         "hot": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+         ],
+         "marks": {}
+        },
+        {
+         "name": "dp",
+         "cells": [
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1"
+         ],
+         "hot": [
+          8
+         ],
+         "marks": {}
+        }
+       ]
       }
      ]
     },

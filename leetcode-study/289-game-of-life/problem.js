@@ -98,6 +98,259 @@ window.PROBLEM = {
        "marks": {},
        "kind": "grid"
       }
+     ],
+     "sub": [
+      {
+       "description": "neighbour (0,0) = 0 → live neighbours = 0",
+       "codeLines": [
+        7
+       ],
+       "facts": {
+        "live": 0
+       },
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "0",
+           "1",
+           "0"
+          ],
+          [
+           "0",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "0",
+           "0",
+           "0"
+          ]
+         ],
+         "hot": [
+          "1,0",
+          "0,0"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "neighbour (0,1) = 1 → live neighbours = 1",
+       "codeLines": [
+        7
+       ],
+       "facts": {
+        "live": 1
+       },
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "0",
+           "1",
+           "0"
+          ],
+          [
+           "0",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "0",
+           "0",
+           "0"
+          ]
+         ],
+         "hot": [
+          "1,0",
+          "0,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "neighbour (1,1) = 0 → live neighbours = 1",
+       "codeLines": [
+        7
+       ],
+       "facts": {
+        "live": 1
+       },
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "0",
+           "1",
+           "0"
+          ],
+          [
+           "0",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "0",
+           "0",
+           "0"
+          ]
+         ],
+         "hot": [
+          "1,0",
+          "1,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "neighbour (2,0) = 1 → live neighbours = 2",
+       "codeLines": [
+        7
+       ],
+       "facts": {
+        "live": 2
+       },
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "0",
+           "1",
+           "0"
+          ],
+          [
+           "0",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "0",
+           "0",
+           "0"
+          ]
+         ],
+         "hot": [
+          "1,0",
+          "2,0"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "neighbour (2,1) = 1 → live neighbours = 3",
+       "codeLines": [
+        7
+       ],
+       "facts": {
+        "live": 3
+       },
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "0",
+           "1",
+           "0"
+          ],
+          [
+           "0",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "0",
+           "0",
+           "0"
+          ]
+         ],
+         "hot": [
+          "1,0",
+          "2,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "dead cell with exactly 3 live neighbours → becomes alive",
+       "codeLines": [
+        8
+       ],
+       "facts": {
+        "live": 3
+       },
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "0",
+           "1",
+           "0"
+          ],
+          [
+           "0",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "0",
+           "0",
+           "0"
+          ]
+         ],
+         "hot": [
+          "1,0"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      }
      ]
     },
     {
@@ -137,6 +390,259 @@ window.PROBLEM = {
        ],
        "marks": {},
        "kind": "grid"
+      }
+     ],
+     "sub": [
+      {
+       "description": "neighbour (0,0) = 0 → live neighbours = 0",
+       "codeLines": [
+        7
+       ],
+       "facts": {
+        "live": 0
+       },
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "0",
+           "1",
+           "0"
+          ],
+          [
+           "0",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "0",
+           "0",
+           "0"
+          ]
+         ],
+         "hot": [
+          "0,1",
+          "0,0"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "neighbour (0,2) = 0 → live neighbours = 0",
+       "codeLines": [
+        7
+       ],
+       "facts": {
+        "live": 0
+       },
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "0",
+           "1",
+           "0"
+          ],
+          [
+           "0",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "0",
+           "0",
+           "0"
+          ]
+         ],
+         "hot": [
+          "0,1",
+          "0,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "neighbour (1,0) = 0 → live neighbours = 0",
+       "codeLines": [
+        7
+       ],
+       "facts": {
+        "live": 0
+       },
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "0",
+           "1",
+           "0"
+          ],
+          [
+           "0",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "0",
+           "0",
+           "0"
+          ]
+         ],
+         "hot": [
+          "0,1",
+          "1,0"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "neighbour (1,1) = 0 → live neighbours = 0",
+       "codeLines": [
+        7
+       ],
+       "facts": {
+        "live": 0
+       },
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "0",
+           "1",
+           "0"
+          ],
+          [
+           "0",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "0",
+           "0",
+           "0"
+          ]
+         ],
+         "hot": [
+          "0,1",
+          "1,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "neighbour (1,2) = 1 → live neighbours = 1",
+       "codeLines": [
+        7
+       ],
+       "facts": {
+        "live": 1
+       },
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "0",
+           "1",
+           "0"
+          ],
+          [
+           "0",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "0",
+           "0",
+           "0"
+          ]
+         ],
+         "hot": [
+          "0,1",
+          "1,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "alive cell with only 1 live neighbour (fewer than 2) → dies",
+       "codeLines": [
+        8
+       ],
+       "facts": {
+        "live": 1
+       },
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "0",
+           "1",
+           "0"
+          ],
+          [
+           "0",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "0",
+           "0",
+           "0"
+          ]
+         ],
+         "hot": [
+          "0,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
       }
      ]
     },

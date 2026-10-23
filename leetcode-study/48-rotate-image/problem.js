@@ -335,41 +335,7 @@ window.PROBLEM = {
      ],
      "sub": [
       {
-       "description": "m[0][0] = 7",
-       "codeLines": [
-        7
-       ],
-       "facts": {},
-       "rows": [
-        {
-         "name": "m",
-         "cells": [
-          [
-           "7",
-           "4",
-           "7"
-          ],
-          [
-           "2",
-           "5",
-           "8"
-          ],
-          [
-           "3",
-           "6",
-           "9"
-          ]
-         ],
-         "hot": [
-          "0,0"
-         ],
-         "marks": {},
-         "kind": "grid"
-        }
-       ]
-      },
-      {
-       "description": "m[0][2] = 1",
+       "description": "reverse row 0 (flip it left ↔ right)",
        "codeLines": [
         7
        ],
@@ -395,6 +361,8 @@ window.PROBLEM = {
           ]
          ],
          "hot": [
+          "0,0",
+          "0,1",
           "0,2"
          ],
          "marks": {},
@@ -403,41 +371,7 @@ window.PROBLEM = {
        ]
       },
       {
-       "description": "m[1][0] = 8",
-       "codeLines": [
-        7
-       ],
-       "facts": {},
-       "rows": [
-        {
-         "name": "m",
-         "cells": [
-          [
-           "7",
-           "4",
-           "1"
-          ],
-          [
-           "8",
-           "5",
-           "8"
-          ],
-          [
-           "3",
-           "6",
-           "9"
-          ]
-         ],
-         "hot": [
-          "1,0"
-         ],
-         "marks": {},
-         "kind": "grid"
-        }
-       ]
-      },
-      {
-       "description": "m[1][2] = 2",
+       "description": "reverse row 1 (flip it left ↔ right)",
        "codeLines": [
         7
        ],
@@ -463,6 +397,8 @@ window.PROBLEM = {
           ]
          ],
          "hot": [
+          "1,0",
+          "1,1",
           "1,2"
          ],
          "marks": {},
@@ -471,41 +407,7 @@ window.PROBLEM = {
        ]
       },
       {
-       "description": "m[2][0] = 9",
-       "codeLines": [
-        7
-       ],
-       "facts": {},
-       "rows": [
-        {
-         "name": "m",
-         "cells": [
-          [
-           "7",
-           "4",
-           "1"
-          ],
-          [
-           "8",
-           "5",
-           "2"
-          ],
-          [
-           "9",
-           "6",
-           "9"
-          ]
-         ],
-         "hot": [
-          "2,0"
-         ],
-         "marks": {},
-         "kind": "grid"
-        }
-       ]
-      },
-      {
-       "description": "m[2][2] = 3. Flip every row left↔right.",
+       "description": "reverse row 2 (flip it left ↔ right)",
        "codeLines": [
         7
        ],
@@ -531,6 +433,8 @@ window.PROBLEM = {
           ]
          ],
          "hot": [
+          "2,0",
+          "2,1",
           "2,2"
          ],
          "marks": {},

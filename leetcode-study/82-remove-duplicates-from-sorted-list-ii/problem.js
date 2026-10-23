@@ -101,6 +101,94 @@ window.PROBLEM = {
        "marks": {},
        "kind": "list"
       }
+     ],
+     "sub": [
+      {
+       "description": "cur = 3 and the next node is also 3 → a duplicate!",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "list",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "3",
+          "4",
+          "4",
+          "5"
+         ],
+         "hot": [
+          2,
+          3
+         ],
+         "marks": {
+          "1": "prev",
+          "2": "cur"
+         },
+         "kind": "list"
+        }
+       ]
+      },
+      {
+       "description": "move cur forward while the next value is the same → cur is the second 3",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "list",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "3",
+          "4",
+          "4",
+          "5"
+         ],
+         "hot": [
+          2,
+          3
+         ],
+         "marks": {
+          "1": "prev",
+          "3": "cur"
+         },
+         "kind": "list"
+        }
+       ]
+      },
+      {
+       "description": "prev.next = cur.next → both 3s are skipped",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "list",
+         "cells": [
+          "1",
+          "2",
+          "4",
+          "4",
+          "5"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {
+          "1": "prev"
+         },
+         "kind": "list"
+        }
+       ]
+      }
      ]
     },
     {
@@ -126,6 +214,88 @@ window.PROBLEM = {
        ],
        "marks": {},
        "kind": "list"
+      }
+     ],
+     "sub": [
+      {
+       "description": "cur = 4 and the next node is also 4 → duplicate",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "list",
+         "cells": [
+          "1",
+          "2",
+          "4",
+          "4",
+          "5"
+         ],
+         "hot": [
+          2,
+          3
+         ],
+         "marks": {
+          "1": "prev",
+          "2": "cur"
+         },
+         "kind": "list"
+        }
+       ]
+      },
+      {
+       "description": "cur moves to the second 4",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "list",
+         "cells": [
+          "1",
+          "2",
+          "4",
+          "4",
+          "5"
+         ],
+         "hot": [
+          2,
+          3
+         ],
+         "marks": {
+          "1": "prev",
+          "3": "cur"
+         },
+         "kind": "list"
+        }
+       ]
+      },
+      {
+       "description": "prev.next = cur.next → both 4s are skipped",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "list",
+         "cells": [
+          "1",
+          "2",
+          "5"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {
+          "1": "prev"
+         },
+         "kind": "list"
+        }
+       ]
       }
      ]
     },

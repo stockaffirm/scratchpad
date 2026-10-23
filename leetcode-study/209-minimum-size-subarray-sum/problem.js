@@ -171,6 +171,105 @@ window.PROBLEM = {
         "3": "r"
        }
       }
+     ],
+     "sub": [
+      {
+       "description": "add nums[3] = 2 → sum = 8",
+       "codeLines": [
+        5
+       ],
+       "facts": {
+        "sum": 8
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "2",
+          "3",
+          "1",
+          "2",
+          "4",
+          "3"
+         ],
+         "hot": [
+          0,
+          1,
+          2,
+          3
+         ],
+         "marks": {
+          "0": "l",
+          "3": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "sum 8 ≥ 7 → record length 4 (best 4), then drop nums[0] = 2",
+       "codeLines": [
+        7
+       ],
+       "facts": {
+        "sum": 8,
+        "best": 4
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "2",
+          "3",
+          "1",
+          "2",
+          "4",
+          "3"
+         ],
+         "hot": [
+          0,
+          1,
+          2,
+          3
+         ],
+         "marks": {
+          "0": "l",
+          "3": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "sum is now 6 < 7 → stop shrinking",
+       "codeLines": [
+        6
+       ],
+       "facts": {
+        "sum": 6,
+        "best": 4
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "2",
+          "3",
+          "1",
+          "2",
+          "4",
+          "3"
+         ],
+         "hot": [
+          1,
+          2,
+          3
+         ],
+         "marks": {
+          "1": "l",
+          "3": "r"
+         }
+        }
+       ]
+      }
      ]
     },
     {
@@ -204,6 +303,168 @@ window.PROBLEM = {
         "4": "r"
        }
       }
+     ],
+     "sub": [
+      {
+       "description": "add nums[4] = 4 → sum = 10",
+       "codeLines": [
+        5
+       ],
+       "facts": {
+        "sum": 10
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "2",
+          "3",
+          "1",
+          "2",
+          "4",
+          "3"
+         ],
+         "hot": [
+          1,
+          2,
+          3,
+          4
+         ],
+         "marks": {
+          "1": "l",
+          "4": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "sum 10 ≥ 7 → record length 4 (best 4), then drop nums[1] = 3",
+       "codeLines": [
+        7
+       ],
+       "facts": {
+        "sum": 10,
+        "best": 4
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "2",
+          "3",
+          "1",
+          "2",
+          "4",
+          "3"
+         ],
+         "hot": [
+          1,
+          2,
+          3,
+          4
+         ],
+         "marks": {
+          "1": "l",
+          "4": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "sum is now 7 — still ≥ 7",
+       "codeLines": [
+        6
+       ],
+       "facts": {
+        "sum": 7,
+        "best": 4
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "2",
+          "3",
+          "1",
+          "2",
+          "4",
+          "3"
+         ],
+         "hot": [
+          2,
+          3,
+          4
+         ],
+         "marks": {
+          "2": "l",
+          "4": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "sum 7 ≥ 7 → record length 3 (best 3), then drop nums[2] = 1",
+       "codeLines": [
+        7
+       ],
+       "facts": {
+        "sum": 7,
+        "best": 3
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "2",
+          "3",
+          "1",
+          "2",
+          "4",
+          "3"
+         ],
+         "hot": [
+          2,
+          3,
+          4
+         ],
+         "marks": {
+          "2": "l",
+          "4": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "sum is now 6 < 7 → stop shrinking",
+       "codeLines": [
+        6
+       ],
+       "facts": {
+        "sum": 6,
+        "best": 3
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "2",
+          "3",
+          "1",
+          "2",
+          "4",
+          "3"
+         ],
+         "hot": [
+          3,
+          4
+         ],
+         "marks": {
+          "3": "l",
+          "4": "r"
+         }
+        }
+       ]
+      }
      ]
     },
     {
@@ -234,6 +495,162 @@ window.PROBLEM = {
        "marks": {
         "5": "l,r"
        }
+      }
+     ],
+     "sub": [
+      {
+       "description": "add nums[5] = 3 → sum = 9",
+       "codeLines": [
+        5
+       ],
+       "facts": {
+        "sum": 9
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "2",
+          "3",
+          "1",
+          "2",
+          "4",
+          "3"
+         ],
+         "hot": [
+          3,
+          4,
+          5
+         ],
+         "marks": {
+          "3": "l",
+          "5": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "sum 9 ≥ 7 → record length 3 (best 3), then drop nums[3] = 2",
+       "codeLines": [
+        7
+       ],
+       "facts": {
+        "sum": 9,
+        "best": 3
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "2",
+          "3",
+          "1",
+          "2",
+          "4",
+          "3"
+         ],
+         "hot": [
+          3,
+          4,
+          5
+         ],
+         "marks": {
+          "3": "l",
+          "5": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "sum is now 7 — still ≥ 7",
+       "codeLines": [
+        6
+       ],
+       "facts": {
+        "sum": 7,
+        "best": 3
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "2",
+          "3",
+          "1",
+          "2",
+          "4",
+          "3"
+         ],
+         "hot": [
+          4,
+          5
+         ],
+         "marks": {
+          "4": "l",
+          "5": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "sum 7 ≥ 7 → record length 2 (best 2), then drop nums[4] = 4",
+       "codeLines": [
+        7
+       ],
+       "facts": {
+        "sum": 7,
+        "best": 2
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "2",
+          "3",
+          "1",
+          "2",
+          "4",
+          "3"
+         ],
+         "hot": [
+          4,
+          5
+         ],
+         "marks": {
+          "4": "l",
+          "5": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "sum is now 3 < 7 → stop shrinking",
+       "codeLines": [
+        6
+       ],
+       "facts": {
+        "sum": 3,
+        "best": 2
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "2",
+          "3",
+          "1",
+          "2",
+          "4",
+          "3"
+         ],
+         "hot": [
+          5
+         ],
+         "marks": {
+          "5": "l,r"
+         }
+        }
+       ]
       }
      ]
     },

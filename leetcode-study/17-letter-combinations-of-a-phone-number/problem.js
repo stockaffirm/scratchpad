@@ -79,6 +79,147 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "digit 2 → pick 'a'",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "a"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "res",
+         "cells": [
+          "·"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "digit 3 → pick 'd' → path 'ad' is complete → save",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "a",
+          "d"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "res",
+         "cells": [
+          "ad"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "digit 3 → pick 'e' → path 'ae' is complete → save",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "a",
+          "e"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "res",
+         "cells": [
+          "ad",
+          "ae"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "digit 3 → pick 'f' → path 'af' is complete → save",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "a",
+          "f"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "res",
+         "cells": [
+          "ad",
+          "ae",
+          "af"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "all of d, e, f tried → undo 'a'",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "res",
+         "cells": [
+          "ad",
+          "ae",
+          "af"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -116,6 +257,161 @@ window.PROBLEM = {
         5
        ],
        "marks": {}
+      }
+     ],
+     "sub": [
+      {
+       "description": "digit 2 → pick 'b'",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "b"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "res",
+         "cells": [
+          "ad",
+          "ae",
+          "af"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "digit 3 → pick 'd' → path 'bd' is complete → save",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "b",
+          "d"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "res",
+         "cells": [
+          "ad",
+          "ae",
+          "af",
+          "bd"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "digit 3 → pick 'e' → path 'be' is complete → save",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "b",
+          "e"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "res",
+         "cells": [
+          "ad",
+          "ae",
+          "af",
+          "bd",
+          "be"
+         ],
+         "hot": [
+          4
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "digit 3 → pick 'f' → path 'bf' is complete → save",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "b",
+          "f"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "res",
+         "cells": [
+          "ad",
+          "ae",
+          "af",
+          "bd",
+          "be",
+          "bf"
+         ],
+         "hot": [
+          5
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "all of d, e, f tried → undo 'b'",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "res",
+         "cells": [
+          "ad",
+          "ae",
+          "af",
+          "bd",
+          "be",
+          "bf"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
       }
      ]
     },
@@ -157,6 +453,176 @@ window.PROBLEM = {
         8
        ],
        "marks": {}
+      }
+     ],
+     "sub": [
+      {
+       "description": "digit 2 → pick 'c'",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "c"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "res",
+         "cells": [
+          "ad",
+          "ae",
+          "af",
+          "bd",
+          "be",
+          "bf"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "digit 3 → pick 'd' → path 'cd' is complete → save",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "c",
+          "d"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "res",
+         "cells": [
+          "ad",
+          "ae",
+          "af",
+          "bd",
+          "be",
+          "bf",
+          "cd"
+         ],
+         "hot": [
+          6
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "digit 3 → pick 'e' → path 'ce' is complete → save",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "c",
+          "e"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "res",
+         "cells": [
+          "ad",
+          "ae",
+          "af",
+          "bd",
+          "be",
+          "bf",
+          "cd",
+          "ce"
+         ],
+         "hot": [
+          7
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "digit 3 → pick 'f' → path 'cf' is complete → save",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "c",
+          "f"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "res",
+         "cells": [
+          "ad",
+          "ae",
+          "af",
+          "bd",
+          "be",
+          "bf",
+          "cd",
+          "ce",
+          "cf"
+         ],
+         "hot": [
+          8
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "all of d, e, f tried → undo 'c'",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "res",
+         "cells": [
+          "ad",
+          "ae",
+          "af",
+          "bd",
+          "be",
+          "bf",
+          "cd",
+          "ce",
+          "cf"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
       }
      ]
     },

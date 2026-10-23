@@ -95,6 +95,128 @@ window.PROBLEM = {
        "marks": {},
        "kind": "list"
       }
+     ],
+     "sub": [
+      {
+       "description": "1 has no 0 in the set → it starts a run. y = 1",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "run",
+         "cells": [
+          "1"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {},
+         "kind": "list"
+        }
+       ]
+      },
+      {
+       "description": "2 is in the set → y = 2",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "run",
+         "cells": [
+          "1",
+          "2"
+         ],
+         "hot": [
+          0,
+          1
+         ],
+         "marks": {},
+         "kind": "list"
+        }
+       ]
+      },
+      {
+       "description": "3 is in the set → y = 3",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "run",
+         "cells": [
+          "1",
+          "2",
+          "3"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {},
+         "kind": "list"
+        }
+       ]
+      },
+      {
+       "description": "4 is in the set → y = 4",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "run",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "4"
+         ],
+         "hot": [
+          0,
+          1,
+          2,
+          3
+         ],
+         "marks": {},
+         "kind": "list"
+        }
+       ]
+      },
+      {
+       "description": "5 is not in the set → stop. Run length = 4",
+       "codeLines": [
+        8
+       ],
+       "facts": {
+        "best": 4
+       },
+       "rows": [
+        {
+         "name": "run",
+         "cells": [
+          "1",
+          "2",
+          "3",
+          "4"
+         ],
+         "hot": [
+          0,
+          1,
+          2,
+          3
+         ],
+         "marks": {},
+         "kind": "list"
+        }
+       ]
+      }
      ]
     },
     {

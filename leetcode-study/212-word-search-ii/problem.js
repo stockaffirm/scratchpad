@@ -107,6 +107,224 @@ window.PROBLEM = {
        "marks": {},
        "kind": "grid"
       }
+     ],
+     "sub": [
+      {
+       "description": "cell (0,0) = 'o' → follows the trie branch of 'o'",
+       "codeLines": [
+        11
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "o",
+           "a",
+           "a",
+           "n"
+          ],
+          [
+           "e",
+           "t",
+           "a",
+           "e"
+          ],
+          [
+           "i",
+           "h",
+           "k",
+           "r"
+          ],
+          [
+           "i",
+           "f",
+           "l",
+           "v"
+          ]
+         ],
+         "hot": [
+          "0,0"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "letters so far",
+         "cells": [
+          "o"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "cell (0,1) = 'a' → follows the trie branch of 'oa'",
+       "codeLines": [
+        11
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "o",
+           "a",
+           "a",
+           "n"
+          ],
+          [
+           "e",
+           "t",
+           "a",
+           "e"
+          ],
+          [
+           "i",
+           "h",
+           "k",
+           "r"
+          ],
+          [
+           "i",
+           "f",
+           "l",
+           "v"
+          ]
+         ],
+         "hot": [
+          "0,0",
+          "0,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "letters so far",
+         "cells": [
+          "o",
+          "a"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "cell (1,1) = 't' → follows the trie branch of 'oat'",
+       "codeLines": [
+        11
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "o",
+           "a",
+           "a",
+           "n"
+          ],
+          [
+           "e",
+           "t",
+           "a",
+           "e"
+          ],
+          [
+           "i",
+           "h",
+           "k",
+           "r"
+          ],
+          [
+           "i",
+           "f",
+           "l",
+           "v"
+          ]
+         ],
+         "hot": [
+          "0,0",
+          "0,1",
+          "1,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "letters so far",
+         "cells": [
+          "o",
+          "a",
+          "t"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "cell (2,1) = 'h' → follows the trie branch of 'oath' → a full word: oath!",
+       "codeLines": [
+        13
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "o",
+           "a",
+           "a",
+           "n"
+          ],
+          [
+           "e",
+           "t",
+           "a",
+           "e"
+          ],
+          [
+           "i",
+           "h",
+           "k",
+           "r"
+          ],
+          [
+           "i",
+           "f",
+           "l",
+           "v"
+          ]
+         ],
+         "hot": [
+          "0,0",
+          "0,1",
+          "1,1",
+          "2,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "letters so far",
+         "cells": [
+          "o",
+          "a",
+          "t",
+          "h"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -154,6 +372,167 @@ window.PROBLEM = {
        ],
        "marks": {},
        "kind": "grid"
+      }
+     ],
+     "sub": [
+      {
+       "description": "cell (1,3) = 'e' → follows the trie branch of 'e'",
+       "codeLines": [
+        11
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "o",
+           "a",
+           "a",
+           "n"
+          ],
+          [
+           "e",
+           "t",
+           "a",
+           "e"
+          ],
+          [
+           "i",
+           "h",
+           "k",
+           "r"
+          ],
+          [
+           "i",
+           "f",
+           "l",
+           "v"
+          ]
+         ],
+         "hot": [
+          "1,3"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "letters so far",
+         "cells": [
+          "e"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "cell (1,2) = 'a' → follows the trie branch of 'ea'",
+       "codeLines": [
+        11
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "o",
+           "a",
+           "a",
+           "n"
+          ],
+          [
+           "e",
+           "t",
+           "a",
+           "e"
+          ],
+          [
+           "i",
+           "h",
+           "k",
+           "r"
+          ],
+          [
+           "i",
+           "f",
+           "l",
+           "v"
+          ]
+         ],
+         "hot": [
+          "1,3",
+          "1,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "letters so far",
+         "cells": [
+          "e",
+          "a"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "cell (1,1) = 't' → follows the trie branch of 'eat' → a full word: eat!",
+       "codeLines": [
+        13
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "o",
+           "a",
+           "a",
+           "n"
+          ],
+          [
+           "e",
+           "t",
+           "a",
+           "e"
+          ],
+          [
+           "i",
+           "h",
+           "k",
+           "r"
+          ],
+          [
+           "i",
+           "f",
+           "l",
+           "v"
+          ]
+         ],
+         "hot": [
+          "1,3",
+          "1,2",
+          "1,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "letters so far",
+         "cells": [
+          "e",
+          "a",
+          "t"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
       }
      ]
     },

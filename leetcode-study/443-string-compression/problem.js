@@ -76,6 +76,129 @@ window.PROBLEM = {
         "2": "read"
        }
       }
+     ],
+     "sub": [
+      {
+       "description": "ch = 'a', count = 0 — start counting this run",
+       "codeLines": [
+        5
+       ],
+       "facts": {
+        "count": 0
+       },
+       "rows": [
+        {
+         "name": "chars",
+         "cells": [
+          "a",
+          "a",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [],
+         "marks": {
+          "0": "read,write"
+         }
+        }
+       ]
+      },
+      {
+       "description": "chars[0] is 'a' = ch → read moves to 1, count = 1",
+       "codeLines": [
+        7,
+        8
+       ],
+       "facts": {
+        "count": 1
+       },
+       "rows": [
+        {
+         "name": "chars",
+         "cells": [
+          "a",
+          "a",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {
+          "0": "write",
+          "1": "read"
+         }
+        }
+       ]
+      },
+      {
+       "description": "chars[1] is 'a' = ch → read moves to 2, count = 2",
+       "codeLines": [
+        7,
+        8
+       ],
+       "facts": {
+        "count": 2
+       },
+       "rows": [
+        {
+         "name": "chars",
+         "cells": [
+          "a",
+          "a",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [
+          0,
+          1
+         ],
+         "marks": {
+          "0": "write",
+          "2": "read"
+         }
+        }
+       ]
+      },
+      {
+       "description": "chars[2] is 'b' ≠ 'a' → the run ends. Count = 2",
+       "codeLines": [
+        6
+       ],
+       "facts": {
+        "count": 2
+       },
+       "rows": [
+        {
+         "name": "chars",
+         "cells": [
+          "a",
+          "a",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [
+          0,
+          1
+         ],
+         "marks": {
+          "0": "write",
+          "2": "read"
+         }
+        }
+       ]
+      }
      ]
     },
     {
@@ -105,6 +228,66 @@ window.PROBLEM = {
        "marks": {
         "2": "read,write"
        }
+      }
+     ],
+     "sub": [
+      {
+       "description": "Write the letter 'a' at position 0 (write → 1)",
+       "codeLines": [
+        9,
+        10
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "chars",
+         "cells": [
+          "a",
+          "a",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {
+          "1": "write",
+          "2": "read"
+         }
+        }
+       ]
+      },
+      {
+       "description": "count 2 > 1 → write the digit '2' at position 1 (write → 2)",
+       "codeLines": [
+        12,
+        13,
+        14
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "chars",
+         "cells": [
+          "a",
+          "2",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {
+          "2": "read,write"
+         }
+        }
+       ]
       }
      ]
     },
@@ -139,6 +322,129 @@ window.PROBLEM = {
         "4": "read"
        }
       }
+     ],
+     "sub": [
+      {
+       "description": "ch = 'b', count = 0 — start counting this run",
+       "codeLines": [
+        5
+       ],
+       "facts": {
+        "count": 0
+       },
+       "rows": [
+        {
+         "name": "chars",
+         "cells": [
+          "a",
+          "2",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [],
+         "marks": {
+          "2": "read,write"
+         }
+        }
+       ]
+      },
+      {
+       "description": "chars[2] is 'b' = ch → read moves to 3, count = 1",
+       "codeLines": [
+        7,
+        8
+       ],
+       "facts": {
+        "count": 1
+       },
+       "rows": [
+        {
+         "name": "chars",
+         "cells": [
+          "a",
+          "2",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {
+          "2": "write",
+          "3": "read"
+         }
+        }
+       ]
+      },
+      {
+       "description": "chars[3] is 'b' = ch → read moves to 4, count = 2",
+       "codeLines": [
+        7,
+        8
+       ],
+       "facts": {
+        "count": 2
+       },
+       "rows": [
+        {
+         "name": "chars",
+         "cells": [
+          "a",
+          "2",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [
+          2,
+          3
+         ],
+         "marks": {
+          "2": "write",
+          "4": "read"
+         }
+        }
+       ]
+      },
+      {
+       "description": "chars[4] is 'c' ≠ 'b' → the run ends. Count = 2",
+       "codeLines": [
+        6
+       ],
+       "facts": {
+        "count": 2
+       },
+       "rows": [
+        {
+         "name": "chars",
+         "cells": [
+          "a",
+          "2",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [
+          2,
+          3
+         ],
+         "marks": {
+          "2": "write",
+          "4": "read"
+         }
+        }
+       ]
+      }
      ]
     },
     {
@@ -168,6 +474,66 @@ window.PROBLEM = {
        "marks": {
         "4": "read,write"
        }
+      }
+     ],
+     "sub": [
+      {
+       "description": "Write the letter 'b' at position 2 (write → 3)",
+       "codeLines": [
+        9,
+        10
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "chars",
+         "cells": [
+          "a",
+          "2",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {
+          "3": "write",
+          "4": "read"
+         }
+        }
+       ]
+      },
+      {
+       "description": "count 2 > 1 → write the digit '2' at position 3 (write → 4)",
+       "codeLines": [
+        12,
+        13,
+        14
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "chars",
+         "cells": [
+          "a",
+          "2",
+          "b",
+          "2",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [
+          3
+         ],
+         "marks": {
+          "4": "read,write"
+         }
+        }
+       ]
       }
      ]
     },
@@ -203,6 +569,163 @@ window.PROBLEM = {
         "7": "read"
        }
       }
+     ],
+     "sub": [
+      {
+       "description": "ch = 'c', count = 0 — start counting this run",
+       "codeLines": [
+        5
+       ],
+       "facts": {
+        "count": 0
+       },
+       "rows": [
+        {
+         "name": "chars",
+         "cells": [
+          "a",
+          "2",
+          "b",
+          "2",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [],
+         "marks": {
+          "4": "read,write"
+         }
+        }
+       ]
+      },
+      {
+       "description": "chars[4] is 'c' = ch → read moves to 5, count = 1",
+       "codeLines": [
+        7,
+        8
+       ],
+       "facts": {
+        "count": 1
+       },
+       "rows": [
+        {
+         "name": "chars",
+         "cells": [
+          "a",
+          "2",
+          "b",
+          "2",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [
+          4
+         ],
+         "marks": {
+          "4": "write",
+          "5": "read"
+         }
+        }
+       ]
+      },
+      {
+       "description": "chars[5] is 'c' = ch → read moves to 6, count = 2",
+       "codeLines": [
+        7,
+        8
+       ],
+       "facts": {
+        "count": 2
+       },
+       "rows": [
+        {
+         "name": "chars",
+         "cells": [
+          "a",
+          "2",
+          "b",
+          "2",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [
+          4,
+          5
+         ],
+         "marks": {
+          "4": "write",
+          "6": "read"
+         }
+        }
+       ]
+      },
+      {
+       "description": "chars[6] is 'c' = ch → read moves to 7, count = 3",
+       "codeLines": [
+        7,
+        8
+       ],
+       "facts": {
+        "count": 3
+       },
+       "rows": [
+        {
+         "name": "chars",
+         "cells": [
+          "a",
+          "2",
+          "b",
+          "2",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [
+          4,
+          5,
+          6
+         ],
+         "marks": {
+          "4": "write",
+          "7": "read"
+         }
+        }
+       ]
+      },
+      {
+       "description": "End of the list → the run ends. Count = 3",
+       "codeLines": [
+        6
+       ],
+       "facts": {
+        "count": 3
+       },
+       "rows": [
+        {
+         "name": "chars",
+         "cells": [
+          "a",
+          "2",
+          "b",
+          "2",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [
+          4,
+          5,
+          6
+         ],
+         "marks": {
+          "4": "write",
+          "7": "read"
+         }
+        }
+       ]
+      }
      ]
     },
     {
@@ -233,6 +756,67 @@ window.PROBLEM = {
         "6": "write",
         "7": "read"
        }
+      }
+     ],
+     "sub": [
+      {
+       "description": "Write the letter 'c' at position 4 (write → 5)",
+       "codeLines": [
+        9,
+        10
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "chars",
+         "cells": [
+          "a",
+          "2",
+          "b",
+          "2",
+          "c",
+          "c",
+          "c"
+         ],
+         "hot": [
+          4
+         ],
+         "marks": {
+          "5": "write",
+          "7": "read"
+         }
+        }
+       ]
+      },
+      {
+       "description": "count 3 > 1 → write the digit '3' at position 5 (write → 6)",
+       "codeLines": [
+        12,
+        13,
+        14
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "chars",
+         "cells": [
+          "a",
+          "2",
+          "b",
+          "2",
+          "c",
+          "3",
+          "c"
+         ],
+         "hot": [
+          5
+         ],
+         "marks": {
+          "6": "write",
+          "7": "read"
+         }
+        }
+       ]
       }
      ]
     },

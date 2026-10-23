@@ -66,6 +66,147 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "choose 1 → path [1]",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "1"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "choose 2 → path [1,2]",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "1",
+          "2"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "only 3 is unused → path [1,2,3] is full → save it",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "1",
+          "2",
+          "3"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "undo 3 and 2 (pop) → back to [1]",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "1"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "choose 3 → path [1,3]",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "1",
+          "3"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "only 2 is unused → path [1,3,2] is full → save it",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "1",
+          "3",
+          "2"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "undo 2 and 3 (pop) → back to [1]",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "1"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -98,6 +239,147 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "choose 2 → path [2]",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "2"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "choose 1 → path [2,1]",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "2",
+          "1"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "only 3 is unused → path [2,1,3] is full → save it",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "2",
+          "1",
+          "3"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "undo 3 and 1 (pop) → back to [2]",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "2"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "choose 3 → path [2,3]",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "2",
+          "3"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "only 1 is unused → path [2,3,1] is full → save it",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "2",
+          "3",
+          "1"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "undo 1 and 3 (pop) → back to [2]",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "2"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -129,6 +411,147 @@ window.PROBLEM = {
         1
        ],
        "marks": {}
+      }
+     ],
+     "sub": [
+      {
+       "description": "choose 3 → path [3]",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "3"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "choose 1 → path [3,1]",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "3",
+          "1"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "only 2 is unused → path [3,1,2] is full → save it",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "3",
+          "1",
+          "2"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "undo 2 and 1 (pop) → back to [3]",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "3"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "choose 2 → path [3,2]",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "3",
+          "2"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "only 1 is unused → path [3,2,1] is full → save it",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "3",
+          "2",
+          "1"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "undo 1 and 2 (pop) → back to [3]",
+       "codeLines": [
+        8
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "3"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
       }
      ]
     },

@@ -229,6 +229,115 @@ window.PROBLEM = {
         "4": "r"
        }
       }
+     ],
+     "sub": [
+      {
+       "description": "add nums[4] = 0 → zeros = 2",
+       "codeLines": [
+        5
+       ],
+       "facts": {
+        "zeros": 2
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "0",
+          "1",
+          "1",
+          "1",
+          "0",
+          "1",
+          "1",
+          "0",
+          "1"
+         ],
+         "hot": [
+          0,
+          1,
+          2,
+          3,
+          4
+         ],
+         "marks": {
+          "0": "l",
+          "4": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "zeros > 1 → shrink: nums[0] is 0 → zeros = 1, left moves to 1",
+       "codeLines": [
+        6
+       ],
+       "facts": {
+        "zeros": 1
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "0",
+          "1",
+          "1",
+          "1",
+          "0",
+          "1",
+          "1",
+          "0",
+          "1"
+         ],
+         "hot": [
+          0,
+          1,
+          2,
+          3,
+          4
+         ],
+         "marks": {
+          "0": "l",
+          "4": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "zeros ≤ 1 → window is valid again: length 3",
+       "codeLines": [
+        9
+       ],
+       "facts": {
+        "zeros": 1
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "0",
+          "1",
+          "1",
+          "1",
+          "0",
+          "1",
+          "1",
+          "0",
+          "1"
+         ],
+         "hot": [
+          1,
+          2,
+          3,
+          4
+         ],
+         "marks": {
+          "1": "l",
+          "4": "r"
+         }
+        }
+       ]
+      }
      ]
     },
     {
@@ -345,6 +454,226 @@ window.PROBLEM = {
         "5": "l",
         "7": "r"
        }
+      }
+     ],
+     "sub": [
+      {
+       "description": "add nums[7] = 0 → zeros = 2",
+       "codeLines": [
+        5
+       ],
+       "facts": {
+        "zeros": 2
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "0",
+          "1",
+          "1",
+          "1",
+          "0",
+          "1",
+          "1",
+          "0",
+          "1"
+         ],
+         "hot": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+         ],
+         "marks": {
+          "1": "l",
+          "7": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "zeros > 1 → shrink: nums[1] is 1 → left moves to 2",
+       "codeLines": [
+        6
+       ],
+       "facts": {
+        "zeros": 2
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "0",
+          "1",
+          "1",
+          "1",
+          "0",
+          "1",
+          "1",
+          "0",
+          "1"
+         ],
+         "hot": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+         ],
+         "marks": {
+          "1": "l",
+          "7": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "zeros > 1 → shrink: nums[2] is 1 → left moves to 3",
+       "codeLines": [
+        6
+       ],
+       "facts": {
+        "zeros": 2
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "0",
+          "1",
+          "1",
+          "1",
+          "0",
+          "1",
+          "1",
+          "0",
+          "1"
+         ],
+         "hot": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+         ],
+         "marks": {
+          "2": "l",
+          "7": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "zeros > 1 → shrink: nums[3] is 1 → left moves to 4",
+       "codeLines": [
+        6
+       ],
+       "facts": {
+        "zeros": 2
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "0",
+          "1",
+          "1",
+          "1",
+          "0",
+          "1",
+          "1",
+          "0",
+          "1"
+         ],
+         "hot": [
+          3,
+          4,
+          5,
+          6,
+          7
+         ],
+         "marks": {
+          "3": "l",
+          "7": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "zeros > 1 → shrink: nums[4] is 0 → zeros = 1, left moves to 5",
+       "codeLines": [
+        6
+       ],
+       "facts": {
+        "zeros": 1
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "0",
+          "1",
+          "1",
+          "1",
+          "0",
+          "1",
+          "1",
+          "0",
+          "1"
+         ],
+         "hot": [
+          4,
+          5,
+          6,
+          7
+         ],
+         "marks": {
+          "4": "l",
+          "7": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "zeros ≤ 1 → window is valid again: length 2",
+       "codeLines": [
+        9
+       ],
+       "facts": {
+        "zeros": 1
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "0",
+          "1",
+          "1",
+          "1",
+          "0",
+          "1",
+          "1",
+          "0",
+          "1"
+         ],
+         "hot": [
+          5,
+          6,
+          7
+         ],
+         "marks": {
+          "5": "l",
+          "7": "r"
+         }
+        }
+       ]
       }
      ]
     },

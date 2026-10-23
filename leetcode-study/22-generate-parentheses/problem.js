@@ -72,6 +72,147 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "open 0 < 2 → add '(' → \"(\"",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "s",
+         "cells": [
+          "("
+         ],
+         "hot": [],
+         "marks": {},
+         "kind": "list"
+        },
+        {
+         "name": "saved",
+         "cells": [
+          "·"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "open 1 < 2 → add '(' → \"((\"",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "s",
+         "cells": [
+          "(",
+          "("
+         ],
+         "hot": [],
+         "marks": {},
+         "kind": "list"
+        },
+        {
+         "name": "saved",
+         "cells": [
+          "·"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "open is 2 = n; close 0 < 2 → add ')' → \"(()\"",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "s",
+         "cells": [
+          "(",
+          "(",
+          ")"
+         ],
+         "hot": [],
+         "marks": {},
+         "kind": "list"
+        },
+        {
+         "name": "saved",
+         "cells": [
+          "·"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "close 1 < 2 → add ')' → \"(())\"",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "s",
+         "cells": [
+          "(",
+          "(",
+          ")",
+          ")"
+         ],
+         "hot": [],
+         "marks": {},
+         "kind": "list"
+        },
+        {
+         "name": "saved",
+         "cells": [
+          "·"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "length 4 = 2n → save \"(())\"",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "s",
+         "cells": [
+          "(",
+          "(",
+          ")",
+          ")"
+         ],
+         "hot": [],
+         "marks": {},
+         "kind": "list"
+        },
+        {
+         "name": "saved",
+         "cells": [
+          "(())"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -109,6 +250,148 @@ window.PROBLEM = {
         1
        ],
        "marks": {}
+      }
+     ],
+     "sub": [
+      {
+       "description": "undo back to \"(\"",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "s",
+         "cells": [
+          "("
+         ],
+         "hot": [],
+         "marks": {},
+         "kind": "list"
+        },
+        {
+         "name": "saved",
+         "cells": [
+          "(())"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "close 0 < open 1 → add ')' → \"()\"",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "s",
+         "cells": [
+          "(",
+          ")"
+         ],
+         "hot": [],
+         "marks": {},
+         "kind": "list"
+        },
+        {
+         "name": "saved",
+         "cells": [
+          "(())"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "open 1 < 2 → add '(' → \"()(\"",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "s",
+         "cells": [
+          "(",
+          ")",
+          "("
+         ],
+         "hot": [],
+         "marks": {},
+         "kind": "list"
+        },
+        {
+         "name": "saved",
+         "cells": [
+          "(())"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "close 1 < open 2 → add ')' → \"()()\"",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "s",
+         "cells": [
+          "(",
+          ")",
+          "(",
+          ")"
+         ],
+         "hot": [],
+         "marks": {},
+         "kind": "list"
+        },
+        {
+         "name": "saved",
+         "cells": [
+          "(())"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "length 4 = 2n → save \"()()\"",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "s",
+         "cells": [
+          "(",
+          ")",
+          "(",
+          ")"
+         ],
+         "hot": [],
+         "marks": {},
+         "kind": "list"
+        },
+        {
+         "name": "saved",
+         "cells": [
+          "(())",
+          "()()"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
       }
      ]
     },

@@ -210,6 +210,137 @@ window.PROBLEM = {
         "4": "r"
        }
       }
+     ],
+     "sub": [
+      {
+       "description": "add nums[4] = 0 → zeros = 2",
+       "codeLines": [
+        5
+       ],
+       "facts": {
+        "zeros": 2
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "1",
+          "0",
+          "1",
+          "1",
+          "0",
+          "1"
+         ],
+         "hot": [
+          0,
+          1,
+          2,
+          3,
+          4
+         ],
+         "marks": {
+          "0": "l",
+          "4": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "zeros > 1 → shrink: nums[0] is 1 → left moves to 1",
+       "codeLines": [
+        6
+       ],
+       "facts": {
+        "zeros": 2
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "1",
+          "0",
+          "1",
+          "1",
+          "0",
+          "1"
+         ],
+         "hot": [
+          0,
+          1,
+          2,
+          3,
+          4
+         ],
+         "marks": {
+          "0": "l",
+          "4": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "zeros > 1 → shrink: nums[1] is 0 → zeros = 1, left moves to 2",
+       "codeLines": [
+        6
+       ],
+       "facts": {
+        "zeros": 1
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "1",
+          "0",
+          "1",
+          "1",
+          "0",
+          "1"
+         ],
+         "hot": [
+          1,
+          2,
+          3,
+          4
+         ],
+         "marks": {
+          "1": "l",
+          "4": "r"
+         }
+        }
+       ]
+      },
+      {
+       "description": "zeros ≤ 1 → window is valid again: length 3",
+       "codeLines": [
+        9
+       ],
+       "facts": {
+        "zeros": 1
+       },
+       "rows": [
+        {
+         "name": "nums",
+         "cells": [
+          "1",
+          "0",
+          "1",
+          "1",
+          "0",
+          "1"
+         ],
+         "hot": [
+          2,
+          3,
+          4
+         ],
+         "marks": {
+          "2": "l",
+          "4": "r"
+         }
+        }
+       ]
+      }
      ]
     },
     {

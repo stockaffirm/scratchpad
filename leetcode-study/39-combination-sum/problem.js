@@ -60,6 +60,97 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "choose 2 → path [2], sum 2",
+       "codeLines": [
+        8
+       ],
+       "facts": {
+        "total": 2
+       },
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "2"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "choose 2 again → path [2,2], sum 4",
+       "codeLines": [
+        8
+       ],
+       "facts": {
+        "total": 4
+       },
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "2",
+          "2"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "choose 2 again → path [2,2,2], sum 6",
+       "codeLines": [
+        8
+       ],
+       "facts": {
+        "total": 6
+       },
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "2",
+          "2",
+          "2"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "try another 2 → 8 > 7 ✗; 3 → 9 ✗; 6, 7 ✗ → dead end",
+       "codeLines": [
+        7
+       ],
+       "facts": {
+        "total": 6
+       },
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "2",
+          "2",
+          "2"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -96,6 +187,88 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "undo the last 2 → path [2,2], sum 4",
+       "codeLines": [
+        8
+       ],
+       "facts": {
+        "total": 4
+       },
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "2",
+          "2"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "try 3 → 4 + 3 = 7 ≤ 7 ✓ → path [2,2,3]",
+       "codeLines": [
+        8
+       ],
+       "facts": {
+        "total": 7
+       },
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "2",
+          "2",
+          "3"
+         ],
+         "hot": [
+          2
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "sum 7 = target → save [2,2,3]",
+       "codeLines": [
+        5
+       ],
+       "facts": {
+        "total": 7
+       },
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "2",
+          "2",
+          "3"
+         ],
+         "hot": [
+          0,
+          1,
+          2
+         ],
+         "marks": {}
+        },
+        {
+         "name": "found",
+         "cells": [
+          "[2,2,3]"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -128,6 +301,78 @@ window.PROBLEM = {
         1
        ],
        "marks": {}
+      }
+     ],
+     "sub": [
+      {
+       "description": "other branches ([2,3], [3,3], [6]) all overshoot 7 and are dropped",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "found",
+         "cells": [
+          "[2,2,3]"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "start with 7 → path [7], sum 7",
+       "codeLines": [
+        8
+       ],
+       "facts": {
+        "total": 7
+       },
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "7"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "sum 7 = target → save [7]",
+       "codeLines": [
+        5
+       ],
+       "facts": {
+        "total": 7
+       },
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "7"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "found",
+         "cells": [
+          "[2,2,3]",
+          "[7]"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        }
+       ]
       }
      ]
     },

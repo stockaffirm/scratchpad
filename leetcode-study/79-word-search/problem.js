@@ -92,6 +92,152 @@ window.PROBLEM = {
        "marks": {},
        "kind": "grid"
       }
+     ],
+     "sub": [
+      {
+       "description": "cell (0,0) = 'A' matches word[0] = 'A' → mark it used and go to a neighbour",
+       "codeLines": [
+        6,
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "A",
+           "B",
+           "C",
+           "E"
+          ],
+          [
+           "S",
+           "F",
+           "C",
+           "S"
+          ],
+          [
+           "A",
+           "D",
+           "E",
+           "E"
+          ]
+         ],
+         "hot": [
+          "0,0"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "matched",
+         "cells": [
+          "A"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "cell (0,1) = 'B' matches word[1] = 'B' → mark it used and go to a neighbour",
+       "codeLines": [
+        6,
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "A",
+           "B",
+           "C",
+           "E"
+          ],
+          [
+           "S",
+           "F",
+           "C",
+           "S"
+          ],
+          [
+           "A",
+           "D",
+           "E",
+           "E"
+          ]
+         ],
+         "hot": [
+          "0,0",
+          "0,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "matched",
+         "cells": [
+          "A",
+          "B"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "cell (0,2) = 'C' matches word[2] = 'C' → mark it used and go to a neighbour",
+       "codeLines": [
+        6,
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "A",
+           "B",
+           "C",
+           "E"
+          ],
+          [
+           "S",
+           "F",
+           "C",
+           "S"
+          ],
+          [
+           "A",
+           "D",
+           "E",
+           "E"
+          ]
+         ],
+         "hot": [
+          "0,0",
+          "0,1",
+          "0,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "matched",
+         "cells": [
+          "A",
+          "B",
+          "C"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -133,6 +279,114 @@ window.PROBLEM = {
        ],
        "marks": {},
        "kind": "grid"
+      }
+     ],
+     "sub": [
+      {
+       "description": "cell (1,2) = 'C' matches word[3] = 'C' → mark it used and go to a neighbour",
+       "codeLines": [
+        6,
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "A",
+           "B",
+           "C",
+           "E"
+          ],
+          [
+           "S",
+           "F",
+           "C",
+           "S"
+          ],
+          [
+           "A",
+           "D",
+           "E",
+           "E"
+          ]
+         ],
+         "hot": [
+          "0,0",
+          "0,1",
+          "0,2",
+          "1,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "matched",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "C"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "cell (2,2) = 'E' matches word[4] = 'E' → mark it used and go to a neighbour",
+       "codeLines": [
+        6,
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "A",
+           "B",
+           "C",
+           "E"
+          ],
+          [
+           "S",
+           "F",
+           "C",
+           "S"
+          ],
+          [
+           "A",
+           "D",
+           "E",
+           "E"
+          ]
+         ],
+         "hot": [
+          "0,0",
+          "0,1",
+          "0,2",
+          "1,2",
+          "2,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "matched",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "C",
+          "E"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
       }
      ]
     },
@@ -178,6 +432,126 @@ window.PROBLEM = {
        ],
        "marks": {},
        "kind": "grid"
+      }
+     ],
+     "sub": [
+      {
+       "description": "cell (2,1) = 'D' matches word[5] = 'D' → mark it used and go to a neighbour",
+       "codeLines": [
+        6,
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "A",
+           "B",
+           "C",
+           "E"
+          ],
+          [
+           "S",
+           "F",
+           "C",
+           "S"
+          ],
+          [
+           "A",
+           "D",
+           "E",
+           "E"
+          ]
+         ],
+         "hot": [
+          "0,0",
+          "0,1",
+          "0,2",
+          "1,2",
+          "2,2",
+          "2,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "matched",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "C",
+          "E",
+          "D"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "i = 6 = len(word) → the whole word is spelled → True",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "board",
+         "cells": [
+          [
+           "A",
+           "B",
+           "C",
+           "E"
+          ],
+          [
+           "S",
+           "F",
+           "C",
+           "S"
+          ],
+          [
+           "A",
+           "D",
+           "E",
+           "E"
+          ]
+         ],
+         "hot": [
+          "0,0",
+          "0,1",
+          "0,2",
+          "1,2",
+          "2,2",
+          "2,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        },
+        {
+         "name": "matched",
+         "cells": [
+          "A",
+          "B",
+          "C",
+          "C",
+          "E",
+          "D"
+         ],
+         "hot": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+         ],
+         "marks": {}
+        }
+       ]
       }
      ]
     }

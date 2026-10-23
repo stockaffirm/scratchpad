@@ -91,6 +91,159 @@ window.PROBLEM = {
        "marks": {},
        "kind": "grid"
       }
+     ],
+     "sub": [
+      {
+       "description": "scan row 0: [1,1,1] has no zero",
+       "codeLines": [
+        3
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "m",
+         "cells": [
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "1",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "1"
+          ]
+         ],
+         "hot": [
+          "0,0",
+          "0,1",
+          "0,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "scan row 1: [1,0,1] has a zero → rows = {1}",
+       "codeLines": [
+        3
+       ],
+       "facts": {
+        "rows": "{1}"
+       },
+       "rows": [
+        {
+         "name": "m",
+         "cells": [
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "1",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "1"
+          ]
+         ],
+         "hot": [
+          "1,0",
+          "1,1",
+          "1,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "scan row 2: no zero",
+       "codeLines": [
+        3
+       ],
+       "facts": {
+        "rows": "{1}"
+       },
+       "rows": [
+        {
+         "name": "m",
+         "cells": [
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "1",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "1"
+          ]
+         ],
+         "hot": [
+          "2,0",
+          "2,1",
+          "2,2"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      },
+      {
+       "description": "the zero is in column 1 → cols = {1}",
+       "codeLines": [
+        4
+       ],
+       "facts": {
+        "rows": "{1}",
+        "cols": "{1}"
+       },
+       "rows": [
+        {
+         "name": "m",
+         "cells": [
+          [
+           "1",
+           "1",
+           "1"
+          ],
+          [
+           "1",
+           "0",
+           "1"
+          ],
+          [
+           "1",
+           "1",
+           "1"
+          ]
+         ],
+         "hot": [
+          "0,1",
+          "1,1",
+          "2,1"
+         ],
+         "marks": {},
+         "kind": "grid"
+        }
+       ]
+      }
      ]
     },
     {

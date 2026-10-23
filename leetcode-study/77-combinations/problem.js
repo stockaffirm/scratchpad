@@ -68,6 +68,176 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "choose 1 → path [1]",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "1"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "saved",
+         "cells": [
+          "…"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "choose 2 → path [1,2] has 2 numbers → save it",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "1",
+          "2"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "saved",
+         "cells": [
+          "[1,2]"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "undo 2 (pop) → path [1], try the next number",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "1"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "choose 3 → path [1,3] has 2 numbers → save it",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "1",
+          "3"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "saved",
+         "cells": [
+          "[1,3]"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "undo 3 (pop) → path [1], try the next number",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "1"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "choose 4 → path [1,4] has 2 numbers → save it",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "1",
+          "4"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "saved",
+         "cells": [
+          "[1,4]"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "undo 4 (pop) → path [1], try the next number",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "1"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -103,6 +273,129 @@ window.PROBLEM = {
        ],
        "marks": {}
       }
+     ],
+     "sub": [
+      {
+       "description": "choose 2 → path [2]",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "2"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "saved",
+         "cells": [
+          "…"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "choose 3 → path [2,3] has 2 numbers → save it",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "2",
+          "3"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "saved",
+         "cells": [
+          "[2,3]"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "undo 3 (pop) → path [2], try the next number",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "2"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "choose 4 → path [2,4] has 2 numbers → save it",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "2",
+          "4"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "saved",
+         "cells": [
+          "[2,4]"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "undo 4 (pop) → path [2], try the next number",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "2"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
+      }
      ]
     },
     {
@@ -133,6 +426,82 @@ window.PROBLEM = {
         1
        ],
        "marks": {}
+      }
+     ],
+     "sub": [
+      {
+       "description": "choose 3 → path [3]",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "3"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        },
+        {
+         "name": "saved",
+         "cells": [
+          "…"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "choose 4 → path [3,4] has 2 numbers → save it",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "3",
+          "4"
+         ],
+         "hot": [
+          1
+         ],
+         "marks": {}
+        },
+        {
+         "name": "saved",
+         "cells": [
+          "[3,4]"
+         ],
+         "hot": [],
+         "marks": {}
+        }
+       ]
+      },
+      {
+       "description": "undo 4 (pop) → path [3], try the next number",
+       "codeLines": [
+        7
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "path",
+         "cells": [
+          "3"
+         ],
+         "hot": [
+          0
+         ],
+         "marks": {}
+        }
+       ]
       }
      ]
     },

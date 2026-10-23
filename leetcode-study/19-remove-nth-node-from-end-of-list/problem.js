@@ -74,6 +74,66 @@ window.PROBLEM = {
        },
        "kind": "list"
       }
+     ],
+     "sub": [
+      {
+       "description": "fast moves 1 step",
+       "codeLines": [
+        4
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "list",
+         "cells": [
+          "D",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         "hot": [
+          0,
+          1
+         ],
+         "marks": {
+          "0": "slow",
+          "1": "fast"
+         },
+         "kind": "list"
+        }
+       ]
+      },
+      {
+       "description": "fast moves 2 steps — the gap is now n = 2",
+       "codeLines": [
+        4
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "list",
+         "cells": [
+          "D",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         "hot": [
+          0,
+          2
+         ],
+         "marks": {
+          "0": "slow",
+          "2": "fast"
+         },
+         "kind": "list"
+        }
+       ]
+      }
      ]
     },
     {
@@ -103,6 +163,124 @@ window.PROBLEM = {
         "5": "fast"
        },
        "kind": "list"
+      }
+     ],
+     "sub": [
+      {
+       "description": "both move one step: slow → 1, fast → 3",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "list",
+         "cells": [
+          "D",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         "hot": [
+          1,
+          3
+         ],
+         "marks": {
+          "1": "slow",
+          "3": "fast"
+         },
+         "kind": "list"
+        }
+       ]
+      },
+      {
+       "description": "both move one step: slow → 2, fast → 4",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "list",
+         "cells": [
+          "D",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         "hot": [
+          2,
+          4
+         ],
+         "marks": {
+          "2": "slow",
+          "4": "fast"
+         },
+         "kind": "list"
+        }
+       ]
+      },
+      {
+       "description": "both move one step: slow → 3, fast → 5",
+       "codeLines": [
+        6
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "list",
+         "cells": [
+          "D",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         "hot": [
+          3,
+          5
+         ],
+         "marks": {
+          "3": "slow",
+          "5": "fast"
+         },
+         "kind": "list"
+        }
+       ]
+      },
+      {
+       "description": "fast.next is None → stop. slow is right before the node to delete",
+       "codeLines": [
+        5
+       ],
+       "facts": {},
+       "rows": [
+        {
+         "name": "list",
+         "cells": [
+          "D",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         "hot": [
+          3,
+          5
+         ],
+         "marks": {
+          "3": "slow",
+          "5": "fast"
+         },
+         "kind": "list"
+        }
+       ]
       }
      ]
     },
