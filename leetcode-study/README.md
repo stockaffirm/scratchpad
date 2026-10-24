@@ -19,7 +19,7 @@ To add a problem: copy a folder, edit `problem.js`, add its folder name to `asse
 
 ## Done marks
 
-Saved in the browser. The **Sync progress to GitHub** button on the index stores them in the private repo `stockaffirm/leetcode-progress` (`progress.json`) using a fine-grained token (Contents: read & write on that repo only) pasted once per browser. Changes merge per problem by timestamp, so a fresh browser never wipes saved progress.
+Saved in the browser. **Sign in with GitHub to sync** (index page) stores them in Supabase, one private row per GitHub user (table `leetcode_progress`, row-level security), so they follow you across browsers. Changes merge per problem by timestamp, so a fresh browser never wipes saved progress.
 
 ## Adding a set (e.g. Google)
 

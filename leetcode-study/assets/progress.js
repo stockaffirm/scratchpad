@@ -1,9 +1,8 @@
-/* Completion tracking. Always saved in this browser (localStorage); optionally synced to a private
-   GitHub repo (progress.json) so it survives cleared storage and follows you across browsers/devices.
+/* Completion tracking. Always saved in this browser (localStorage); after "Sign in with GitHub" it is also synced
+   to Supabase (one private row per GitHub user) so it survives cleared storage and follows you across devices.
    Sync merges per problem by timestamp (latest change wins), so an empty browser can never wipe saved progress. */
 (function(){
-  const KD = "lc75.done", KU = "lc75.undone", KG = "lc75.gh";
-  const REPO = "stockaffirm/leetcode-progress", FILE = "progress.json";
+  const KD = "lc75.done", KU = "lc75.undone";
   const ls = {
     get(k, d){ try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch(e){ return d; } },
     set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} },
@@ -23,39 +22,49 @@
   }
   const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 
-  const gh = { cfg: () => ls.get(KG, null), status: "off", listeners: [] };
+  /* ---- Supabase backend: "Sign in with GitHub", one row per user (RLS) in public.leetcode_progress ---- */
+  const SB_URL = "https://yjhhdbcxwkiwlzznjwye.supabase.co", SB_KEY = "sb_publishable_gO8mOgqTAT7aaNuRg26sMA_NuXuJNl8";
+  const SB_STORE = "sb-yjhhdbcxwkiwlzznjwye-auth-token";
+  const INDEX_URL = new URL("../", (document.currentScript || {}).src || location.href).href;
+  const hasSession = () => { try { return !!localStorage.getItem(SB_STORE); } catch(e){ return false; } };
+  const wantsSb = () => hasSession() || /[#?&](access_token|code)=/.test(location.hash + location.search);
+  const gh = { cfg: () => (wantsSb() || gh.user) ? { user: gh.user } : null, status: "off", listeners: [], user: null };
   const say = (st, msg) => { gh.status = st; gh.msg = msg || ""; gh.listeners.forEach(f => f()); };
-  const b64e = s => btoa(unescape(encodeURIComponent(s))), b64d = s => decodeURIComponent(escape(atob(s.replace(/\s/g, ""))));
+  let sbp = null;
+  function client(){
+    return sbp = sbp || new Promise((res, rej) => {
+      const go = () => res(window.supabase.createClient(SB_URL, SB_KEY, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } }));
+      if(window.supabase) return go();
+      const t = document.createElement("script"); t.src = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js";
+      t.onload = go; t.onerror = () => { sbp = null; rej(new Error("could not load Supabase")); }; document.head.appendChild(t);
+    });
+  }
   async function api(method, body){
-    const c = gh.cfg(); if(!c) throw new Error("no token");
-    const r = await fetch("https://api.github.com/repos/" + (c.repo || REPO) + "/contents/" + FILE, {
-      method, headers: { Authorization: "Bearer " + c.token, Accept: "application/vnd.github+json", "Content-Type": "application/json" },
-      body: body ? JSON.stringify(body) : undefined, cache: "no-store" });
-    if(r.status === 404 && method === "GET") return { sha: null, data: { done: {}, undone: {} } };
-    if(!r.ok) { const e = new Error("GitHub " + r.status); e.status = r.status; throw e; }
-    const j = await r.json();
-    if(method === "GET"){ let data = {}; try { data = JSON.parse(b64d(j.content)); } catch(e){} return { sha: j.sha, data: { done: data.done || {}, undone: data.undone || {} } }; }
-    return j;
+    const sb = await client(), { data: { session } } = await sb.auth.getSession();
+    if(!session){ const e = new Error("signed out"); e.status = 401; throw e; }
+    gh.user = session.user.user_metadata.user_name || session.user.email || "you";
+    if(method === "GET"){
+      const { data, error } = await sb.from("leetcode_progress").select("data").maybeSingle();
+      if(error) throw Object.assign(new Error(error.message), { status: 500 });
+      const d = (data && data.data) || {}; return { data: { done: d.done || {}, undone: d.undone || {} } };
+    }
+    const { error } = await sb.from("leetcode_progress").upsert({ user_id: session.user.id, data: body, updated_at: new Date().toISOString() });
+    if(error) throw Object.assign(new Error(error.message), { status: 500 });
   }
   let busy = false, again = false, timer = null;
-  /* pull -> merge -> save locally -> push if the merge differs from what is on GitHub */
+  /* pull -> merge -> save locally -> push if the merge differs from what is stored */
   async function sync(){
     if(!gh.cfg()) return say("off");
     if(busy){ again = true; return; }
     busy = true; say("syncing");
     try {
-      for(let tries = 0; tries < 3; tries++){
-        const remote = await api("GET");
-        const merged = merge(state(), remote.data);
-        save(merged); P.paint();
-        if(same(merged, remote.data)) { say("ok", "Synced " + new Date().toLocaleTimeString()); break; }
-        try {
-          await api("PUT", { message: "progress " + Object.keys(merged.done).length + " done", content: b64e(JSON.stringify(merged)), sha: remote.sha || undefined });
-          say("ok", "Synced " + new Date().toLocaleTimeString()); break;
-        } catch(e){ if(e.status !== 409 && e.status !== 422 || tries === 2) throw e; }
-      }
+      const remote = await api("GET");
+      const merged = merge(state(), remote.data);
+      save(merged); P.paint();
+      if(!same(merged, remote.data)) await api("PUT", merged);
+      say("ok", "Synced as " + gh.user + " at " + new Date().toLocaleTimeString());
     } catch(e){
-      say("err", e.status === 401 || e.status === 403 ? "Token rejected (needs Contents read+write on " + REPO + ")" : e.status === 404 ? "Repo " + REPO + " not found for this token" : "Sync failed: " + e.message);
+      if(e.status === 401){ gh.user = null; say("off"); } else say("err", "Sync failed: " + e.message);
     }
     busy = false; if(again){ again = false; sync(); }
   }
@@ -73,11 +82,8 @@
     clear(){ ls.del(KD); ls.del(KU); },
     paint(){},
     sync,
-    connect(){
-      const t = prompt("Paste a GitHub fine-grained token with Contents: read & write on " + REPO + " (kept only in this browser):");
-      if(!t) return; ls.set(KG, { token: t.trim(), repo: REPO }); sync();
-    },
-    disconnect(){ ls.del(KG); say("off"); }
+    async connect(){ try { const sb = await client(); await sb.auth.signInWithOAuth({ provider: "github", options: { redirectTo: INDEX_URL } }); } catch(e){ say("err", e.message); } },
+    async disconnect(){ try { const sb = await client(); await sb.auth.signOut(); } catch(e){} gh.user = null; say("off"); }
   };
   window.addEventListener("pageshow", () => { if(gh.cfg()) sync(); });
   document.addEventListener("visibilitychange", () => { if(!document.hidden && gh.cfg()) sync(); });
@@ -91,12 +97,12 @@
     const b = document.createElement("button"); b.id = "syncBtn"; b.className = "sync";
     tools.insertBefore(b, tools.querySelector(".gap"));
     const draw = () => {
-      b.textContent = { off: "☁ Sync progress to GitHub", syncing: "☁ Syncing…", ok: "☁ Synced", err: "☁ " + (gh.msg || "Sync problem") }[gh.status];
-      b.title = gh.msg || (gh.status === "off" ? "Save done marks in a private GitHub repo" : "Click to " + (gh.status === "ok" ? "disconnect" : "retry"));
+      b.textContent = { off: "☁ Sign in with GitHub to sync", syncing: "☁ Syncing…", ok: "☁ Synced", err: "☁ " + (gh.msg || "Sync problem") }[gh.status];
+      b.title = gh.msg || (gh.status === "off" ? "Save your done marks to your account so they follow you across browsers" : "Click to " + (gh.status === "ok" ? "disconnect" : "retry"));
       b.dataset.st = gh.status;
     };
     gh.listeners.push(draw);
-    b.onclick = () => { if(!gh.cfg()) P.connect(); else if(gh.status === "ok" && confirm("Disconnect GitHub sync in this browser? Your progress stays saved here and on GitHub.")) P.disconnect(); else if(gh.status === "err") sync(); };
+    b.onclick = () => { if(!gh.cfg()) P.connect(); else if(gh.status === "ok" && confirm("Sign out of sync in this browser? Your progress stays saved here and in your account.")) P.disconnect(); else if(gh.status === "err") sync(); };
     draw();
   }
   P.paint(); window.addEventListener("pageshow", P.paint);
