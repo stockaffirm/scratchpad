@@ -12,7 +12,3 @@ leetcode-study/
 ```
 
 To add a problem: copy a folder, edit `problem.js`, add its folder name to `assets/order.js` and a card to `index.html`.
-
-## Tools
-
-`tools/gen/` is the generator pipeline (`./all.sh`): curated walkthroughs + real-code traces + extra approaches for every problem. See `tools/gen/drivers.py` (examples), `drivers2.py` (edge cases) and `alts*.js` (other approaches).

@@ -14,6 +14,8 @@ for(const[id,s]of Object.entries(old))built[id]={dir:id+"-"+s,title:oldMeta[id][
 const order=[],sections=[];let missing=[];
 for(const[name,ids]of groups){const items=[];for(const id of ids){const b=built[id];if(!b){missing.push(id);continue}items.push({id,...b});order.push(b.dir)}sections.push([name,items])}
 const in75=new Set(groups.flatMap(g=>g[1]));for(const[,ids]of groups150)for(const id of ids)if(!in75.has(id)){const b2=built[id];if(!b2){missing.push(id);continue}order.push(b2.dir)}
+const sj=path.join(__dirname,"sets.json"),extraSets=fs.existsSync(sj)?JSON.parse(fs.readFileSync(sj,"utf8")):[];
+for(const e of extraSets)for(const[,ids]of e.groups)for(const id of ids){const b3=built[id];if(!b3){missing.push(id);continue}if(!order.includes(b3.dir))order.push(b3.dir)}
 fs.writeFileSync(path.join(out,"assets","order.js"),"window.ORDER = "+JSON.stringify(order)+";\n");
 // old problem pages need order.js too
 for(const s of Object.values(old)){const d=path.join(out,Object.keys(old).find(k=>old[k]===s)+"-"+s,"index.html");let h=fs.readFileSync(d,"utf8");if(!h.includes("order.js")){h=h.replace('<script src="problem.js">','<script src="../assets/order.js"></script><script src="problem.js">');fs.writeFileSync(d,h)}}

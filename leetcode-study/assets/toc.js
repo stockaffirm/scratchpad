@@ -16,6 +16,6 @@
     const on = b.getAttribute("aria-pressed") !== "true";
     btns.forEach(x => x.setAttribute("aria-pressed", "false"));
     b.setAttribute("aria-pressed", on);
-    rows.forEach(r => r.classList.toggle("hl", on && r.dataset["l" + b.dataset.flt] === "1"));
+    rows.forEach(r => r.classList.toggle("hl", on && (r.dataset.s || "").split(" ").includes(b.dataset.flt)));
   });
 })();
