@@ -12,3 +12,15 @@ leetcode-study/
 ```
 
 To add a problem: copy a folder, edit `problem.js`, add its folder name to `assets/order.js` and a card to `index.html`.
+
+## Tools
+
+`tools/gen/` is the generator pipeline (`./all.sh`): curated walkthroughs + real-code traces + extra approaches for every problem. See `tools/gen/drivers.py` (examples), `drivers2.py` (edge cases) and `alts*.js` (other approaches).
+
+## Done marks
+
+Saved in the browser. The **Sync progress to GitHub** button on the index stores them in the private repo `stockaffirm/leetcode-progress` (`progress.json`) using a fine-grained token (Contents: read & write on that repo only) pasted once per browser. Changes merge per problem by timestamp, so a fresh browser never wipes saved progress.
+
+## Adding a set (e.g. Google)
+
+Use the `leetcode-study-add` skill (in `stockaffirm/truistAI`): `tools/gen/delta.js` finds the problems not yet on the site, `tools/gen/sets.json` registers the set (new section with only the new problems + a highlight button).
