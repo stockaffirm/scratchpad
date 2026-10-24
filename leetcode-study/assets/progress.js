@@ -23,8 +23,8 @@
   const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 
   /* ---- Supabase backend: "Sign in with GitHub", one row per user (RLS) in public.leetcode_progress ---- */
-  const SB_URL = "https://yjhhdbcxwkiwlzznjwye.supabase.co", SB_KEY = "sb_publishable_gO8mOgqTAT7aaNuRg26sMA_NuXuJNl8";
-  const SB_STORE = "sb-yjhhdbcxwkiwlzznjwye-auth-token";
+  const SB_URL = "https://mxdljkwconnaanpgvigz.supabase.co", SB_KEY = "sb_publishable_o6BVx6t3iKn1VP4hkrVWQQ_xjofy47K";
+  const SB_STORE = "sb-mxdljkwconnaanpgvigz-auth-token";
   const INDEX_URL = new URL("../", (document.currentScript || {}).src || location.href).href;
   const hasSession = () => { try { return !!localStorage.getItem(SB_STORE); } catch(e){ return false; } };
   const wantsSb = () => hasSession() || /[#?&](access_token|code)=/.test(location.hash + location.search);
